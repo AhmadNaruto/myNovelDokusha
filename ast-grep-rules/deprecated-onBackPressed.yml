@@ -1,0 +1,14 @@
+# Rule to find deprecated onBackPressed() usage
+# Should be replaced with OnBackPressedDispatcher
+id: deprecated-onBackPressed
+language: kotlin
+rule:
+  pattern: override fun onBackPressed()
+severity: warning
+message: |
+  onBackPressed() is deprecated. Use OnBackPressedDispatcher via getOnBackPressedDispatcher() instead.
+  See: https://developer.android.com/reference/androidx/activity/ComponentActivity#getOnBackPressedDispatcher()
+fix: |
+  // TODO: Migrate to OnBackPressedDispatcher
+  // @Deprecated("Use OnBackPressedDispatcher instead")
+  // override fun onBackPressed() { ... }

@@ -1,0 +1,36 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:2:1-16:12
+	package
+		INJECTED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:5:5-15:19
+meta-data#my.noveldokusha.scraper.extension.id
+ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:6:9-8:40
+	android:value
+		ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:8:13-37
+	android:name
+		ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:7:13-64
+meta-data#my.noveldokusha.scraper.extension.name
+ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:9:9-11:47
+	android:value
+		ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:11:13-44
+	android:name
+		ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:10:13-66
+meta-data#my.noveldokusha.scraper.extension.version
+ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:12:9-14:37
+	android:value
+		ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:14:13-34
+	android:name
+		ADDED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml:13:13-69
+uses-sdk
+INJECTED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml
+INJECTED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/ubuntu/myNovelDokusha/scraper/providers/template/src/main/AndroidManifest.xml

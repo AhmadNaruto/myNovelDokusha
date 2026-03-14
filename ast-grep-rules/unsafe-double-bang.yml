@@ -1,0 +1,26 @@
+# Rule to find unsafe double-bang (!!) operators
+# These can cause NullPointerException at runtime
+id: unsafe-double-bang
+language: kotlin
+rule:
+  pattern: $EXPR!!
+  all:
+    - not:
+        inside:
+          kind: string_literal
+          stopBy: end
+    - not:
+        inside:
+          kind: line_comment
+          stopBy: end
+    - not:
+        inside:
+          kind: multiline_comment
+          stopBy: end
+severity: error
+message: |
+  Unsafe `!!` operator detected. This can cause NullPointerException at runtime.
+  Consider using safe calls (`?.`) with elvis operator (`?:`) or proper null handling.
+  
+  Before: val result = getValue()!!
+  After: val result = getValue() ?: throw IllegalStateException("Value is null")
