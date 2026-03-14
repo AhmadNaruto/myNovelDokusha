@@ -6,6 +6,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.AbsListView
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -113,6 +114,7 @@ class ReaderActivity : BaseActivity() {
 
     private val fontsLoader = FontsLoader()
 
+    @Deprecated("Deprecated in favor of OnBackPressedCallback")
     override fun onBackPressed() {
         viewModel.onCloseManually()
         super.onBackPressed()
@@ -126,6 +128,15 @@ class ReaderActivity : BaseActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Register OnBackPressedCallback to handle back navigation
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                viewModel.onCloseManually()
+                finish()
+            }
+        })
+        
         viewBind.listView.adapter = viewAdapter.listView
 
         fadeInTextLiveData.distinctUntilChanged().observe(this) {

@@ -3,6 +3,7 @@ package my.noveldokusha.features.chapterslist
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.core.view.WindowCompat
@@ -41,6 +42,14 @@ class ChaptersActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Register OnBackPressedCallback to handle back navigation
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                finish()
+            }
+        })
+        
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             Theme(themeProvider = themeProvider) {
