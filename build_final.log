@@ -1,0 +1,718 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Calculating task graph as no cached configuration is available for tasks: clean assembleFullRelease
+Type-safe project accessors is an incubating feature.
+> Task :build-logic:convention:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:convention:compileKotlin UP-TO-DATE
+> Task :build-logic:convention:compileJava NO-SOURCE
+> Task :build-logic:convention:pluginDescriptors UP-TO-DATE
+> Task :build-logic:convention:processResources UP-TO-DATE
+> Task :build-logic:convention:classes UP-TO-DATE
+> Task :build-logic:convention:jar UP-TO-DATE
+
+> Configure project :app
+localPropertiesFilePath: local.properties
+hasDefaultSigningConfigData: true
+
+> Task :clean
+> Task :core:clean
+> Task :coreui:clean
+> Task :app:clean
+> Task :navigation:clean
+> Task :data:clean
+> Task :networking:clean
+> Task :strings:clean
+> Task :scraper:clean
+> Task :features:catalogExplorer:clean
+> Task :features:chaptersList:clean
+> Task :features:databaseExplorer:clean
+> Task :features:globalSourceSearch:clean
+> Task :features:libraryExplorer:clean
+> Task :features:reader:clean
+> Task :features:settings:clean
+> Task :features:webview:clean
+> Task :features:sourceExplorer:clean
+> Task :scraper:api:clean
+> Task :tooling:algorithms:clean
+> Task :scraper:extension-manager:clean
+> Task :tooling:application_workers:clean
+> Task :tooling:backup_create:clean
+> Task :tooling:backup_restore:clean
+> Task :tooling:epub_parser:clean
+> Task :tooling:local_database:clean
+> Task :tooling:epub_importer:clean
+> Task :tooling:local_source:clean
+> Task :tooling:text_to_speech:clean
+> Task :scraper:providers:royalroad:clean
+> Task :scraper:providers:template:clean
+> Task :tooling:text_translator:domain:clean
+> Task :tooling:text_translator:translator_nop:clean
+> Task :app:preBuild UP-TO-DATE
+> Task :tooling:text_translator:translator:clean
+> Task :app:preFullReleaseBuild UP-TO-DATE
+> Task :core:preBuild UP-TO-DATE
+> Task :core:preReleaseBuild UP-TO-DATE
+> Task :app:mergeFullReleaseJniLibFolders
+> Task :coreui:preBuild UP-TO-DATE
+> Task :core:mergeReleaseJniLibFolders
+> Task :coreui:preReleaseBuild UP-TO-DATE
+> Task :core:mergeReleaseNativeLibs NO-SOURCE
+> Task :coreui:mergeReleaseJniLibFolders
+> Task :coreui:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:copyReleaseJniLibsProjectOnly
+> Task :data:preBuild UP-TO-DATE
+> Task :data:preReleaseBuild UP-TO-DATE
+> Task :coreui:copyReleaseJniLibsProjectOnly
+> Task :navigation:preBuild UP-TO-DATE
+> Task :navigation:preReleaseBuild UP-TO-DATE
+> Task :navigation:mergeReleaseJniLibFolders
+> Task :navigation:mergeReleaseNativeLibs NO-SOURCE
+> Task :data:mergeReleaseJniLibFolders
+> Task :data:mergeReleaseNativeLibs NO-SOURCE
+> Task :navigation:copyReleaseJniLibsProjectOnly
+> Task :networking:preBuild UP-TO-DATE
+> Task :networking:preReleaseBuild UP-TO-DATE
+> Task :data:copyReleaseJniLibsProjectOnly
+> Task :scraper:preBuild UP-TO-DATE
+> Task :scraper:preReleaseBuild UP-TO-DATE
+> Task :networking:mergeReleaseJniLibFolders
+> Task :scraper:mergeReleaseJniLibFolders
+> Task :networking:mergeReleaseNativeLibs NO-SOURCE
+> Task :scraper:mergeReleaseNativeLibs NO-SOURCE
+> Task :scraper:copyReleaseJniLibsProjectOnly
+> Task :strings:preBuild UP-TO-DATE
+> Task :strings:preReleaseBuild UP-TO-DATE
+> Task :networking:copyReleaseJniLibsProjectOnly
+> Task :features:catalogExplorer:preBuild UP-TO-DATE
+> Task :features:catalogExplorer:preReleaseBuild UP-TO-DATE
+> Task :strings:mergeReleaseJniLibFolders
+> Task :features:catalogExplorer:mergeReleaseJniLibFolders
+> Task :strings:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:catalogExplorer:mergeReleaseNativeLibs NO-SOURCE
+> Task :strings:copyReleaseJniLibsProjectOnly
+> Task :features:chaptersList:preBuild UP-TO-DATE
+> Task :features:catalogExplorer:copyReleaseJniLibsProjectOnly
+> Task :features:chaptersList:preReleaseBuild UP-TO-DATE
+> Task :features:databaseExplorer:preBuild UP-TO-DATE
+> Task :features:databaseExplorer:preReleaseBuild UP-TO-DATE
+> Task :features:chaptersList:mergeReleaseJniLibFolders
+> Task :features:databaseExplorer:mergeReleaseJniLibFolders
+> Task :features:databaseExplorer:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:chaptersList:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:chaptersList:copyReleaseJniLibsProjectOnly
+> Task :features:globalSourceSearch:preBuild UP-TO-DATE
+> Task :features:databaseExplorer:copyReleaseJniLibsProjectOnly
+> Task :features:globalSourceSearch:preReleaseBuild UP-TO-DATE
+> Task :features:libraryExplorer:preBuild UP-TO-DATE
+> Task :features:libraryExplorer:preReleaseBuild UP-TO-DATE
+> Task :features:libraryExplorer:mergeReleaseJniLibFolders
+> Task :features:globalSourceSearch:mergeReleaseJniLibFolders
+> Task :features:libraryExplorer:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:globalSourceSearch:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:libraryExplorer:copyReleaseJniLibsProjectOnly
+> Task :features:reader:preBuild UP-TO-DATE
+> Task :features:reader:preReleaseBuild UP-TO-DATE
+> Task :features:globalSourceSearch:copyReleaseJniLibsProjectOnly
+> Task :features:settings:preBuild UP-TO-DATE
+> Task :features:settings:preReleaseBuild UP-TO-DATE
+> Task :features:reader:mergeReleaseJniLibFolders
+> Task :features:settings:mergeReleaseJniLibFolders
+> Task :features:reader:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:settings:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:reader:copyReleaseJniLibsProjectOnly
+> Task :features:sourceExplorer:preBuild UP-TO-DATE
+> Task :features:sourceExplorer:preReleaseBuild UP-TO-DATE
+> Task :features:settings:copyReleaseJniLibsProjectOnly
+> Task :features:webview:preBuild UP-TO-DATE
+> Task :features:webview:preReleaseBuild UP-TO-DATE
+> Task :features:sourceExplorer:mergeReleaseJniLibFolders
+> Task :features:webview:mergeReleaseJniLibFolders
+> Task :features:sourceExplorer:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:webview:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:webview:copyReleaseJniLibsProjectOnly
+> Task :features:sourceExplorer:copyReleaseJniLibsProjectOnly
+> Task :scraper:api:preBuild UP-TO-DATE
+> Task :scraper:extension-manager:preBuild UP-TO-DATE
+> Task :scraper:api:preReleaseBuild UP-TO-DATE
+> Task :scraper:extension-manager:preReleaseBuild UP-TO-DATE
+> Task :scraper:api:mergeReleaseJniLibFolders
+> Task :scraper:extension-manager:mergeReleaseJniLibFolders
+> Task :scraper:api:mergeReleaseNativeLibs NO-SOURCE
+> Task :scraper:extension-manager:mergeReleaseNativeLibs NO-SOURCE
+> Task :scraper:api:copyReleaseJniLibsProjectOnly
+> Task :scraper:extension-manager:copyReleaseJniLibsProjectOnly
+> Task :tooling:algorithms:preBuild UP-TO-DATE
+> Task :tooling:application_workers:preBuild UP-TO-DATE
+> Task :tooling:algorithms:preReleaseBuild UP-TO-DATE
+> Task :tooling:application_workers:preReleaseBuild UP-TO-DATE
+> Task :tooling:application_workers:mergeReleaseJniLibFolders
+> Task :tooling:algorithms:mergeReleaseJniLibFolders
+> Task :tooling:application_workers:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:algorithms:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:application_workers:copyReleaseJniLibsProjectOnly
+> Task :tooling:backup_create:preBuild UP-TO-DATE
+> Task :tooling:backup_create:preReleaseBuild UP-TO-DATE
+> Task :tooling:algorithms:copyReleaseJniLibsProjectOnly
+> Task :tooling:backup_restore:preBuild UP-TO-DATE
+> Task :tooling:backup_restore:preReleaseBuild UP-TO-DATE
+> Task :tooling:backup_create:mergeReleaseJniLibFolders
+> Task :tooling:backup_create:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:backup_restore:mergeReleaseJniLibFolders
+> Task :tooling:backup_restore:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:backup_create:copyReleaseJniLibsProjectOnly
+> Task :tooling:backup_restore:copyReleaseJniLibsProjectOnly
+> Task :tooling:epub_parser:preBuild UP-TO-DATE
+> Task :tooling:epub_parser:preReleaseBuild UP-TO-DATE
+> Task :tooling:epub_importer:preBuild UP-TO-DATE
+> Task :tooling:epub_importer:preReleaseBuild UP-TO-DATE
+> Task :tooling:epub_parser:mergeReleaseJniLibFolders
+> Task :tooling:epub_importer:mergeReleaseJniLibFolders
+> Task :tooling:epub_importer:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:epub_parser:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:epub_importer:copyReleaseJniLibsProjectOnly
+> Task :tooling:local_database:preBuild UP-TO-DATE
+> Task :tooling:local_database:preReleaseBuild UP-TO-DATE
+> Task :tooling:epub_parser:copyReleaseJniLibsProjectOnly
+> Task :tooling:local_source:preBuild UP-TO-DATE
+> Task :tooling:local_source:preReleaseBuild UP-TO-DATE
+> Task :tooling:local_database:mergeReleaseJniLibFolders
+> Task :tooling:local_source:mergeReleaseJniLibFolders
+> Task :tooling:local_database:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:local_source:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:local_database:copyReleaseJniLibsProjectOnly
+> Task :tooling:local_source:copyReleaseJniLibsProjectOnly
+> Task :tooling:text_to_speech:preBuild UP-TO-DATE
+> Task :tooling:text_translator:domain:preBuild UP-TO-DATE
+> Task :tooling:text_translator:domain:preReleaseBuild UP-TO-DATE
+> Task :tooling:text_to_speech:preReleaseBuild UP-TO-DATE
+> Task :tooling:text_to_speech:mergeReleaseJniLibFolders
+> Task :tooling:text_translator:domain:mergeReleaseJniLibFolders
+> Task :tooling:text_translator:domain:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:text_to_speech:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:text_translator:domain:copyReleaseJniLibsProjectOnly
+> Task :tooling:text_translator:translator:preBuild UP-TO-DATE
+> Task :tooling:text_translator:translator:preReleaseBuild UP-TO-DATE
+> Task :tooling:text_to_speech:copyReleaseJniLibsProjectOnly
+> Task :core:generateReleaseResValues
+> Task :tooling:text_translator:translator:mergeReleaseJniLibFolders
+> Task :tooling:text_translator:translator:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:text_translator:translator:copyReleaseJniLibsProjectOnly
+> Task :core:generateReleaseResources
+> Task :core:packageReleaseResources
+> Task :core:parseReleaseLocalResources
+> Task :strings:generateReleaseResValues
+> Task :strings:generateReleaseResources
+> Task :app:mergeFullReleaseNativeLibs
+> Task :strings:packageReleaseResources
+
+> Task :app:stripFullReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, liblanguage_id_l2c_jni.so, libtranslate_jni.so. Run with --info option to learn more.
+
+> Task :strings:parseReleaseLocalResources
+> Task :app:extractFullReleaseNativeSymbolTables
+> Task :app:mergeFullReleaseNativeDebugMetadata NO-SOURCE
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:generateReleaseBuildConfig
+> Task :strings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :strings:generateReleaseBuildConfig
+> Task :strings:javaPreCompileRelease
+> Task :core:javaPreCompileRelease
+> Task :tooling:text_translator:domain:generateReleaseResValues
+> Task :tooling:text_translator:domain:generateReleaseResources
+> Task :tooling:text_translator:domain:packageReleaseResources
+> Task :tooling:text_translator:domain:parseReleaseLocalResources
+> Task :tooling:text_translator:domain:generateReleaseRFile
+> Task :tooling:text_translator:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:text_translator:domain:generateReleaseBuildConfig
+> Task :strings:generateReleaseRFile
+> Task :tooling:text_translator:domain:kspReleaseKotlin UP-TO-DATE
+> Task :strings:kspReleaseKotlin UP-TO-DATE
+> Task :strings:compileReleaseKotlin NO-SOURCE
+> Task :core:generateReleaseRFile
+> Task :strings:compileReleaseJavaWithJavac
+> Task :strings:transformReleaseClassesWithAsm
+> Task :strings:bundleLibCompileToJarRelease
+> Task :core:kspReleaseKotlin
+> Task :tooling:text_translator:domain:compileReleaseKotlin
+> Task :strings:bundleLibRuntimeToJarRelease
+> Task :tooling:text_translator:domain:javaPreCompileRelease
+> Task :tooling:text_translator:domain:compileReleaseJavaWithJavac
+> Task :tooling:text_translator:domain:transformReleaseClassesWithAsm
+> Task :tooling:text_translator:domain:bundleLibCompileToJarRelease
+> Task :tooling:text_translator:domain:bundleLibRuntimeToJarRelease
+> Task :tooling:text_translator:translator:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:text_translator:translator:generateReleaseBuildConfig
+> Task :tooling:text_translator:translator:generateReleaseResValues
+> Task :tooling:text_translator:translator:generateReleaseResources
+> Task :tooling:text_translator:translator:packageReleaseResources
+> Task :tooling:text_translator:translator:parseReleaseLocalResources
+> Task :tooling:text_translator:translator:generateReleaseRFile
+> Task :tooling:text_translator:translator:javaPreCompileRelease
+> Task :coreui:generateReleaseResValues
+> Task :coreui:generateReleaseResources
+> Task :coreui:packageReleaseResources
+> Task :coreui:parseReleaseLocalResources
+> Task :tooling:local_database:generateReleaseResValues
+> Task :tooling:local_database:generateReleaseResources
+> Task :tooling:local_database:packageReleaseResources
+> Task :tooling:local_database:parseReleaseLocalResources
+> Task :tooling:local_database:generateReleaseRFile
+> Task :coreui:generateReleaseRFile
+> Task :coreui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :coreui:generateReleaseBuildConfig
+> Task :tooling:local_database:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:local_database:generateReleaseBuildConfig
+> Task :tooling:local_database:javaPreCompileRelease
+> Task :coreui:javaPreCompileRelease
+> Task :data:generateReleaseResValues
+> Task :data:generateReleaseResources
+> Task :data:packageReleaseResources
+> Task :data:parseReleaseLocalResources
+> Task :networking:generateReleaseResValues
+> Task :networking:generateReleaseResources
+> Task :networking:packageReleaseResources
+> Task :networking:parseReleaseLocalResources
+> Task :networking:generateReleaseRFile
+> Task :scraper:generateReleaseResValues
+> Task :scraper:generateReleaseResources
+> Task :scraper:packageReleaseResources
+> Task :scraper:parseReleaseLocalResources
+> Task :scraper:api:generateReleaseResValues
+> Task :scraper:api:generateReleaseResources
+> Task :scraper:api:packageReleaseResources
+> Task :scraper:api:parseReleaseLocalResources
+> Task :scraper:api:generateReleaseRFile
+> Task :scraper:extension-manager:generateReleaseResValues
+> Task :scraper:extension-manager:generateReleaseResources
+> Task :scraper:extension-manager:packageReleaseResources
+> Task :scraper:extension-manager:parseReleaseLocalResources
+> Task :scraper:extension-manager:generateReleaseRFile
+> Task :scraper:generateReleaseRFile
+> Task :tooling:epub_parser:generateReleaseResValues
+> Task :tooling:epub_parser:generateReleaseResources
+> Task :tooling:epub_parser:packageReleaseResources
+> Task :tooling:epub_parser:parseReleaseLocalResources
+> Task :tooling:epub_parser:generateReleaseRFile
+> Task :data:generateReleaseRFile
+> Task :data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :data:generateReleaseBuildConfig
+> Task :networking:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :networking:generateReleaseBuildConfig
+> Task :networking:javaPreCompileRelease
+> Task :scraper:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scraper:generateReleaseBuildConfig
+> Task :scraper:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scraper:api:generateReleaseBuildConfig
+> Task :scraper:api:javaPreCompileRelease
+> Task :scraper:extension-manager:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scraper:extension-manager:generateReleaseBuildConfig
+> Task :scraper:extension-manager:javaPreCompileRelease
+> Task :scraper:javaPreCompileRelease
+> Task :tooling:epub_parser:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:epub_parser:generateReleaseBuildConfig
+> Task :tooling:epub_parser:javaPreCompileRelease
+> Task :data:javaPreCompileRelease
+> Task :navigation:generateReleaseResValues
+> Task :navigation:generateReleaseResources
+> Task :navigation:packageReleaseResources
+> Task :navigation:parseReleaseLocalResources
+> Task :navigation:generateReleaseRFile
+> Task :navigation:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :navigation:generateReleaseBuildConfig
+> Task :navigation:javaPreCompileRelease
+> Task :features:libraryExplorer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:libraryExplorer:generateReleaseBuildConfig
+> Task :features:libraryExplorer:generateReleaseResValues
+> Task :features:libraryExplorer:generateReleaseResources
+> Task :features:libraryExplorer:packageReleaseResources
+> Task :features:libraryExplorer:parseReleaseLocalResources
+> Task :tooling:epub_importer:generateReleaseResValues
+> Task :tooling:epub_importer:generateReleaseResources
+> Task :tooling:epub_importer:packageReleaseResources
+> Task :tooling:epub_importer:parseReleaseLocalResources
+> Task :tooling:epub_importer:generateReleaseRFile
+> Task :features:libraryExplorer:generateReleaseRFile
+> Task :tooling:epub_importer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:epub_importer:generateReleaseBuildConfig
+> Task :tooling:epub_importer:javaPreCompileRelease
+> Task :features:libraryExplorer:javaPreCompileRelease
+> Task :tooling:application_workers:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:application_workers:generateReleaseBuildConfig
+> Task :tooling:application_workers:generateReleaseResValues
+> Task :tooling:application_workers:generateReleaseResources
+> Task :tooling:application_workers:packageReleaseResources
+> Task :tooling:application_workers:parseReleaseLocalResources
+> Task :tooling:application_workers:generateReleaseRFile
+> Task :tooling:application_workers:javaPreCompileRelease
+> Task :tooling:local_source:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:local_source:generateReleaseBuildConfig
+> Task :tooling:local_source:generateReleaseResValues
+> Task :tooling:local_source:generateReleaseResources
+> Task :tooling:local_source:packageReleaseResources
+> Task :tooling:local_source:parseReleaseLocalResources
+> Task :tooling:local_source:generateReleaseRFile
+> Task :tooling:local_source:javaPreCompileRelease
+> Task :features:reader:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:reader:dataBindingMergeDependencyArtifactsRelease
+> Task :features:reader:generateReleaseResValues
+> Task :features:reader:generateReleaseResources
+> Task :features:reader:packageReleaseResources
+> Task :features:reader:dataBindingGenBaseClassesRelease
+> Task :features:reader:generateReleaseBuildConfig
+> Task :features:reader:parseReleaseLocalResources
+> Task :tooling:algorithms:generateReleaseResValues
+> Task :tooling:algorithms:generateReleaseResources
+> Task :tooling:algorithms:packageReleaseResources
+> Task :tooling:algorithms:parseReleaseLocalResources
+> Task :tooling:algorithms:generateReleaseRFile
+> Task :tooling:text_to_speech:generateReleaseResValues
+> Task :tooling:text_to_speech:generateReleaseResources
+> Task :tooling:text_to_speech:packageReleaseResources
+> Task :tooling:text_to_speech:parseReleaseLocalResources
+> Task :tooling:text_to_speech:generateReleaseRFile
+> Task :features:reader:generateReleaseRFile
+> Task :tooling:algorithms:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:algorithms:generateReleaseBuildConfig
+> Task :tooling:algorithms:kspReleaseKotlin UP-TO-DATE
+> Task :tooling:algorithms:compileReleaseKotlin
+> Task :tooling:algorithms:javaPreCompileRelease
+> Task :tooling:algorithms:compileReleaseJavaWithJavac
+> Task :tooling:algorithms:transformReleaseClassesWithAsm
+> Task :tooling:algorithms:bundleLibCompileToJarRelease
+> Task :tooling:algorithms:bundleLibRuntimeToJarRelease
+> Task :tooling:text_to_speech:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:text_to_speech:generateReleaseBuildConfig
+> Task :tooling:text_to_speech:kspReleaseKotlin UP-TO-DATE
+> Task :core:compileReleaseKotlin
+> Task :tooling:text_to_speech:compileReleaseKotlin
+> Task :tooling:text_to_speech:javaPreCompileRelease
+> Task :tooling:text_to_speech:compileReleaseJavaWithJavac
+> Task :tooling:text_to_speech:transformReleaseClassesWithAsm
+> Task :tooling:text_to_speech:bundleLibCompileToJarRelease
+> Task :features:reader:javaPreCompileRelease
+> Task :tooling:text_to_speech:bundleLibRuntimeToJarRelease
+> Task :features:chaptersList:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:chaptersList:generateReleaseBuildConfig
+> Task :features:chaptersList:generateReleaseResValues
+> Task :features:chaptersList:generateReleaseResources
+> Task :features:chaptersList:packageReleaseResources
+> Task :features:chaptersList:parseReleaseLocalResources
+> Task :features:chaptersList:generateReleaseRFile
+> Task :features:chaptersList:javaPreCompileRelease
+> Task :features:globalSourceSearch:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:globalSourceSearch:generateReleaseBuildConfig
+> Task :features:globalSourceSearch:generateReleaseResValues
+> Task :features:globalSourceSearch:generateReleaseResources
+> Task :features:globalSourceSearch:packageReleaseResources
+> Task :features:globalSourceSearch:parseReleaseLocalResources
+> Task :features:globalSourceSearch:generateReleaseRFile
+> Task :features:globalSourceSearch:javaPreCompileRelease
+> Task :features:databaseExplorer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:databaseExplorer:generateReleaseBuildConfig
+> Task :features:databaseExplorer:generateReleaseResValues
+> Task :features:databaseExplorer:generateReleaseResources
+> Task :features:databaseExplorer:packageReleaseResources
+> Task :features:databaseExplorer:parseReleaseLocalResources
+> Task :features:databaseExplorer:generateReleaseRFile
+> Task :features:databaseExplorer:javaPreCompileRelease
+> Task :features:sourceExplorer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:sourceExplorer:generateReleaseBuildConfig
+> Task :features:sourceExplorer:generateReleaseResValues
+> Task :features:sourceExplorer:generateReleaseResources
+> Task :features:sourceExplorer:packageReleaseResources
+> Task :features:sourceExplorer:parseReleaseLocalResources
+> Task :core:compileReleaseJavaWithJavac
+> Task :features:sourceExplorer:generateReleaseRFile
+> Task :features:sourceExplorer:javaPreCompileRelease
+> Task :features:catalogExplorer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:catalogExplorer:generateReleaseBuildConfig
+> Task :features:catalogExplorer:generateReleaseResValues
+> Task :features:catalogExplorer:generateReleaseResources
+> Task :core:transformReleaseClassesWithAsm
+> Task :features:catalogExplorer:packageReleaseResources
+> Task :core:bundleLibCompileToJarRelease
+> Task :core:bundleLibRuntimeToJarRelease
+> Task :tooling:text_translator:translator:kspReleaseKotlin
+> Task :tooling:text_translator:translator:compileReleaseKotlin
+> Task :tooling:text_translator:translator:compileReleaseJavaWithJavac
+> Task :tooling:text_translator:translator:transformReleaseClassesWithAsm
+> Task :tooling:text_translator:translator:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :tooling:text_translator:translator:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :networking:kspReleaseKotlin
+> Task :tooling:local_database:kspReleaseKotlin
+> Task :networking:compileReleaseKotlin
+> Task :networking:compileReleaseJavaWithJavac
+> Task :networking:transformReleaseClassesWithAsm
+> Task :networking:bundleLibCompileToJarRelease
+> Task :networking:bundleLibRuntimeToJarRelease
+> Task :scraper:api:kspReleaseKotlin UP-TO-DATE
+> Task :scraper:api:compileReleaseKotlin
+> Task :scraper:api:compileReleaseJavaWithJavac
+> Task :scraper:api:transformReleaseClassesWithAsm
+> Task :scraper:api:bundleLibCompileToJarRelease
+> Task :scraper:api:bundleLibRuntimeToJarRelease
+
+> Task :tooling:local_database:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/tooling/local_database/src/main/java/my/noveldokusha/feature/local_database/AppDatabase.kt:51:14 'fun fallbackToDestructiveMigrationOnDowngrade(): RoomDatabase.Builder<AppRoomDatabase>' is deprecated. Replace by overloaded version with parameter to indicate if all tables should be dropped or not.
+
+> Task :tooling:local_database:compileReleaseJavaWithJavac
+> Task :tooling:local_database:transformReleaseClassesWithAsm
+> Task :tooling:local_database:bundleLibCompileToJarRelease
+> Task :scraper:extension-manager:kspReleaseKotlin
+> Task :tooling:local_database:bundleLibRuntimeToJarRelease
+> Task :scraper:extension-manager:compileReleaseKotlin
+> Task :scraper:extension-manager:compileReleaseJavaWithJavac
+> Task :scraper:extension-manager:transformReleaseClassesWithAsm
+> Task :scraper:extension-manager:bundleLibCompileToJarRelease
+> Task :scraper:kspReleaseKotlin
+> Task :coreui:kspReleaseKotlin
+> Task :scraper:compileReleaseKotlin
+> Task :coreui:compileReleaseKotlin
+> Task :coreui:compileReleaseJavaWithJavac
+> Task :coreui:transformReleaseClassesWithAsm
+> Task :coreui:bundleLibCompileToJarRelease
+> Task :coreui:bundleLibRuntimeToJarRelease
+> Task :scraper:extension-manager:bundleLibRuntimeToJarRelease
+> Task :tooling:epub_parser:kspReleaseKotlin UP-TO-DATE
+> Task :scraper:compileReleaseJavaWithJavac
+> Task :scraper:transformReleaseClassesWithAsm
+> Task :scraper:bundleLibCompileToJarRelease
+> Task :scraper:bundleLibRuntimeToJarRelease
+> Task :tooling:epub_parser:compileReleaseKotlin
+> Task :tooling:epub_parser:compileReleaseJavaWithJavac
+> Task :tooling:epub_parser:transformReleaseClassesWithAsm
+> Task :tooling:epub_parser:bundleLibCompileToJarRelease
+> Task :navigation:kspReleaseKotlin
+> Task :tooling:epub_parser:bundleLibRuntimeToJarRelease
+> Task :navigation:compileReleaseKotlin
+> Task :navigation:compileReleaseJavaWithJavac
+> Task :navigation:transformReleaseClassesWithAsm
+> Task :navigation:bundleLibCompileToJarRelease
+> Task :navigation:bundleLibRuntimeToJarRelease
+> Task :features:catalogExplorer:parseReleaseLocalResources
+> Task :features:catalogExplorer:generateReleaseRFile
+> Task :features:catalogExplorer:javaPreCompileRelease
+> Task :features:settings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:settings:generateReleaseBuildConfig
+> Task :features:settings:generateReleaseResValues
+> Task :features:settings:generateReleaseResources
+> Task :features:settings:packageReleaseResources
+> Task :features:settings:parseReleaseLocalResources
+> Task :tooling:backup_create:generateReleaseResValues
+> Task :tooling:backup_create:generateReleaseResources
+> Task :tooling:backup_create:packageReleaseResources
+> Task :tooling:backup_create:parseReleaseLocalResources
+> Task :tooling:backup_create:generateReleaseRFile
+> Task :tooling:backup_restore:generateReleaseResValues
+> Task :tooling:backup_restore:generateReleaseResources
+> Task :tooling:backup_restore:packageReleaseResources
+> Task :tooling:backup_restore:parseReleaseLocalResources
+> Task :tooling:backup_restore:generateReleaseRFile
+> Task :features:settings:generateReleaseRFile
+> Task :tooling:backup_create:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:backup_create:generateReleaseBuildConfig
+> Task :tooling:backup_create:javaPreCompileRelease
+> Task :tooling:backup_restore:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:backup_restore:generateReleaseBuildConfig
+> Task :tooling:backup_restore:javaPreCompileRelease
+> Task :features:settings:javaPreCompileRelease
+> Task :features:webview:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:webview:generateReleaseBuildConfig
+> Task :features:webview:generateReleaseResValues
+> Task :features:webview:generateReleaseResources
+> Task :features:webview:packageReleaseResources
+> Task :features:webview:parseReleaseLocalResources
+> Task :features:webview:generateReleaseRFile
+> Task :data:kspReleaseKotlin
+> Task :data:compileReleaseKotlin
+> Task :features:webview:kspReleaseKotlin
+> Task :data:compileReleaseJavaWithJavac
+> Task :data:transformReleaseClassesWithAsm
+> Task :data:bundleLibCompileToJarRelease
+> Task :data:bundleLibRuntimeToJarRelease
+
+> Task :features:webview:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/features/webview/src/main/java/my/noveldokusha/webview/WebViewActivity.kt:60:60 'fun onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+      The OnBackPressedDispatcher controls how back button events are dispatched
+      to one or more {@link OnBackPressedCallback} objects.
+
+> Task :tooling:epub_importer:kspReleaseKotlin
+> Task :tooling:epub_importer:compileReleaseKotlin
+> Task :tooling:epub_importer:compileReleaseJavaWithJavac
+> Task :tooling:epub_importer:transformReleaseClassesWithAsm
+> Task :tooling:epub_importer:bundleLibCompileToJarRelease
+> Task :tooling:application_workers:kspReleaseKotlin
+> Task :tooling:epub_importer:bundleLibRuntimeToJarRelease
+> Task :tooling:epub_importer:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :tooling:epub_importer:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :tooling:application_workers:compileReleaseKotlin
+> Task :tooling:application_workers:compileReleaseJavaWithJavac
+> Task :tooling:application_workers:transformReleaseClassesWithAsm
+> Task :tooling:application_workers:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :tooling:application_workers:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :features:libraryExplorer:kspReleaseKotlin
+> Task :tooling:local_source:kspReleaseKotlin
+> Task :features:libraryExplorer:compileReleaseKotlin
+> Task :features:libraryExplorer:compileReleaseJavaWithJavac
+> Task :features:libraryExplorer:transformReleaseClassesWithAsm
+> Task :features:libraryExplorer:mergeReleaseGeneratedProguardFiles
+> Task :features:libraryExplorer:exportReleaseConsumerProguardFiles
+> Task :tooling:local_source:compileReleaseKotlin
+> Task :tooling:local_source:compileReleaseJavaWithJavac
+> Task :tooling:local_source:transformReleaseClassesWithAsm
+> Task :tooling:local_source:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :tooling:local_source:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :features:reader:kspReleaseKotlin
+> Task :features:chaptersList:kspReleaseKotlin
+
+> Task :features:chaptersList:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/features/chaptersList/src/main/java/my/noveldokusha/features/chapterslist/ChaptersActivity.kt:62:37 'fun onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+      The OnBackPressedDispatcher controls how back button events are dispatched
+      to one or more {@link OnBackPressedCallback} objects.
+
+> Task :features:chaptersList:compileReleaseJavaWithJavac
+> Task :features:chaptersList:transformReleaseClassesWithAsm
+> Task :features:chaptersList:mergeReleaseGeneratedProguardFiles
+> Task :features:chaptersList:exportReleaseConsumerProguardFiles
+
+> Task :features:reader:compileReleaseKotlin FAILED
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:126:12 Unresolved reference 'ExperimentalMaterial3Api'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:126:12 Annotation argument must be a compile-time constant.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:248:9 Unresolved reference 'snapshotFlow'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:248:72 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:249:14 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:249:14 Not enough information to infer type argument for 'T'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:250:28 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:253:9 Unresolved reference 'snapshotFlow'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:253:72 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:254:14 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:254:14 Not enough information to infer type argument for 'T'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:255:28 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:258:9 Unresolved reference 'snapshotFlow'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:258:74 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:259:14 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:259:14 Not enough information to infer type argument for 'T'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:260:28 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:263:9 Unresolved reference 'snapshotFlow'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:264:14 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:265:30 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:295:25 Unresolved reference 'AndroidView'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:300:21 Unresolved reference 'BasicAlertDialog'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:303:25 Unresolved reference 'Text'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:303:30 Unresolved reference 'stringResource'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:335:9 Unresolved reference 'snapshotFlow'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:336:14 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:337:30 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:411:9 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:411:9 Not enough information to infer type argument for 'T1'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:411:9 Not enough information to infer type argument for 'T2'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:411:9 Not enough information to infer type argument for 'R'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:412:13 Unresolved reference 'snapshotFlow'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:413:13 Unresolved reference 'snapshotFlow'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:414:13 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:414:29 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:414:58 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:414:58 Not enough information to infer type argument for 'A'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:414:58 Not enough information to infer type argument for 'B'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:415:14 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:415:14 Not enough information to infer type argument for 'T'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:415:14 Not enough information to infer type argument for 'K'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:415:39 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:415:39 Function 'component1()' is ambiguous for this expression: 
+fun <T> Array<out T>.component1(): T
+fun ByteArray.component1(): Byte
+fun ShortArray.component1(): Short
+fun IntArray.component1(): Int
+fun LongArray.component1(): Long
+fun FloatArray.component1(): Float
+fun DoubleArray.component1(): Double
+fun BooleanArray.component1(): Boolean
+fun CharArray.component1(): Char
+fun <T> List<T>.component1(): T
+fun <K, V> Map.Entry<K, V>.component1(): K
+fun UIntArray.component1(): UInt
+fun ULongArray.component1(): ULong
+fun UByteArray.component1(): UByte
+fun UShortArray.component1(): UShort.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:415:39 Function 'component2()' is ambiguous for this expression: 
+fun <T> Array<out T>.component2(): T
+fun ByteArray.component2(): Byte
+fun ShortArray.component2(): Short
+fun IntArray.component2(): Int
+fun LongArray.component2(): Long
+fun FloatArray.component2(): Float
+fun DoubleArray.component2(): Double
+fun BooleanArray.component2(): Boolean
+fun CharArray.component2(): Char
+fun <T> List<T>.component2(): T
+fun <K, V> Map.Entry<K, V>.component2(): V
+fun UIntArray.component2(): UInt
+fun ULongArray.component2(): ULong
+fun UByteArray.component2(): UByte
+fun UShortArray.component2(): UShort.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:415:89 Unresolved reference 'not' for operator '!'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:416:14 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:416:14 Not enough information to infer type argument for 'T'.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:416:43 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:416:43 Function 'component1()' is ambiguous for this expression: 
+fun <T> Array<out T>.component1(): T
+fun ByteArray.component1(): Byte
+fun ShortArray.component1(): Short
+fun IntArray.component1(): Int
+fun LongArray.component1(): Long
+fun FloatArray.component1(): Float
+fun DoubleArray.component1(): Double
+fun BooleanArray.component1(): Boolean
+fun CharArray.component1(): Char
+fun <T> List<T>.component1(): T
+fun <K, V> Map.Entry<K, V>.component1(): K
+fun UIntArray.component1(): UInt
+fun ULongArray.component1(): ULong
+fun UByteArray.component1(): UByte
+fun UShortArray.component1(): UShort.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:416:43 Function 'component2()' is ambiguous for this expression: 
+fun <T> Array<out T>.component2(): T
+fun ByteArray.component2(): Byte
+fun ShortArray.component2(): Short
+fun IntArray.component2(): Int
+fun LongArray.component2(): Long
+fun FloatArray.component2(): Float
+fun DoubleArray.component2(): Double
+fun BooleanArray.component2(): Boolean
+fun CharArray.component2(): Char
+fun <T> List<T>.component2(): T
+fun <K, V> Map.Entry<K, V>.component2(): V
+fun UIntArray.component2(): UInt
+fun ULongArray.component2(): ULong
+fun UByteArray.component2(): UByte
+fun UShortArray.component2(): UShort.
+e: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:417:46 Unresolved reference 'not' for operator '!'.
+
+> Task :features:globalSourceSearch:kspReleaseKotlin
+
+[Incubating] Problems report is available at: file:///home/ubuntu/myNovelDokusha/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':features:reader:compileReleaseKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 5m 17s
+430 actionable tasks: 412 executed, 18 up-to-date
+Configuration cache entry stored.
