@@ -21,4 +21,5 @@ class TranslationManagerEmpty : TranslationManager {
 
     override fun downloadModel(language: String) = Unit
     override fun removeModel(language: String) = Unit
+    override fun close() = Unit
 }

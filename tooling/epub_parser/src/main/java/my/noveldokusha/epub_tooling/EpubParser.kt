@@ -83,7 +83,7 @@ suspend fun epubParser(
         val imgTag = doc.selectFirst("img")
 
         if (imgTag != null) {
-            var imgSrc = imgTag.attribute("src").value.hrefAbsolutePath()
+            var imgSrc = imgTag.attribute("src")?.value?.hrefAbsolutePath() ?: return null
             if (!imgSrc.startsWith("$rootPath/")) {
                 imgSrc = "$rootPath/$imgSrc"
             }
@@ -170,9 +170,11 @@ suspend fun epubParser(
             val res = parser.parseAsDocument()
 
             // If currentTOC exists and we have a new tocEntry, add the accumulated chapter content
-            if (currentTOC != null && tocEntry != null && currentChapterBody.isNotEmpty()) {
-                chapters.add(Chapter(currentTOC!!.chapterLink, currentTOC!!.chapterTitle, currentChapterBody))
-                currentChapterBody = ""
+            currentTOC?.let { currentToc ->
+                if (tocEntry != null && currentChapterBody.isNotEmpty()) {
+                    chapters.add(Chapter(currentToc.chapterLink, currentToc.chapterTitle, currentChapterBody))
+                    currentChapterBody = ""
+                }
             }
 
             if (tocEntry == null) {
@@ -190,8 +192,10 @@ suspend fun epubParser(
     }
 
     // Add the last chapter if any content remains
-    if (currentTOC != null && currentChapterBody.isNotEmpty()) {
-        chapters.add(Chapter(currentTOC!!.chapterLink, currentTOC!!.chapterTitle, currentChapterBody))
+    currentTOC?.let { currentToc ->
+        if (currentChapterBody.isNotEmpty()) {
+            chapters.add(Chapter(currentToc.chapterLink, currentToc.chapterTitle, currentChapterBody))
+        }
     }
 
 

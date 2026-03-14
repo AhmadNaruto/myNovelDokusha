@@ -78,6 +78,10 @@ internal class ReaderLiveTranslation(
 
     private suspend fun getValidTranslatorOrNull(language: String): TranslationModelState? {
         if (language.isBlank()) return null
+        // Auto-detect is always available (no download needed)
+        if (language == "und") {
+            return translationManager.models.firstOrNull { it.language == "und" }
+        }
         return translationManager.hasModelDownloaded(language)
     }
 
@@ -92,7 +96,7 @@ internal class ReaderLiveTranslation(
         Log.d(TAG, "updateTranslatorState: enabled=$isEnabled, source=${source?.language}, target=${target?.language}")
 
         val old = translatorState
-        val new = when {
+        val new: TranslatorState? = when {
             !isEnabled -> {
                 Log.d(TAG, "updateTranslatorState: translation disabled")
                 null
@@ -102,8 +106,17 @@ internal class ReaderLiveTranslation(
                 null
             }
             source.language == target.language -> {
-                Log.d(TAG, "updateTranslatorState: source and target are the same")
-                null
+                // Allow auto-detect ("und") to be the same as target since it will detect automatically
+                if (source.language == "und") {
+                    Log.d(TAG, "updateTranslatorState: auto-detect source, allowing same as target")
+                    translationManager.getTranslator(
+                        source = source.language,
+                        target = target.language
+                    )
+                } else {
+                    Log.d(TAG, "updateTranslatorState: source and target are the same")
+                    null
+                }
             }
             else -> {
                 try {
@@ -111,15 +124,14 @@ internal class ReaderLiveTranslation(
                     translationManager.getTranslator(
                         source = source.language,
                         target = target.language
-                    ).also {
-                        Log.d(TAG, "updateTranslatorState: translator created successfully")
-                    }
+                    )
                 } catch (e: Exception) {
                     Log.e(TAG, "updateTranslatorState: failed to create translator", e)
                     throw e
                 }
             }
-        }.also { this.translatorState = it }
+        }
+        this.translatorState = new
 
 
         return when {
@@ -255,57 +267,6 @@ internal class ReaderLiveTranslation(
         }
     }
     
-    /**
-     * Get batch translator if available (Gemini only)
-     * Returns null for MLKit which doesn't support batch translation
-     */
-    fun getBatchTranslator(): (suspend (List<String>) -> Map<String, String>)? {
-        if (!translationManager.isUsingOnlineTranslation) return null
-        if (translatorState == null) return null
-        
-        val source = translatorState?.source ?: return null
-        val target = translatorState?.target ?: return null
-        
-        // Try to get Gemini manager and call translateBatch directly
-        return try {
-            val geminiClass = Class.forName("my.noveldokusha.text_translator.TranslationManagerGemini")
-            if (!geminiClass.isInstance(translationManager)) {
-                Log.d(TAG, "getBatchTranslator: translator is not Gemini")
-                return null
-            }
-            
-            Log.d(TAG, "getBatchTranslator: found Gemini translator, creating batch wrapper")
-            
-            // Create wrapper that calls translateBatch using callSuspend
-            val kClass = geminiClass.kotlin
-            val translateBatchFunc = kClass.members
-                .filterIsInstance<kotlin.reflect.KFunction<*>>()
-                .find { func -> 
-                    func.name == "translateBatch" && 
-                    func.parameters.size == 4  // this + 3 params (texts, source, target)
-                } as? kotlin.reflect.KSuspendFunction4<*, List<String>, String, String, Map<String, String>> ?: run {
-                    Log.e(TAG, "getBatchTranslator: translateBatch function not found")
-                    return null
-                }
-            
-            val batchTranslator: suspend (List<String>) -> Map<String, String> = { texts ->
-                @Suppress("UNCHECKED_CAST")
-                try {
-                    // Call using callSuspend which handles suspend functions without explicit continuation
-                    (translateBatchFunc as kotlin.reflect.KSuspendFunction4<Any, List<String>, String, String, Map<String, String>>)
-                        .invoke(translationManager, texts, source, target)
-                } catch (e: Exception) {
-                    Log.e(TAG, "getBatchTranslator: call failed", e)
-                    emptyMap()
-                }
-            }
-            batchTranslator
-        } catch (e: Exception) {
-            Log.e(TAG, "getBatchTranslator: error (${translationManager.javaClass.simpleName})", e)
-            null
-        }
-    }
-
     companion object {
         private const val TAG = "ReaderLiveTranslation"
     }

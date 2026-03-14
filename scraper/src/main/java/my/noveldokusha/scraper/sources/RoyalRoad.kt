@@ -50,14 +50,14 @@ class RoyalRoad(
                 .map { match -> match.groups["class"]?.value }
                 .filterNotNull()}
             .toSet()
-        doc.selectFirst(".chapter-content")!!.let {
+        doc.selectFirst(".chapter-content")?.let {
             it.select("script").remove()
             it.select("a").remove()
             it.select(".ads-title").remove()
             it.select(".hidden").remove()
             hiddenClasses.forEach { hc -> it.select(hc).remove() }
             TextExtractor.get(it)
-        }
+        } ?: ""
     }
 
     override suspend fun getBookCoverImageUrl(

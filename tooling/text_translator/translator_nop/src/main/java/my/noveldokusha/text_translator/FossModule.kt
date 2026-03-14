@@ -19,7 +19,7 @@ object FossModule {
         appCoroutineScope: AppCoroutineScope,
         appPreferences: AppPreferences
     ): TranslationManager {
-        // Always provide Gemini manager for FOSS (reads API key dynamically)
-        return TranslationManagerGemini(appCoroutineScope, appPreferences)
+        // No translation available in FOSS version
+        return TranslationManagerEmpty()
     }
 }

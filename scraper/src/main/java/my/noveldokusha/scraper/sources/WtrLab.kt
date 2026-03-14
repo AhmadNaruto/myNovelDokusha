@@ -2,6 +2,9 @@ package my.noveldokusha.scraper.sources
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import my.noveldokusha.core.LanguageCode
 import my.noveldokusha.core.PagedList
 import my.noveldokusha.core.Response
@@ -47,15 +50,15 @@ class WtrLab(
     override suspend fun getChapterText(doc: Document): String = withContext(Dispatchers.Default) {
         // WtrLab uses API for chapter content
         val nextData = doc.selectFirst("script#__NEXT_DATA__")?.html() ?: return@withContext ""
-        
+
         // Extract raw_id and chapter number from URL or data
         val rawIdMatch = Regex("\"raw_id\":(\\d+)").find(nextData)
         val chapterMatch = Regex("/chapter-(\\d+)").find(doc.location())
-        
+
         if (rawIdMatch != null && chapterMatch != null) {
             val rawId = rawIdMatch.groupValues[1]
             val chapterNo = chapterMatch.groupValues[1]
-            
+
             try {
                 val apiUrl = "$baseUrl/api/reader/get"
                 val request = postRequest(apiUrl)
@@ -65,23 +68,24 @@ class WtrLab(
                         add("raw_id", rawId)
                         add("chapter_no", chapterNo)
                     }
-                
+
                 val jsonResponse = networkClient.call(request).toJson()
-                val bodyArray = jsonResponse.asJsonObject
-                    .getAsJsonObject("data")
-                    ?.getAsJsonObject("data")
-                    ?.getAsJsonArray("body")
-                
+                val bodyArray = jsonResponse.jsonObject
+                    .jsonObject["data"]
+                    ?.jsonObject
+                    ?.jsonObject
+                    ?.jsonArray
+
                 if (bodyArray != null) {
-                    return@withContext bodyArray.joinToString("") { 
-                        "<p>${it.asString}</p>" 
+                    return@withContext bodyArray.joinToString("") {
+                        "<p>${it.jsonPrimitive.content}</p>"
                     }
                 }
             } catch (e: Exception) {
                 // Fallback to basic extraction
             }
         }
-        
+
         // Fallback extraction from page
         doc.selectFirst(".chapter-content, .reading-content")?.let { element ->
             element.select("script").remove()
@@ -193,23 +197,23 @@ class WtrLab(
                 }
 
             val jsonResponse = networkClient.call(request).toJson()
-            val dataArray = jsonResponse.asJsonObject.getAsJsonArray("data")
-            
+            val dataArray = jsonResponse.jsonObject["data"]?.jsonArray
+
             val books = mutableListOf<BookResult>()
             dataArray?.forEach { item ->
-                val novel = item.asJsonObject
-                val data = novel.getAsJsonObject("data")
-                val rawId = novel.get("raw_id").asInt
-                val slug = novel.get("slug").asString
-                val title = data.get("title").asString
-                val author = data.get("author").asString
-                val status = if (novel.get("status").asBoolean) "Ongoing" else "Completed"
-                
+                val novel = item.jsonObject
+                val data = novel["data"]?.jsonObject
+                val rawId = novel["raw_id"]?.jsonPrimitive?.content?.toIntOrNull() ?: return@forEach
+                val slug = novel["slug"]?.jsonPrimitive?.content.orEmpty()
+                val title = data?.get("title")?.jsonPrimitive?.content.orEmpty()
+                val author = data?.get("author")?.jsonPrimitive?.content.orEmpty()
+                val status = if (novel["status"]?.jsonPrimitive?.content?.toBoolean() == true) "Ongoing" else "Completed"
+
                 books.add(
                     BookResult(
                         title = title,
                         url = "$baseUrl/en/serie-$rawId/f$slug",
-                        coverImageUrl = data.get("image")?.asString ?: "",
+                        coverImageUrl = data?.get("image")?.jsonPrimitive?.content ?: "",
                         description = "Author: $author | Status: $status"
                     )
                 )

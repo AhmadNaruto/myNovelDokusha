@@ -1,5 +1,6 @@
 package my.noveldokusha.network.interceptors
 
+import com.aayushatharva.brotli4j.decoder.BrotliInputStream
 import okhttp3.Interceptor
 import okhttp3.Response
 import okhttp3.ResponseBody.Companion.asResponseBody
@@ -7,7 +8,6 @@ import okhttp3.internal.http.promisesBody
 import okio.GzipSource
 import okio.buffer
 import okio.source
-import org.brotli.dec.BrotliInputStream
 
 /**
  * Interceptor to decode/uncompress a response body

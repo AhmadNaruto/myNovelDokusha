@@ -8,8 +8,15 @@ data class TranslationModelState(
     val available: Boolean,
     val downloading: Boolean,
     val downloadingFailed: Boolean,
+    val displayName: String? = null, // Optional custom display name (e.g., "Auto-detect")
 ) {
     val locale = Locale(language)
+    
+    /**
+     * Get the display name for this language model.
+     * Returns custom displayName if set, otherwise uses locale's display name.
+     */
+    fun asDisplayName(): String = displayName ?: locale.getDisplayName(Locale.getDefault()).replaceFirstChar { it.uppercase() }
 }
 
 data class TranslatorState(
@@ -24,7 +31,7 @@ data class TranslatorState(
 interface TranslationManager {
 
     val available: Boolean
-    
+
     val isUsingOnlineTranslation: Boolean get() = false
 
     val models: SnapshotStateList<TranslationModelState>
@@ -41,4 +48,10 @@ interface TranslationManager {
     fun downloadModel(language: String)
 
     fun removeModel(language: String)
+
+    /**
+     * Close the manager and release resources.
+     * Call when the manager is no longer needed.
+     */
+    fun close() {}
 }

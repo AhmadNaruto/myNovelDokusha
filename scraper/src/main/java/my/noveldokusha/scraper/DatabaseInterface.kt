@@ -1,10 +1,12 @@
 package my.noveldokusha.scraper
 
 import androidx.annotation.StringRes
+import kotlinx.serialization.Serializable
 import my.noveldokusha.core.PagedList
 import my.noveldokusha.core.Response
 import my.noveldokusha.scraper.domain.BookResult
 
+@Serializable
 data class SearchGenre(val id: String, val genreName: String)
 
 interface DatabaseInterface {
@@ -34,8 +36,10 @@ interface DatabaseInterface {
 
     suspend fun getAuthorData(authorUrl: String): Response<AuthorData>
 
+    @Serializable
     data class AuthorMetadata(val name: String, val url: String?)
 
+    @Serializable
     data class BookData(
         val title: String,
         val description: String,
@@ -49,6 +53,7 @@ interface DatabaseInterface {
         val coverImageUrl: String?
     )
 
+    @Serializable
     data class AuthorData(
         val name: String,
         val coverImageUrl: String? = null,

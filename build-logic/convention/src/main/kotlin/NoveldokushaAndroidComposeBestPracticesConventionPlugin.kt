@@ -8,10 +8,14 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.findByType
 import org.gradle.kotlin.dsl.getByType
+import org.gradle.kotlin.dsl.apply
 
 class NoveldokushaAndroidComposeBestPracticesConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
+            // Apply Compose Compiler Gradle plugin (required for Kotlin 2.0+)
+            pluginManager.apply("org.jetbrains.kotlin.plugin.compose")
+
             val extension = extensions.findByType<ApplicationExtension>()
                 ?: extensions.getByType<LibraryExtension>()
 

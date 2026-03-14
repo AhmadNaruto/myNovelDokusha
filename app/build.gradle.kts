@@ -51,7 +51,7 @@ android {
 
     signingConfigs {
         if (hasDefaultSigningConfigData) create("default") {
-            storeFile = file(defaultSigningConfigData.getProperty("storeFile"))
+            storeFile = rootProject.file(defaultSigningConfigData.getProperty("storeFile"))
             storePassword = defaultSigningConfigData.getProperty("storePassword")
             keyAlias = defaultSigningConfigData.getProperty("keyAlias")
             keyPassword = defaultSigningConfigData.getProperty("keyPassword")
@@ -60,26 +60,15 @@ android {
 
     buildTypes {
 
-        signingConfigs.asMap["default"]?.let {
-            all {
-                signingConfig = it
-            }
-        }
-
         named("debug") {
-            postprocessing {
-                isRemoveUnusedCode = false
-                isObfuscate = false
-                isOptimizeCode = false
-                isRemoveUnusedResources = false
-            }
+            signingConfig = signingConfigs.asMap["default"] ?: signingConfigs.getByName("debug")
         }
 
         named("release") {
+            signingConfig = signingConfigs.asMap["default"] ?: signingConfigs.getByName("debug")
             postprocessing {
                 proguardFile("proguard-rules.pro")
                 isRemoveUnusedCode = true
-                isObfuscate = false
                 isOptimizeCode = true
                 isRemoveUnusedResources = true
             }
@@ -150,7 +139,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.common.java8)
-    implementation(libs.androidx.coordinatorlayout)
 
     // Local storage directory access
     implementation(libs.androidx.documentfile)
@@ -183,11 +171,7 @@ dependencies {
     androidTestUtil(libs.test.androidx.orchestrator)
 
     // Serialization
-    implementation(libs.gson)
-    implementation(libs.moshi)
-    implementation(libs.moshi.kotlin)
     implementation(libs.kotlinx.serialization.json)
-    implementation(libs.retrofit)
 
     // Dependency injection
     implementation(libs.hilt.workmanager)
@@ -206,17 +190,13 @@ dependencies {
     implementation(libs.compose.androidx.material.icons.extended)
     implementation(libs.compose.material3.android)
     implementation(libs.compose.accompanist.systemuicontroller)
-    implementation(libs.compose.accompanist.swiperefresh)
-    implementation(libs.compose.accompanist.insets)
-    implementation(libs.compose.accompanist.pager)
-    implementation(libs.compose.accompanist.pager.indicators)
     implementation(libs.compose.landscapist.glide)
     implementation(libs.compose.coil)
+    implementation(libs.compose.coil.network)
     implementation(libs.compose.lazyColumnScrollbar)
 
     // Networking
     implementation(libs.okhttp)
-    implementation(libs.okhttp.interceptor.brotli)
     implementation(libs.okhttp.interceptor.logging)
     implementation(libs.okhttp.glideIntegration)
 

@@ -15,6 +15,6 @@ dependencies {
     implementation(libs.kotlinx.coroutines.playServices)
     // Android ML Translation Kit
     implementation(libs.translate)
-    // OkHttp for Gemini API
-    implementation(libs.okhttp)
+    // Android ML Language Identification Kit (for auto-detect source language)
+    implementation(libs.language.id)
 }

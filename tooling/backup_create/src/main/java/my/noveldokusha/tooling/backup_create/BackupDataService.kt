@@ -22,7 +22,6 @@ import my.noveldokusha.core.utils.Extra_Boolean
 import my.noveldokusha.core.utils.Extra_Uri
 import my.noveldokusha.core.utils.isServiceRunning
 import my.noveldokusha.feature.local_database.AppDatabase
-import okhttp3.internal.closeQuietly
 import timber.log.Timber
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
@@ -168,7 +167,11 @@ internal class BackupDataService : Service() {
                     }
             }
 
-            zip.closeQuietly()
+            try {
+                zip.close()
+            } catch (e: Exception) {
+                Timber.e(e, "Error closing zip file")
+            }
             notificationsCenter.showNotification(
                 notificationId = "Backup saved success".hashCode(),
                 channelId = channelId,

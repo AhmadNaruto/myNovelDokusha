@@ -43,20 +43,28 @@ class BakaUpdates(
     override suspend fun getAuthorData(authorUrl: String) = withContext(Dispatchers.Default) {
         tryFlatConnect {
             val doc = networkClient.get(authorUrl).toDocument()
+            
             fun entry(header: String) =
-                doc.selectFirst("div.sCat > b:containsOwn($header)")!!.parent()!!
-                    .nextElementSibling()!!
+                doc.selectFirst("div.sCat > b:containsOwn($header)")
+                    ?.parent()
+                    ?.nextElementSibling()
+                    ?: throw IllegalStateException("Element not found for header: $header")
 
             val coverImageUrl = entry("Image")
-                .selectFirst("img[src]")!!
-                .attr("src")
+                .selectFirst("img[src]")
+                ?.attr("src")
+                ?: throw IllegalStateException("Cover image not found")
+                
             val description = entry("Comments").text()
             val genres = entry("Genres").select("a").dropLast(1).map { it.text() }
             val books = doc
                 .select(".pl-2.col-md-5.col-7.text-truncate.text > a[href]")
                 .filter { it -> it.text().endsWith("(Novel)") }
                 .map { BookResult(title = it.text().removeNovelTag(), url = it.attr("href")) }
-            val name = doc.selectFirst(".releasestitle.tabletitle")!!.text().removeNovelTag()
+            val name = doc.selectFirst(".releasestitle.tabletitle")
+                ?.text()
+                ?.removeNovelTag()
+                ?: throw IllegalStateException("Author name not found")
             val associatedNames = TextExtractor.get(entry("Associated Names")).split("\n\n")
 
             DatabaseInterface.AuthorData(
@@ -159,9 +167,12 @@ class BakaUpdates(
     ) = withContext(Dispatchers.Default) {
         tryFlatConnect {
             val doc = networkClient.get(bookUrl).toDocument()
+            
             fun entry(header: String) =
-                doc.selectFirst("div.sCat > b:containsOwn($header)")!!.parent()!!
-                    .nextElementSibling()!!
+                doc.selectFirst("div.sCat > b:containsOwn($header)")
+                    ?.parent()
+                    ?.nextElementSibling()
+                    ?: throw IllegalStateException("Element not found for header: $header")
 
             val relatedBooks = entry("Category Recommendations")
                 .select("a[href]")
@@ -187,11 +198,12 @@ class BakaUpdates(
                 .select("a[href]")
                 .mapNotNull {
                     val url = it.attr("href")
-                    if (url.startsWith("https://www.mangaupdates.com/author/"))
+                    if (url.startsWith("https://www.mangaupdates.com/author/")) {
                         return@mapNotNull DatabaseInterface.AuthorMetadata(
                             name = it.text(),
                             url = it.attr("href")
                         )
+                    }
 
                     if (url.startsWith("https://www.mangaupdates.com/submit.html?act=add_author")) {
                         val name = url.toUrlBuilderSafe().build().getQueryParameter("author")
@@ -208,15 +220,16 @@ class BakaUpdates(
                 it.selectFirst("[id=div_desc_more]") ?: it.selectFirst("div")
             }.also {
                 it?.select("a")?.remove()
-            }.let { TextExtractor.get(it!!) }
+            }?.let { TextExtractor.get(it) } ?: ""
 
             val tags = entry("Categories")
                 .select("li > a")
                 .mapNotNull { it.text().ifBlank { null } }
 
             val coverImageUrl = entry("Image")
-                .selectFirst("img[src]")!!
-                .attr("src")
+                .selectFirst("img[src]")
+                ?.attr("src")
+                ?: throw IllegalStateException("Cover image not found")
 
             val genres = entry("Genre").select("a")
                 .dropLast(1)
@@ -224,7 +237,10 @@ class BakaUpdates(
                 .map { SearchGenre(genreName = it, id = it) }
 
             DatabaseInterface.BookData(
-                title = doc.selectFirst(".releasestitle.tabletitle")!!.text().removeNovelTag(),
+                title = doc.selectFirst(".releasestitle.tabletitle")
+                    ?.text()
+                    ?.removeNovelTag()
+                    ?: throw IllegalStateException("Book title not found"),
                 description = description,
                 alternativeTitles = TextExtractor.get(entry("Associated Names")).split("\n\n"),
                 relatedBooks = relatedBooks,

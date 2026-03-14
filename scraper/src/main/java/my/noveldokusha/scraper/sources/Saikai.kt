@@ -1,9 +1,14 @@
 package my.noveldokusha.scraper.sources
 
-import com.google.gson.JsonParser
-import com.google.gson.stream.JsonReader
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonPrimitive
+import kotlinx.serialization.json.contentOrNull
 import my.noveldokusha.core.LanguageCode
 import my.noveldokusha.core.PagedList
 import my.noveldokusha.core.Response
@@ -18,6 +23,11 @@ import my.noveldokusha.scraper.TextExtractor
 import my.noveldokusha.scraper.domain.BookResult
 import my.noveldokusha.scraper.domain.ChapterResult
 import java.io.StringReader
+
+private val json = Json {
+    ignoreUnknownKeys = true
+    isLenient = true
+}
 
 // Cloudfare blocked
 class Saikai(
@@ -81,26 +91,26 @@ class Saikai(
                 val start = "{layout:"
                 start + script.data().split(head + start).last()
             }.let { input ->
-                val reader = JsonReader(StringReader(input))
-                reader.isLenient = true
-                JsonParser.parseReader(reader)
-            }.asJsonObject["data"]
-                .asJsonArray[0]
-                .asJsonObject["story"]
-                .asJsonObject["data"]
-                .asJsonObject["separators"]
-                .asJsonArray.flatMap { volume ->
-                    volume.asJsonObject["releases"]
-                        .asJsonArray.map { it.asJsonObject }
-                        .mapNotNull {
-                            it["chapter"].asNumber.runCatching { toInt() }.getOrNull()
+                json.parseToJsonElement(StringReader(input).readText()).jsonObject
+            }["data"]
+                ?.jsonArray?.getOrNull(0)
+                ?.jsonObject?.get("story")
+                ?.jsonObject?.get("data")
+                ?.jsonObject?.get("separators")
+                ?.jsonArray?.flatMap { volume ->
+                    volume.jsonObject["releases"]
+                        ?.jsonArray?.map { it.jsonObject }
+                        ?.mapNotNull { jsonElement ->
+                            val chapterNum = jsonElement["chapter"]?.jsonPrimitive?.contentOrNull?.toIntOrNull()
                                 ?: return@mapNotNull null
+                            val slug = jsonElement["slug"]?.jsonPrimitive?.contentOrNull ?: return@mapNotNull null
+                            val title = jsonElement["title"]?.jsonPrimitive?.contentOrNull ?: ""
                             ChapterResult(
-                                url = it["slug"].asString,
-                                title = it["title"].asString
+                                url = slug,
+                                title = title
                             )
-                        }
-                }
+                        } ?: emptyList()
+                } ?: emptyList()
 
             (listOf(firstChapter) + preList).mapIndexed { index: Int, chapter: ChapterResult ->
                 ChapterResult(
@@ -149,27 +159,25 @@ class Saikai(
                 )
                 .toString()
 
-            val json = networkClient.get(url).body.string()
+            val jsonElement = networkClient.get(url).body.string()
+                .let { json.parseToJsonElement(it) }
 
-            JsonParser
-                .parseString(json)
-                .asJsonObject["data"]
-                .asJsonArray
-                .map { it.asJsonObject }
-                .map {
+            jsonElement.jsonObject["data"]
+                ?.jsonArray
+                ?.map { it.jsonObject }
+                ?.map { obj ->
                     BookResult(
-                        title = it["title"].asString,
-                        url = "https://saikaiscan.com.br/series/${it["slug"].asString}",
-                        coverImageUrl = "https://s3-alpha.saikai.com.br/${it["image"].asString}"
+                        title = obj["title"]?.jsonPrimitive?.contentOrNull ?: "",
+                        url = "https://saikaiscan.com.br/series/${obj["slug"]?.jsonPrimitive?.contentOrNull ?: ""}",
+                        coverImageUrl = "https://s3-alpha.saikai.com.br/${obj["image"]?.jsonPrimitive?.contentOrNull ?: ""}"
                     )
-                }
-                .let {
+                }?.let {
                     PagedList(
                         list = it,
                         index = index,
                         isLastPage = false
                     )
-                }
+                } ?: PagedList.createEmpty(index = index)
         }
     }
 }

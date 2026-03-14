@@ -54,7 +54,7 @@ internal fun SettingsTranslationModelsDialog(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            text = it.locale.displayLanguage,
+                            text = it.asDisplayName(),
                             modifier = Modifier.weight(1f)
                         )
                         Box(
@@ -64,6 +64,14 @@ internal fun SettingsTranslationModelsDialog(
                                 .height(22.dp)
                         ) {
                             when {
+                                it.language == "und" -> {
+                                    // Auto-detect doesn't need download/manage
+                                    Text(
+                                        text = "✓",
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        color = MaterialTheme.colorScheme.primary
+                                    )
+                                }
                                 it.available -> {
                                     Row(verticalAlignment = Alignment.CenterVertically) {
                                         Icon(

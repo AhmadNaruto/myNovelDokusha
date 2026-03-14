@@ -1,9 +1,9 @@
 package my.noveldokusha.network
 
-import com.google.gson.JsonElement
-import com.google.gson.JsonParser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.OkHttpClient
@@ -16,6 +16,8 @@ import java.nio.charset.Charset
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
+
+private val json = Json { ignoreUnknownKeys = true }
 
 private suspend fun Call.await(): Response = withContext(Dispatchers.IO) {
     suspendCoroutine { continuation ->
@@ -45,5 +47,5 @@ fun Response.toDocument(charset: String): Document {
 }
 
 fun Response.toJson(): JsonElement {
-    return JsonParser.parseString(body.string())
+    return json.parseToJsonElement(body.string())
 }

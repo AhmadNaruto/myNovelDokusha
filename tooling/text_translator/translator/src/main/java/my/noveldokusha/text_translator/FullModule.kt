@@ -20,15 +20,11 @@ object FullModule {
         appPreferences: AppPreferences
     ): TranslationManager {
         val mlkitManager = TranslationManagerMLKit(coroutineScope)
-        
-        // Always create Gemini manager (reads API key dynamically)
-        val geminiManager = TranslationManagerGemini(coroutineScope, appPreferences)
-        
-        // Always use composite manager for full version
+
+        // Use MLKit only (offline translation)
         return TranslationManagerComposite(
             coroutineScope,
             mlkitManager,
-            geminiManager,
             appPreferences
         )
     }

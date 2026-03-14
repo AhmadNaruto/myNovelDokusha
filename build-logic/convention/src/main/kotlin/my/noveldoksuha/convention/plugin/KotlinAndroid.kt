@@ -51,6 +51,9 @@ private fun Project.configureKotlin() {
                 "-opt-in=kotlin.RequiresOptIn",
                 "-Xjvm-default=all-compatibility",
             )
+            // Set language version to 2.1 for Kotlin 2.x compatibility
+            languageVersion = "2.1"
+            apiVersion = "2.1"
         }
     }
 }

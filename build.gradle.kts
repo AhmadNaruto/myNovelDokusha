@@ -19,6 +19,7 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.dependency.analysis) apply false
     alias(libs.plugins.jetbrains.kotlin.jvm) apply false
+    id("org.jetbrains.kotlin.plugin.compose") version "2.1.21" apply false
 }
 
 tasks.register("clean", Delete::class) {

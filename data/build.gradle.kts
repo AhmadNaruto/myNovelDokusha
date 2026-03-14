@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.noveldokusha.android.library)
     alias(libs.plugins.noveldokusha.android.compose)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -16,8 +17,7 @@ dependencies {
 
     implementation(libs.jsoup)
     implementation(libs.readability4j)
-    implementation(libs.gson)
-    implementation(libs.moshi.kotlin)
+    implementation(libs.kotlinx.serialization.json)
     implementation(libs.okhttp)
     implementation(libs.timber)
 

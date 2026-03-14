@@ -109,7 +109,7 @@ internal fun CatalogList(
             ListItem(
                 modifier = Modifier
                     .clickable { onSourceClick(it.catalog) }
-                    .animateItemPlacement(),
+                    .animateItem(),
                 headlineContent = {
                     Text(
                         text = stringResource(id = it.catalog.nameStrId),

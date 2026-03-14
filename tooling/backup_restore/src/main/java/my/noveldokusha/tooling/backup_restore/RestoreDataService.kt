@@ -29,7 +29,6 @@ import my.noveldokusha.core.tryAsResponse
 import my.noveldokusha.core.utils.Extra_Uri
 import my.noveldokusha.core.utils.isServiceRunning
 import my.noveldokusha.feature.local_database.AppDatabase
-import okhttp3.internal.closeQuietly
 import timber.log.Timber
 import java.io.File
 import java.io.InputStream
@@ -481,7 +480,11 @@ class RestoreDataService : Service() {
             }
         }
 
-        inputStream.closeQuietly()
+        try {
+            inputStream.close()
+        } catch (e: Exception) {
+            Timber.e(e, "restoreData: Error closing input stream")
+        }
         Timber.d("restoreData: Restore process completed, closed input stream")
         notificationsCenter.modifyNotification(
             notificationBuilder,

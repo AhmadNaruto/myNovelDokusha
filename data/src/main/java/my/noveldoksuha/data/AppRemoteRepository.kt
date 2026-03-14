@@ -2,6 +2,8 @@ package my.noveldoksuha.data
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import my.noveldokusha.core.AppInternalState
 import my.noveldokusha.core.Response
 import my.noveldokusha.core.domain.AppVersion
@@ -26,11 +28,11 @@ class AppRemoteRepository @Inject constructor(
             val json = networkClient
                 .get(lastReleaseUrl)
                 .toJson()
-                .asJsonObject
+                .jsonObject
 
             RemoteAppVersion(
-                version = AppVersion.fromString(json["tag_name"].asString),
-                sourceUrl = json["html_url"].asString
+                version = AppVersion.fromString(json["tag_name"]?.jsonPrimitive?.content.orEmpty()),
+                sourceUrl = json["html_url"]?.jsonPrimitive?.content.orEmpty()
             )
         }
     }

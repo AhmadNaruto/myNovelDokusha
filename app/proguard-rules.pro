@@ -67,3 +67,14 @@
     public static *** v(...);
     public static *** i(...);
 }
+
+#### ML Kit Translation
+# Keep ML Kit models
+-keep class com.google.mlkit.** { *; }
+-keep class com.google.android.gms.** { *; }
+-dontwarn com.google.mlkit.**
+-dontwarn com.google.android.gms.**
+
+# Keep TranslateRemoteModel
+-keep class com.google.mlkit.nl.translate.** { *; }
+-keep class com.google.mlkit.common.model.** { *; }
