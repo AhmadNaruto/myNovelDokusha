@@ -8,9 +8,14 @@ import coil3.PlatformContext
 import coil3.network.okhttp.OkHttpNetworkFetcherFactory
 import dagger.hilt.EntryPoints
 import dagger.hilt.android.HiltAndroidApp
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 import my.noveldokusha.di.HiltAppEntryPoint
 import my.noveldokusha.network.NetworkClient
 import my.noveldokusha.network.ScraperNetworkClient
+import my.noveldokusha.scraper.extension.manager.ExtensionManager
 import my.noveldokusha.tooling.application_workers.setup.PeriodicWorkersInitializer
 import timber.log.Timber
 import javax.inject.Inject
@@ -24,6 +29,12 @@ class App : Application(), Configuration.Provider {
 
     @Inject
     lateinit var periodicWorkersInitializer: PeriodicWorkersInitializer
+
+    @Inject
+    lateinit var extensionManager: ExtensionManager
+
+    // Application scope for background tasks
+    private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 
     // Coil 3.x ImageLoader - provided via Hilt now
     val imageLoader: ImageLoader by lazy {
@@ -47,6 +58,11 @@ class App : Application(), Configuration.Provider {
             Timber.plant(Timber.DebugTree())
         }
         periodicWorkersInitializer.init()
+        
+        // Load scraper extensions in background
+        applicationScope.launch {
+            extensionManager.loadExtensions()
+        }
     }
 
     // WorkManager

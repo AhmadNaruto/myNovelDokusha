@@ -125,6 +125,8 @@ dependencies {
     implementation(projects.networking)
     implementation(projects.strings)
     implementation(projects.scraper)
+    implementation(projects.scraper.api)
+    implementation(projects.scraper.extensionManager)
 
     // Translation feature
     fullImplementation(projects.tooling.textTranslator.translator)

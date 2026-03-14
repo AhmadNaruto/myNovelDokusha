@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Extension metadata -->
+    <application>
+        <meta-data
+            android:name="my.noveldokusha.scraper.extension.id"
+            android:value="template" />
+        <meta-data
+            android:name="my.noveldokusha.scraper.extension.name"
+            android:value="Template Source" />
+        <meta-data
+            android:name="my.noveldokusha.scraper.extension.version"
+            android:value="1.0.0" />
+    </application>
+</manifest>
