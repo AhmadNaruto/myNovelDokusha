@@ -48,7 +48,7 @@ interface AppDatabase {
         ): AppDatabase = Room
             .databaseBuilder(ctx, AppRoomDatabase::class.java, name)
             .createFromInputStream { inputStream }
-            .fallbackToDestructiveMigration() // Don't apply migrations, database is already at correct version
+            .fallbackToDestructiveMigrationOnDowngrade() // Allow destructive migration on downgrade only
             .build()
             .also { it.name = name }
     }
