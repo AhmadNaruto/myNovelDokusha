@@ -112,6 +112,7 @@ class ReaderActivity : BaseActivity() {
     private val fontsLoader = FontsLoader()
 
     @Deprecated("Deprecated in favor of OnBackPressedCallback")
+    @Suppress("DEPRECATION")
     override fun onBackPressed() {
         viewModel.onCloseManually()
         super.onBackPressed()
