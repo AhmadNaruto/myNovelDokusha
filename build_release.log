@@ -1,0 +1,1402 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Calculating task graph as configuration cache cannot be reused because file 'settings.gradle.kts' has changed.
+Type-safe project accessors is an incubating feature.
+> Task :build-logic:convention:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:convention:compileKotlin UP-TO-DATE
+> Task :build-logic:convention:compileJava NO-SOURCE
+> Task :build-logic:convention:pluginDescriptors UP-TO-DATE
+> Task :build-logic:convention:processResources UP-TO-DATE
+> Task :build-logic:convention:classes UP-TO-DATE
+> Task :build-logic:convention:jar UP-TO-DATE
+
+> Configure project :app
+localPropertiesFilePath: local.properties
+hasDefaultSigningConfigData: true
+
+> Task :app:preBuild UP-TO-DATE
+> Task :core:preBuild UP-TO-DATE
+> Task :core:preReleaseBuild UP-TO-DATE
+> Task :app:preFullReleaseBuild UP-TO-DATE
+> Task :core:mergeReleaseJniLibFolders
+> Task :app:mergeFullReleaseJniLibFolders
+> Task :coreui:preBuild UP-TO-DATE
+> Task :coreui:preReleaseBuild UP-TO-DATE
+> Task :core:mergeReleaseNativeLibs NO-SOURCE
+> Task :coreui:mergeReleaseJniLibFolders
+> Task :coreui:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:copyReleaseJniLibsProjectOnly
+> Task :coreui:copyReleaseJniLibsProjectOnly
+> Task :navigation:preBuild UP-TO-DATE
+> Task :data:preBuild UP-TO-DATE
+> Task :navigation:preReleaseBuild UP-TO-DATE
+> Task :data:preReleaseBuild UP-TO-DATE
+> Task :navigation:mergeReleaseJniLibFolders
+> Task :navigation:mergeReleaseNativeLibs NO-SOURCE
+> Task :data:mergeReleaseJniLibFolders
+> Task :data:mergeReleaseNativeLibs NO-SOURCE
+> Task :navigation:copyReleaseJniLibsProjectOnly
+> Task :networking:preBuild UP-TO-DATE
+> Task :networking:preReleaseBuild UP-TO-DATE
+> Task :data:copyReleaseJniLibsProjectOnly
+> Task :scraper:preBuild UP-TO-DATE
+> Task :scraper:preReleaseBuild UP-TO-DATE
+> Task :networking:mergeReleaseJniLibFolders
+> Task :networking:mergeReleaseNativeLibs NO-SOURCE
+> Task :scraper:mergeReleaseJniLibFolders
+> Task :scraper:mergeReleaseNativeLibs NO-SOURCE
+> Task :networking:copyReleaseJniLibsProjectOnly
+> Task :strings:preBuild UP-TO-DATE
+> Task :strings:preReleaseBuild UP-TO-DATE
+> Task :scraper:copyReleaseJniLibsProjectOnly
+> Task :features:catalogExplorer:preBuild UP-TO-DATE
+> Task :features:catalogExplorer:preReleaseBuild UP-TO-DATE
+> Task :strings:mergeReleaseJniLibFolders
+> Task :features:catalogExplorer:mergeReleaseJniLibFolders
+> Task :features:catalogExplorer:mergeReleaseNativeLibs NO-SOURCE
+> Task :strings:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:catalogExplorer:copyReleaseJniLibsProjectOnly
+> Task :features:chaptersList:preBuild UP-TO-DATE
+> Task :features:chaptersList:preReleaseBuild UP-TO-DATE
+> Task :strings:copyReleaseJniLibsProjectOnly
+> Task :features:databaseExplorer:preBuild UP-TO-DATE
+> Task :features:databaseExplorer:preReleaseBuild UP-TO-DATE
+> Task :features:databaseExplorer:mergeReleaseJniLibFolders
+> Task :features:databaseExplorer:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:chaptersList:mergeReleaseJniLibFolders
+> Task :features:chaptersList:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:databaseExplorer:copyReleaseJniLibsProjectOnly
+> Task :features:globalSourceSearch:preBuild UP-TO-DATE
+> Task :features:chaptersList:copyReleaseJniLibsProjectOnly
+> Task :features:globalSourceSearch:preReleaseBuild UP-TO-DATE
+> Task :features:libraryExplorer:preBuild UP-TO-DATE
+> Task :features:libraryExplorer:preReleaseBuild UP-TO-DATE
+> Task :features:globalSourceSearch:mergeReleaseJniLibFolders
+> Task :features:libraryExplorer:mergeReleaseJniLibFolders
+> Task :features:globalSourceSearch:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:libraryExplorer:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:libraryExplorer:copyReleaseJniLibsProjectOnly
+> Task :features:globalSourceSearch:copyReleaseJniLibsProjectOnly
+> Task :features:settings:preBuild UP-TO-DATE
+> Task :features:settings:preReleaseBuild UP-TO-DATE
+> Task :features:reader:preBuild UP-TO-DATE
+> Task :features:reader:preReleaseBuild UP-TO-DATE
+> Task :features:reader:mergeReleaseJniLibFolders
+> Task :features:settings:mergeReleaseJniLibFolders
+> Task :features:reader:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:settings:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:reader:copyReleaseJniLibsProjectOnly
+> Task :features:settings:copyReleaseJniLibsProjectOnly
+> Task :features:sourceExplorer:preBuild UP-TO-DATE
+> Task :features:webview:preBuild UP-TO-DATE
+> Task :features:sourceExplorer:preReleaseBuild UP-TO-DATE
+> Task :features:webview:preReleaseBuild UP-TO-DATE
+> Task :features:webview:mergeReleaseJniLibFolders
+> Task :features:sourceExplorer:mergeReleaseJniLibFolders
+> Task :features:webview:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:sourceExplorer:mergeReleaseNativeLibs NO-SOURCE
+> Task :features:webview:copyReleaseJniLibsProjectOnly
+> Task :features:sourceExplorer:copyReleaseJniLibsProjectOnly
+> Task :scraper:extension-manager:preBuild UP-TO-DATE
+> Task :scraper:api:preBuild UP-TO-DATE
+> Task :scraper:api:preReleaseBuild UP-TO-DATE
+> Task :scraper:extension-manager:preReleaseBuild UP-TO-DATE
+> Task :scraper:extension-manager:mergeReleaseJniLibFolders
+> Task :scraper:api:mergeReleaseJniLibFolders
+> Task :scraper:extension-manager:mergeReleaseNativeLibs NO-SOURCE
+> Task :scraper:api:mergeReleaseNativeLibs NO-SOURCE
+> Task :scraper:api:copyReleaseJniLibsProjectOnly
+> Task :tooling:algorithms:preBuild UP-TO-DATE
+> Task :tooling:algorithms:preReleaseBuild UP-TO-DATE
+> Task :scraper:extension-manager:copyReleaseJniLibsProjectOnly
+> Task :tooling:application_workers:preBuild UP-TO-DATE
+> Task :tooling:application_workers:preReleaseBuild UP-TO-DATE
+> Task :tooling:algorithms:mergeReleaseJniLibFolders
+> Task :tooling:algorithms:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:application_workers:mergeReleaseJniLibFolders
+> Task :tooling:application_workers:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:algorithms:copyReleaseJniLibsProjectOnly
+> Task :tooling:backup_create:preBuild UP-TO-DATE
+> Task :tooling:application_workers:copyReleaseJniLibsProjectOnly
+> Task :tooling:backup_create:preReleaseBuild UP-TO-DATE
+> Task :tooling:backup_restore:preBuild UP-TO-DATE
+> Task :tooling:backup_restore:preReleaseBuild UP-TO-DATE
+> Task :tooling:backup_restore:mergeReleaseJniLibFolders
+> Task :tooling:backup_create:mergeReleaseJniLibFolders
+> Task :tooling:backup_restore:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:backup_create:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:backup_restore:copyReleaseJniLibsProjectOnly
+> Task :tooling:epub_importer:preBuild UP-TO-DATE
+> Task :tooling:backup_create:copyReleaseJniLibsProjectOnly
+> Task :tooling:epub_importer:preReleaseBuild UP-TO-DATE
+> Task :tooling:epub_parser:preBuild UP-TO-DATE
+> Task :tooling:epub_parser:preReleaseBuild UP-TO-DATE
+> Task :tooling:epub_parser:mergeReleaseJniLibFolders
+> Task :tooling:epub_importer:mergeReleaseJniLibFolders
+> Task :tooling:epub_parser:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:epub_importer:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:epub_parser:copyReleaseJniLibsProjectOnly
+> Task :tooling:epub_importer:copyReleaseJniLibsProjectOnly
+> Task :tooling:local_source:preBuild UP-TO-DATE
+> Task :tooling:local_source:preReleaseBuild UP-TO-DATE
+> Task :tooling:local_database:preBuild UP-TO-DATE
+> Task :tooling:local_database:preReleaseBuild UP-TO-DATE
+> Task :tooling:local_database:mergeReleaseJniLibFolders
+> Task :tooling:local_database:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:local_source:mergeReleaseJniLibFolders
+> Task :tooling:local_source:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:local_database:copyReleaseJniLibsProjectOnly
+> Task :tooling:text_to_speech:preBuild UP-TO-DATE
+> Task :tooling:text_to_speech:preReleaseBuild UP-TO-DATE
+> Task :tooling:local_source:copyReleaseJniLibsProjectOnly
+> Task :tooling:text_translator:domain:preBuild UP-TO-DATE
+> Task :tooling:text_translator:domain:preReleaseBuild UP-TO-DATE
+> Task :tooling:text_to_speech:mergeReleaseJniLibFolders
+> Task :tooling:text_translator:domain:mergeReleaseJniLibFolders
+> Task :tooling:text_to_speech:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:text_translator:domain:mergeReleaseNativeLibs NO-SOURCE
+> Task :tooling:text_translator:domain:copyReleaseJniLibsProjectOnly
+> Task :tooling:text_translator:translator:preBuild UP-TO-DATE
+> Task :tooling:text_translator:translator:preReleaseBuild UP-TO-DATE
+> Task :tooling:text_to_speech:copyReleaseJniLibsProjectOnly
+> Task :tooling:text_translator:translator:mergeReleaseJniLibFolders
+> Task :tooling:text_translator:translator:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:generateReleaseResValues
+> Task :tooling:text_translator:translator:copyReleaseJniLibsProjectOnly
+> Task :core:generateReleaseResources
+> Task :core:packageReleaseResources
+> Task :core:parseReleaseLocalResources
+> Task :app:mergeFullReleaseNativeLibs
+> Task :strings:generateReleaseResValues
+> Task :strings:generateReleaseResources
+> Task :strings:packageReleaseResources
+> Task :strings:parseReleaseLocalResources
+
+> Task :app:stripFullReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, liblanguage_id_l2c_jni.so, libtranslate_jni.so. Run with --info option to learn more.
+
+> Task :app:extractFullReleaseNativeSymbolTables
+> Task :app:mergeFullReleaseNativeDebugMetadata NO-SOURCE
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:generateReleaseBuildConfig
+> Task :strings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :strings:generateReleaseBuildConfig
+> Task :strings:javaPreCompileRelease
+> Task :core:javaPreCompileRelease
+> Task :tooling:text_translator:domain:generateReleaseResValues
+> Task :tooling:text_translator:domain:generateReleaseResources
+> Task :tooling:text_translator:domain:packageReleaseResources
+> Task :tooling:text_translator:domain:parseReleaseLocalResources
+> Task :strings:generateReleaseRFile
+> Task :tooling:text_translator:domain:generateReleaseRFile
+> Task :core:generateReleaseRFile
+> Task :tooling:text_translator:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:text_translator:domain:generateReleaseBuildConfig
+> Task :strings:kspReleaseKotlin
+> Task :strings:compileReleaseKotlin NO-SOURCE
+> Task :tooling:text_translator:domain:kspReleaseKotlin
+> Task :strings:compileReleaseJavaWithJavac
+> Task :strings:transformReleaseClassesWithAsm
+> Task :strings:bundleLibCompileToJarRelease
+> Task :core:kspReleaseKotlin
+> Task :tooling:text_translator:domain:compileReleaseKotlin
+> Task :strings:bundleLibRuntimeToJarRelease
+> Task :tooling:text_translator:domain:javaPreCompileRelease
+> Task :tooling:text_translator:domain:compileReleaseJavaWithJavac
+> Task :tooling:text_translator:domain:transformReleaseClassesWithAsm
+> Task :tooling:text_translator:domain:bundleLibCompileToJarRelease
+> Task :tooling:text_translator:domain:bundleLibRuntimeToJarRelease
+> Task :tooling:text_translator:translator:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:text_translator:translator:generateReleaseBuildConfig
+> Task :tooling:text_translator:translator:generateReleaseResValues
+> Task :tooling:text_translator:translator:generateReleaseResources
+> Task :tooling:text_translator:translator:packageReleaseResources
+> Task :tooling:text_translator:translator:parseReleaseLocalResources
+> Task :tooling:text_translator:translator:generateReleaseRFile
+> Task :tooling:text_translator:translator:javaPreCompileRelease
+> Task :coreui:generateReleaseResValues
+> Task :coreui:generateReleaseResources
+> Task :coreui:packageReleaseResources
+> Task :coreui:parseReleaseLocalResources
+> Task :tooling:local_database:generateReleaseResValues
+> Task :tooling:local_database:generateReleaseResources
+> Task :tooling:local_database:packageReleaseResources
+> Task :tooling:local_database:parseReleaseLocalResources
+> Task :tooling:local_database:generateReleaseRFile
+> Task :coreui:generateReleaseRFile
+> Task :coreui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :coreui:generateReleaseBuildConfig
+> Task :tooling:local_database:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:local_database:generateReleaseBuildConfig
+> Task :tooling:local_database:javaPreCompileRelease
+> Task :coreui:javaPreCompileRelease
+> Task :data:generateReleaseResValues
+> Task :data:generateReleaseResources
+> Task :data:packageReleaseResources
+> Task :data:parseReleaseLocalResources
+> Task :networking:generateReleaseResValues
+> Task :networking:generateReleaseResources
+> Task :networking:packageReleaseResources
+> Task :networking:parseReleaseLocalResources
+> Task :networking:generateReleaseRFile
+> Task :scraper:generateReleaseResValues
+> Task :scraper:generateReleaseResources
+> Task :scraper:packageReleaseResources
+> Task :scraper:parseReleaseLocalResources
+> Task :scraper:api:generateReleaseResValues
+> Task :scraper:api:generateReleaseResources
+> Task :scraper:api:packageReleaseResources
+> Task :scraper:api:parseReleaseLocalResources
+> Task :scraper:api:generateReleaseRFile
+> Task :scraper:extension-manager:generateReleaseResValues
+> Task :scraper:extension-manager:generateReleaseResources
+> Task :scraper:extension-manager:packageReleaseResources
+> Task :scraper:extension-manager:parseReleaseLocalResources
+> Task :scraper:extension-manager:generateReleaseRFile
+> Task :scraper:generateReleaseRFile
+> Task :tooling:epub_parser:generateReleaseResValues
+> Task :tooling:epub_parser:generateReleaseResources
+> Task :tooling:epub_parser:packageReleaseResources
+> Task :tooling:epub_parser:parseReleaseLocalResources
+> Task :tooling:epub_parser:generateReleaseRFile
+> Task :data:generateReleaseRFile
+> Task :data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :data:generateReleaseBuildConfig
+> Task :networking:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :networking:generateReleaseBuildConfig
+> Task :networking:javaPreCompileRelease
+> Task :scraper:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scraper:generateReleaseBuildConfig
+> Task :scraper:api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scraper:api:generateReleaseBuildConfig
+> Task :scraper:api:javaPreCompileRelease
+> Task :scraper:extension-manager:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scraper:extension-manager:generateReleaseBuildConfig
+> Task :scraper:extension-manager:javaPreCompileRelease
+> Task :scraper:javaPreCompileRelease
+> Task :tooling:epub_parser:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:epub_parser:generateReleaseBuildConfig
+> Task :tooling:epub_parser:javaPreCompileRelease
+> Task :data:javaPreCompileRelease
+> Task :navigation:generateReleaseResValues
+> Task :navigation:generateReleaseResources
+> Task :navigation:packageReleaseResources
+> Task :navigation:parseReleaseLocalResources
+> Task :navigation:generateReleaseRFile
+> Task :navigation:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :navigation:generateReleaseBuildConfig
+> Task :navigation:javaPreCompileRelease
+> Task :features:libraryExplorer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:libraryExplorer:generateReleaseBuildConfig
+> Task :features:libraryExplorer:generateReleaseResValues
+> Task :features:libraryExplorer:generateReleaseResources
+> Task :features:libraryExplorer:packageReleaseResources
+> Task :features:libraryExplorer:parseReleaseLocalResources
+> Task :tooling:epub_importer:generateReleaseResValues
+> Task :tooling:epub_importer:generateReleaseResources
+> Task :tooling:epub_importer:packageReleaseResources
+> Task :tooling:epub_importer:parseReleaseLocalResources
+> Task :tooling:epub_importer:generateReleaseRFile
+> Task :features:libraryExplorer:generateReleaseRFile
+> Task :tooling:epub_importer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:epub_importer:generateReleaseBuildConfig
+> Task :tooling:epub_importer:javaPreCompileRelease
+> Task :features:libraryExplorer:javaPreCompileRelease
+> Task :tooling:application_workers:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:application_workers:generateReleaseBuildConfig
+> Task :tooling:application_workers:generateReleaseResValues
+> Task :tooling:application_workers:generateReleaseResources
+> Task :tooling:application_workers:packageReleaseResources
+> Task :tooling:application_workers:parseReleaseLocalResources
+> Task :tooling:application_workers:generateReleaseRFile
+> Task :tooling:application_workers:javaPreCompileRelease
+> Task :tooling:local_source:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:local_source:generateReleaseBuildConfig
+> Task :tooling:local_source:generateReleaseResValues
+> Task :tooling:local_source:generateReleaseResources
+> Task :tooling:local_source:packageReleaseResources
+> Task :tooling:local_source:parseReleaseLocalResources
+> Task :tooling:local_source:generateReleaseRFile
+> Task :tooling:local_source:javaPreCompileRelease
+> Task :features:reader:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:reader:dataBindingMergeDependencyArtifactsRelease
+> Task :features:reader:generateReleaseResValues
+> Task :features:reader:generateReleaseResources
+> Task :features:reader:packageReleaseResources
+> Task :features:reader:dataBindingGenBaseClassesRelease
+> Task :features:reader:generateReleaseBuildConfig
+> Task :core:compileReleaseKotlin
+> Task :features:reader:parseReleaseLocalResources
+> Task :tooling:algorithms:generateReleaseResValues
+> Task :tooling:algorithms:generateReleaseResources
+> Task :tooling:algorithms:packageReleaseResources
+> Task :tooling:algorithms:parseReleaseLocalResources
+> Task :tooling:algorithms:generateReleaseRFile
+> Task :tooling:text_to_speech:generateReleaseResValues
+> Task :tooling:text_to_speech:generateReleaseResources
+> Task :tooling:text_to_speech:packageReleaseResources
+> Task :tooling:text_to_speech:parseReleaseLocalResources
+> Task :tooling:text_to_speech:generateReleaseRFile
+> Task :features:reader:generateReleaseRFile
+> Task :tooling:algorithms:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:algorithms:generateReleaseBuildConfig
+> Task :tooling:algorithms:kspReleaseKotlin
+> Task :core:compileReleaseJavaWithJavac
+> Task :core:transformReleaseClassesWithAsm
+> Task :core:bundleLibCompileToJarRelease
+> Task :core:bundleLibRuntimeToJarRelease
+> Task :tooling:algorithms:compileReleaseKotlin
+> Task :tooling:text_translator:translator:kspReleaseKotlin
+> Task :tooling:text_translator:translator:compileReleaseKotlin
+> Task :tooling:text_translator:translator:compileReleaseJavaWithJavac
+> Task :tooling:text_translator:translator:transformReleaseClassesWithAsm
+> Task :tooling:text_translator:translator:mergeReleaseGeneratedProguardFiles
+> Task :tooling:text_translator:translator:exportReleaseConsumerProguardFiles
+> Task :networking:kspReleaseKotlin
+> Task :tooling:local_database:kspReleaseKotlin
+> Task :networking:compileReleaseKotlin
+> Task :networking:compileReleaseJavaWithJavac
+> Task :networking:transformReleaseClassesWithAsm
+> Task :networking:bundleLibCompileToJarRelease
+> Task :networking:bundleLibRuntimeToJarRelease
+> Task :scraper:api:kspReleaseKotlin
+
+> Task :tooling:local_database:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/tooling/local_database/src/main/java/my/noveldokusha/feature/local_database/AppDatabase.kt:51:14 'fun fallbackToDestructiveMigration(): RoomDatabase.Builder<AppRoomDatabase>' is deprecated. Replace by overloaded version with parameter to indicate if all tables should be dropped or not.
+
+> Task :tooling:local_database:compileReleaseJavaWithJavac
+> Task :tooling:local_database:transformReleaseClassesWithAsm
+> Task :tooling:local_database:bundleLibCompileToJarRelease
+> Task :scraper:api:compileReleaseKotlin
+> Task :tooling:local_database:bundleLibRuntimeToJarRelease
+> Task :scraper:api:compileReleaseJavaWithJavac
+> Task :scraper:api:transformReleaseClassesWithAsm
+> Task :scraper:api:bundleLibCompileToJarRelease
+> Task :scraper:api:bundleLibRuntimeToJarRelease
+> Task :scraper:extension-manager:kspReleaseKotlin
+> Task :scraper:extension-manager:compileReleaseKotlin
+> Task :scraper:extension-manager:compileReleaseJavaWithJavac
+> Task :scraper:extension-manager:transformReleaseClassesWithAsm
+> Task :scraper:extension-manager:bundleLibCompileToJarRelease
+> Task :scraper:kspReleaseKotlin
+> Task :coreui:kspReleaseKotlin
+> Task :scraper:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/scraper/src/main/java/my/noveldokusha/scraper/domain/ChapterResult.kt:3:26 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+
+> Task :scraper:compileReleaseJavaWithJavac
+> Task :scraper:extension-manager:bundleLibRuntimeToJarRelease
+> Task :scraper:transformReleaseClassesWithAsm
+> Task :scraper:bundleLibCompileToJarRelease
+> Task :tooling:epub_parser:kspReleaseKotlin
+
+> Task :coreui:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/coreui/src/main/java/my/noveldoksuha/coreui/theme/MaterialColor.kt:10:25 'constructor(primary: Color, onPrimary: Color, primaryContainer: Color, onPrimaryContainer: Color, inversePrimary: Color, secondary: Color, onSecondary: Color, secondaryContainer: Color, onSecondaryContainer: Color, tertiary: Color, onTertiary: Color, tertiaryContainer: Color, onTertiaryContainer: Color, background: Color, onBackground: Color, surface: Color, onSurface: Color, surfaceVariant: Color, onSurfaceVariant: Color, surfaceTint: Color, inverseSurface: Color, inverseOnSurface: Color, error: Color, onError: Color, errorContainer: Color, onErrorContainer: Color, outline: Color, outlineVariant: Color, scrim: Color): ColorScheme' is deprecated. Use constructor with additional 'surfaceContainer' roles.
+w: file:///home/ubuntu/myNovelDokusha/coreui/src/main/java/my/noveldoksuha/coreui/theme/MaterialColor.kt:42:24 'constructor(primary: Color, onPrimary: Color, primaryContainer: Color, onPrimaryContainer: Color, inversePrimary: Color, secondary: Color, onSecondary: Color, secondaryContainer: Color, onSecondaryContainer: Color, tertiary: Color, onTertiary: Color, tertiaryContainer: Color, onTertiaryContainer: Color, background: Color, onBackground: Color, surface: Color, onSurface: Color, surfaceVariant: Color, onSurfaceVariant: Color, surfaceTint: Color, inverseSurface: Color, inverseOnSurface: Color, error: Color, onError: Color, errorContainer: Color, onErrorContainer: Color, outline: Color, outlineVariant: Color, scrim: Color): ColorScheme' is deprecated. Use constructor with additional 'surfaceContainer' roles.
+w: file:///home/ubuntu/myNovelDokusha/coreui/src/main/java/my/noveldoksuha/coreui/theme/MaterialColor.kt:74:25 'constructor(primary: Color, onPrimary: Color, primaryContainer: Color, onPrimaryContainer: Color, inversePrimary: Color, secondary: Color, onSecondary: Color, secondaryContainer: Color, onSecondaryContainer: Color, tertiary: Color, onTertiary: Color, tertiaryContainer: Color, onTertiaryContainer: Color, background: Color, onBackground: Color, surface: Color, onSurface: Color, surfaceVariant: Color, onSurfaceVariant: Color, surfaceTint: Color, inverseSurface: Color, inverseOnSurface: Color, error: Color, onError: Color, errorContainer: Color, onErrorContainer: Color, outline: Color, outlineVariant: Color, scrim: Color): ColorScheme' is deprecated. Use constructor with additional 'surfaceContainer' roles.
+
+> Task :tooling:epub_parser:compileReleaseKotlin
+> Task :coreui:compileReleaseJavaWithJavac
+> Task :tooling:epub_parser:compileReleaseJavaWithJavac
+> Task :tooling:epub_parser:transformReleaseClassesWithAsm
+> Task :tooling:epub_parser:bundleLibCompileToJarRelease
+> Task :coreui:transformReleaseClassesWithAsm
+> Task :coreui:bundleLibCompileToJarRelease
+> Task :coreui:bundleLibRuntimeToJarRelease
+> Task :scraper:bundleLibRuntimeToJarRelease
+> Task :tooling:epub_parser:bundleLibRuntimeToJarRelease
+> Task :data:kspReleaseKotlin
+> Task :navigation:kspReleaseKotlin
+> Task :navigation:compileReleaseKotlin
+> Task :navigation:compileReleaseJavaWithJavac
+> Task :navigation:transformReleaseClassesWithAsm
+> Task :navigation:bundleLibCompileToJarRelease
+> Task :navigation:bundleLibRuntimeToJarRelease
+> Task :tooling:algorithms:javaPreCompileRelease
+> Task :tooling:algorithms:compileReleaseJavaWithJavac
+> Task :tooling:algorithms:transformReleaseClassesWithAsm
+> Task :tooling:algorithms:bundleLibCompileToJarRelease
+> Task :tooling:algorithms:bundleLibRuntimeToJarRelease
+> Task :tooling:text_to_speech:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:text_to_speech:generateReleaseBuildConfig
+> Task :tooling:text_to_speech:kspReleaseKotlin
+> Task :data:compileReleaseKotlin
+> Task :tooling:text_to_speech:compileReleaseKotlin
+> Task :tooling:text_to_speech:javaPreCompileRelease
+> Task :data:compileReleaseJavaWithJavac
+> Task :data:transformReleaseClassesWithAsm
+> Task :data:bundleLibCompileToJarRelease
+> Task :data:bundleLibRuntimeToJarRelease
+> Task :tooling:text_to_speech:compileReleaseJavaWithJavac
+> Task :tooling:epub_importer:kspReleaseKotlin
+> Task :tooling:application_workers:kspReleaseKotlin
+> Task :tooling:epub_importer:compileReleaseKotlin
+> Task :tooling:epub_importer:compileReleaseJavaWithJavac
+> Task :tooling:epub_importer:transformReleaseClassesWithAsm
+> Task :tooling:epub_importer:bundleLibCompileToJarRelease
+> Task :tooling:application_workers:compileReleaseKotlin
+> Task :tooling:epub_importer:bundleLibRuntimeToJarRelease
+> Task :tooling:epub_importer:mergeReleaseGeneratedProguardFiles
+> Task :tooling:epub_importer:exportReleaseConsumerProguardFiles
+> Task :tooling:application_workers:compileReleaseJavaWithJavac
+> Task :tooling:application_workers:transformReleaseClassesWithAsm
+> Task :tooling:application_workers:mergeReleaseGeneratedProguardFiles
+> Task :tooling:application_workers:exportReleaseConsumerProguardFiles
+> Task :features:libraryExplorer:kspReleaseKotlin
+> Task :tooling:local_source:kspReleaseKotlin
+> Task :tooling:local_source:compileReleaseKotlin
+> Task :tooling:local_source:compileReleaseJavaWithJavac
+> Task :tooling:local_source:transformReleaseClassesWithAsm
+> Task :tooling:local_source:mergeReleaseGeneratedProguardFiles
+> Task :tooling:local_source:exportReleaseConsumerProguardFiles
+> Task :tooling:text_to_speech:transformReleaseClassesWithAsm
+> Task :tooling:text_to_speech:bundleLibCompileToJarRelease
+> Task :features:libraryExplorer:compileReleaseKotlin
+> Task :features:libraryExplorer:compileReleaseJavaWithJavac
+> Task :features:libraryExplorer:transformReleaseClassesWithAsm
+> Task :features:libraryExplorer:mergeReleaseGeneratedProguardFiles
+> Task :features:libraryExplorer:exportReleaseConsumerProguardFiles
+> Task :features:reader:javaPreCompileRelease
+> Task :tooling:text_to_speech:bundleLibRuntimeToJarRelease
+> Task :features:chaptersList:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:chaptersList:generateReleaseBuildConfig
+> Task :features:chaptersList:generateReleaseResValues
+> Task :features:chaptersList:generateReleaseResources
+> Task :features:chaptersList:packageReleaseResources
+> Task :features:chaptersList:parseReleaseLocalResources
+> Task :features:chaptersList:generateReleaseRFile
+> Task :features:chaptersList:kspReleaseKotlin
+> Task :features:reader:kspReleaseKotlin
+
+> Task :features:chaptersList:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/features/chaptersList/src/main/java/my/noveldokusha/features/chapterslist/ChaptersActivity.kt:53:37 'fun onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+      The OnBackPressedDispatcher controls how back button events are dispatched
+      to one or more {@link OnBackPressedCallback} objects.
+
+> Task :features:chaptersList:javaPreCompileRelease
+> Task :features:chaptersList:compileReleaseJavaWithJavac
+> Task :features:chaptersList:transformReleaseClassesWithAsm
+> Task :features:chaptersList:mergeReleaseGeneratedProguardFiles
+> Task :features:chaptersList:exportReleaseConsumerProguardFiles
+> Task :features:globalSourceSearch:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:globalSourceSearch:generateReleaseBuildConfig
+> Task :features:globalSourceSearch:generateReleaseResValues
+> Task :features:globalSourceSearch:generateReleaseResources
+> Task :features:globalSourceSearch:packageReleaseResources
+> Task :features:globalSourceSearch:parseReleaseLocalResources
+> Task :features:globalSourceSearch:generateReleaseRFile
+> Task :features:globalSourceSearch:kspReleaseKotlin
+
+> Task :features:globalSourceSearch:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/features/globalSourceSearch/src/main/java/my/noveldokusha/globalsourcesearch/GlobalSourceSearchActivity.kt:43:37 'fun onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+      The OnBackPressedDispatcher controls how back button events are dispatched
+      to one or more {@link OnBackPressedCallback} objects.
+
+> Task :features:globalSourceSearch:javaPreCompileRelease
+> Task :features:globalSourceSearch:compileReleaseJavaWithJavac
+> Task :features:globalSourceSearch:transformReleaseClassesWithAsm
+> Task :features:globalSourceSearch:mergeReleaseGeneratedProguardFiles
+> Task :features:globalSourceSearch:exportReleaseConsumerProguardFiles
+> Task :features:databaseExplorer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:databaseExplorer:generateReleaseBuildConfig
+> Task :features:databaseExplorer:generateReleaseResValues
+> Task :features:databaseExplorer:generateReleaseResources
+> Task :features:databaseExplorer:packageReleaseResources
+> Task :features:databaseExplorer:parseReleaseLocalResources
+> Task :features:databaseExplorer:generateReleaseRFile
+
+> Task :features:reader:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:116:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:118:15 'fun onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+      The OnBackPressedDispatcher controls how back button events are dispatched
+      to one or more {@link OnBackPressedCallback} objects.
+w: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:380:16 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///home/ubuntu/myNovelDokusha/features/reader/src/main/java/my/noveldokusha/features/reader/ReaderActivity.kt:395:16 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+
+> Task :features:reader:compileReleaseJavaWithJavac
+> Task :features:reader:transformReleaseClassesWithAsm
+> Task :features:reader:mergeReleaseGeneratedProguardFiles
+> Task :features:reader:exportReleaseConsumerProguardFiles
+> Task :features:databaseExplorer:javaPreCompileRelease
+> Task :features:sourceExplorer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:sourceExplorer:generateReleaseBuildConfig
+> Task :features:sourceExplorer:generateReleaseResValues
+> Task :features:sourceExplorer:generateReleaseResources
+> Task :features:sourceExplorer:packageReleaseResources
+> Task :features:sourceExplorer:parseReleaseLocalResources
+> Task :features:sourceExplorer:generateReleaseRFile
+> Task :features:databaseExplorer:kspReleaseKotlin
+> Task :features:sourceExplorer:kspReleaseKotlin
+
+> Task :features:sourceExplorer:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/features/sourceExplorer/src/main/java/my/noveldokusha/sourceexplorer/SourceCatalogActivity.kt:52:37 'fun onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+      The OnBackPressedDispatcher controls how back button events are dispatched
+      to one or more {@link OnBackPressedCallback} objects.
+
+> Task :features:sourceExplorer:javaPreCompileRelease
+> Task :features:sourceExplorer:compileReleaseJavaWithJavac
+> Task :features:sourceExplorer:transformReleaseClassesWithAsm
+> Task :features:sourceExplorer:mergeReleaseGeneratedProguardFiles
+> Task :features:sourceExplorer:exportReleaseConsumerProguardFiles
+> Task :features:catalogExplorer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:catalogExplorer:generateReleaseBuildConfig
+> Task :features:catalogExplorer:generateReleaseResValues
+> Task :features:catalogExplorer:generateReleaseResources
+> Task :features:catalogExplorer:packageReleaseResources
+> Task :features:catalogExplorer:parseReleaseLocalResources
+> Task :features:catalogExplorer:generateReleaseRFile
+
+> Task :features:databaseExplorer:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/features/databaseExplorer/src/main/java/my/noveldoksuha/databaseexplorer/databaseBookInfo/DatabaseBookInfoActivity.kt:56:37 'fun onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+      The OnBackPressedDispatcher controls how back button events are dispatched
+      to one or more {@link OnBackPressedCallback} objects.
+w: file:///home/ubuntu/myNovelDokusha/features/databaseExplorer/src/main/java/my/noveldoksuha/databaseexplorer/databaseSearch/DatabaseSearchActivity.kt:58:16 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///home/ubuntu/myNovelDokusha/features/databaseExplorer/src/main/java/my/noveldoksuha/databaseexplorer/databaseSearch/DatabaseSearchActivity.kt:70:37 'fun onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+      The OnBackPressedDispatcher controls how back button events are dispatched
+      to one or more {@link OnBackPressedCallback} objects.
+
+> Task :features:databaseExplorer:compileReleaseJavaWithJavac
+> Task :features:databaseExplorer:transformReleaseClassesWithAsm
+> Task :features:databaseExplorer:mergeReleaseGeneratedProguardFiles
+> Task :features:databaseExplorer:exportReleaseConsumerProguardFiles
+> Task :features:catalogExplorer:javaPreCompileRelease
+> Task :features:settings:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:settings:generateReleaseBuildConfig
+> Task :features:settings:generateReleaseResValues
+> Task :features:settings:generateReleaseResources
+> Task :features:settings:packageReleaseResources
+> Task :features:settings:parseReleaseLocalResources
+> Task :tooling:backup_create:generateReleaseResValues
+> Task :tooling:backup_create:generateReleaseResources
+> Task :tooling:backup_create:packageReleaseResources
+> Task :tooling:backup_create:parseReleaseLocalResources
+> Task :tooling:backup_create:generateReleaseRFile
+> Task :tooling:backup_restore:generateReleaseResValues
+> Task :tooling:backup_restore:generateReleaseResources
+> Task :tooling:backup_restore:packageReleaseResources
+> Task :tooling:backup_restore:parseReleaseLocalResources
+> Task :tooling:backup_restore:generateReleaseRFile
+> Task :features:settings:generateReleaseRFile
+> Task :tooling:backup_create:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:backup_create:generateReleaseBuildConfig
+> Task :features:catalogExplorer:kspReleaseKotlin
+> Task :tooling:backup_create:kspReleaseKotlin
+> Task :features:catalogExplorer:compileReleaseKotlin
+> Task :features:catalogExplorer:compileReleaseJavaWithJavac
+> Task :features:catalogExplorer:transformReleaseClassesWithAsm
+> Task :features:catalogExplorer:mergeReleaseGeneratedProguardFiles
+> Task :features:catalogExplorer:exportReleaseConsumerProguardFiles
+> Task :tooling:backup_create:javaPreCompileRelease
+> Task :tooling:backup_restore:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tooling:backup_restore:generateReleaseBuildConfig
+> Task :tooling:backup_create:compileReleaseKotlin
+> Task :tooling:backup_create:compileReleaseJavaWithJavac
+> Task :tooling:backup_create:transformReleaseClassesWithAsm
+> Task :tooling:backup_create:bundleLibCompileToJarRelease
+> Task :tooling:backup_restore:javaPreCompileRelease
+> Task :features:settings:javaPreCompileRelease
+> Task :tooling:backup_create:bundleLibRuntimeToJarRelease
+> Task :tooling:backup_create:mergeReleaseGeneratedProguardFiles
+> Task :tooling:backup_create:exportReleaseConsumerProguardFiles
+> Task :data:mergeReleaseGeneratedProguardFiles
+> Task :data:exportReleaseConsumerProguardFiles
+> Task :features:webview:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :features:webview:generateReleaseBuildConfig
+> Task :features:webview:generateReleaseResValues
+> Task :features:webview:generateReleaseResources
+> Task :features:webview:packageReleaseResources
+> Task :features:webview:parseReleaseLocalResources
+> Task :features:webview:generateReleaseRFile
+> Task :tooling:backup_restore:kspReleaseKotlin
+> Task :features:webview:kspReleaseKotlin
+> Task :tooling:backup_restore:compileReleaseKotlin
+> Task :tooling:backup_restore:compileReleaseJavaWithJavac
+> Task :tooling:backup_restore:transformReleaseClassesWithAsm
+> Task :tooling:backup_restore:bundleLibCompileToJarRelease
+
+> Task :features:webview:compileReleaseKotlin
+w: file:///home/ubuntu/myNovelDokusha/features/webview/src/main/java/my/noveldokusha/webview/WebViewActivity.kt:52:60 'fun onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+      The OnBackPressedDispatcher controls how back button events are dispatched
+      to one or more {@link OnBackPressedCallback} objects.
+
+> Task :tooling:backup_restore:bundleLibRuntimeToJarRelease
+> Task :tooling:backup_restore:mergeReleaseGeneratedProguardFiles
+> Task :tooling:backup_restore:exportReleaseConsumerProguardFiles
+> Task :features:webview:javaPreCompileRelease
+> Task :features:webview:compileReleaseJavaWithJavac
+> Task :features:webview:transformReleaseClassesWithAsm
+> Task :features:webview:mergeReleaseGeneratedProguardFiles
+> Task :features:webview:exportReleaseConsumerProguardFiles
+> Task :coreui:mergeReleaseGeneratedProguardFiles
+> Task :coreui:exportReleaseConsumerProguardFiles
+> Task :navigation:mergeReleaseGeneratedProguardFiles
+> Task :navigation:exportReleaseConsumerProguardFiles
+> Task :tooling:local_database:mergeReleaseGeneratedProguardFiles
+> Task :tooling:local_database:exportReleaseConsumerProguardFiles
+> Task :tooling:epub_parser:mergeReleaseGeneratedProguardFiles
+> Task :tooling:epub_parser:exportReleaseConsumerProguardFiles
+> Task :tooling:text_translator:domain:mergeReleaseGeneratedProguardFiles
+> Task :tooling:text_translator:domain:exportReleaseConsumerProguardFiles
+> Task :tooling:text_to_speech:mergeReleaseGeneratedProguardFiles
+> Task :tooling:text_to_speech:exportReleaseConsumerProguardFiles
+> Task :scraper:mergeReleaseGeneratedProguardFiles
+> Task :scraper:exportReleaseConsumerProguardFiles
+> Task :networking:mergeReleaseGeneratedProguardFiles
+> Task :networking:exportReleaseConsumerProguardFiles
+> Task :scraper:extension-manager:mergeReleaseGeneratedProguardFiles
+> Task :scraper:extension-manager:exportReleaseConsumerProguardFiles
+> Task :scraper:api:mergeReleaseGeneratedProguardFiles
+> Task :scraper:api:exportReleaseConsumerProguardFiles
+> Task :core:mergeReleaseGeneratedProguardFiles
+> Task :core:exportReleaseConsumerProguardFiles
+> Task :strings:mergeReleaseGeneratedProguardFiles
+> Task :strings:exportReleaseConsumerProguardFiles
+> Task :tooling:algorithms:mergeReleaseGeneratedProguardFiles
+> Task :tooling:algorithms:exportReleaseConsumerProguardFiles
+> Task :app:checkFullReleaseDuplicateClasses
+> Task :app:extractProguardFiles
+> Task :app:checkFullReleaseProguardFiles
+> Task :core:prepareReleaseArtProfile
+> Task :coreui:prepareReleaseArtProfile
+> Task :data:prepareReleaseArtProfile
+> Task :navigation:prepareReleaseArtProfile
+> Task :networking:prepareReleaseArtProfile
+> Task :scraper:prepareReleaseArtProfile
+> Task :strings:prepareReleaseArtProfile
+> Task :features:catalogExplorer:prepareReleaseArtProfile
+> Task :features:chaptersList:prepareReleaseArtProfile
+> Task :features:databaseExplorer:prepareReleaseArtProfile
+> Task :features:globalSourceSearch:prepareReleaseArtProfile
+> Task :features:libraryExplorer:prepareReleaseArtProfile
+> Task :features:reader:prepareReleaseArtProfile
+> Task :features:settings:prepareReleaseArtProfile
+> Task :features:sourceExplorer:prepareReleaseArtProfile
+> Task :features:webview:prepareReleaseArtProfile
+> Task :scraper:api:prepareReleaseArtProfile
+> Task :scraper:extension-manager:prepareReleaseArtProfile
+> Task :tooling:algorithms:prepareReleaseArtProfile
+> Task :tooling:application_workers:prepareReleaseArtProfile
+> Task :tooling:backup_create:prepareReleaseArtProfile
+> Task :tooling:backup_restore:prepareReleaseArtProfile
+> Task :tooling:epub_importer:prepareReleaseArtProfile
+> Task :tooling:epub_parser:prepareReleaseArtProfile
+> Task :tooling:local_database:prepareReleaseArtProfile
+> Task :tooling:local_source:prepareReleaseArtProfile
+> Task :tooling:text_to_speech:prepareReleaseArtProfile
+> Task :tooling:text_translator:domain:prepareReleaseArtProfile
+> Task :tooling:text_translator:translator:prepareReleaseArtProfile
+> Task :features:settings:kspReleaseKotlin
+> Task :app:mergeFullReleaseArtProfile
+> Task :app:buildKotlinToolingMetadata
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:dataBindingMergeDependencyArtifactsFullRelease
+> Task :app:generateFullReleaseResValues
+> Task :app:generateFullReleaseResources
+> Task :features:settings:compileReleaseKotlin
+> Task :features:settings:compileReleaseJavaWithJavac
+> Task :features:settings:transformReleaseClassesWithAsm
+> Task :features:settings:mergeReleaseGeneratedProguardFiles
+> Task :features:settings:exportReleaseConsumerProguardFiles
+> Task :app:generateFullReleaseBuildConfig
+> Task :core:writeReleaseAarMetadata
+> Task :coreui:writeReleaseAarMetadata
+> Task :data:writeReleaseAarMetadata
+> Task :navigation:writeReleaseAarMetadata
+> Task :networking:writeReleaseAarMetadata
+> Task :scraper:writeReleaseAarMetadata
+> Task :strings:writeReleaseAarMetadata
+> Task :features:catalogExplorer:writeReleaseAarMetadata
+> Task :features:chaptersList:writeReleaseAarMetadata
+> Task :features:databaseExplorer:writeReleaseAarMetadata
+> Task :features:globalSourceSearch:writeReleaseAarMetadata
+> Task :features:libraryExplorer:writeReleaseAarMetadata
+> Task :features:reader:writeReleaseAarMetadata
+> Task :features:settings:writeReleaseAarMetadata
+> Task :features:sourceExplorer:writeReleaseAarMetadata
+> Task :features:webview:writeReleaseAarMetadata
+> Task :scraper:api:writeReleaseAarMetadata
+> Task :scraper:extension-manager:writeReleaseAarMetadata
+> Task :tooling:algorithms:writeReleaseAarMetadata
+> Task :tooling:application_workers:writeReleaseAarMetadata
+> Task :tooling:backup_create:writeReleaseAarMetadata
+> Task :tooling:backup_restore:writeReleaseAarMetadata
+> Task :tooling:epub_importer:writeReleaseAarMetadata
+> Task :tooling:epub_parser:writeReleaseAarMetadata
+> Task :tooling:local_database:writeReleaseAarMetadata
+> Task :tooling:local_source:writeReleaseAarMetadata
+> Task :tooling:text_to_speech:writeReleaseAarMetadata
+> Task :tooling:text_translator:domain:writeReleaseAarMetadata
+> Task :tooling:text_translator:translator:writeReleaseAarMetadata
+> Task :app:checkFullReleaseAarMetadata
+> Task :app:mapFullReleaseSourceSetPaths
+> Task :app:createFullReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksFullRelease
+> Task :core:extractDeepLinksRelease
+> Task :core:processReleaseManifest
+> Task :coreui:extractDeepLinksRelease
+> Task :coreui:processReleaseManifest
+> Task :data:extractDeepLinksRelease
+> Task :data:processReleaseManifest
+> Task :navigation:extractDeepLinksRelease
+> Task :navigation:processReleaseManifest
+> Task :networking:extractDeepLinksRelease
+> Task :networking:processReleaseManifest
+> Task :scraper:extractDeepLinksRelease
+> Task :scraper:processReleaseManifest
+> Task :strings:extractDeepLinksRelease
+> Task :strings:processReleaseManifest
+> Task :features:catalogExplorer:extractDeepLinksRelease
+> Task :features:catalogExplorer:processReleaseManifest
+> Task :features:chaptersList:extractDeepLinksRelease
+> Task :features:chaptersList:processReleaseManifest
+> Task :features:databaseExplorer:extractDeepLinksRelease
+> Task :features:databaseExplorer:processReleaseManifest
+> Task :features:globalSourceSearch:extractDeepLinksRelease
+> Task :features:globalSourceSearch:processReleaseManifest
+> Task :features:libraryExplorer:extractDeepLinksRelease
+> Task :features:libraryExplorer:processReleaseManifest
+> Task :features:reader:extractDeepLinksRelease
+> Task :features:reader:processReleaseManifest
+> Task :features:settings:extractDeepLinksRelease
+> Task :features:settings:processReleaseManifest
+> Task :features:sourceExplorer:extractDeepLinksRelease
+> Task :features:sourceExplorer:processReleaseManifest
+> Task :features:webview:extractDeepLinksRelease
+> Task :features:webview:processReleaseManifest
+> Task :scraper:api:extractDeepLinksRelease
+> Task :scraper:api:processReleaseManifest
+> Task :scraper:extension-manager:extractDeepLinksRelease
+> Task :scraper:extension-manager:processReleaseManifest
+> Task :tooling:algorithms:extractDeepLinksRelease
+> Task :tooling:algorithms:processReleaseManifest
+> Task :tooling:application_workers:extractDeepLinksRelease
+> Task :tooling:application_workers:processReleaseManifest
+> Task :tooling:backup_create:extractDeepLinksRelease
+> Task :tooling:backup_create:processReleaseManifest
+> Task :tooling:backup_restore:extractDeepLinksRelease
+> Task :tooling:backup_restore:processReleaseManifest
+> Task :tooling:epub_importer:extractDeepLinksRelease
+> Task :tooling:epub_importer:processReleaseManifest
+> Task :app:mergeFullReleaseResources
+> Task :tooling:epub_parser:extractDeepLinksRelease
+> Task :tooling:epub_parser:processReleaseManifest
+> Task :tooling:local_database:extractDeepLinksRelease
+> Task :app:dataBindingGenBaseClassesFullRelease
+> Task :tooling:local_database:processReleaseManifest
+> Task :tooling:local_source:extractDeepLinksRelease
+> Task :tooling:text_to_speech:extractDeepLinksRelease
+> Task :tooling:local_source:processReleaseManifest
+> Task :tooling:text_translator:domain:extractDeepLinksRelease
+> Task :tooling:text_to_speech:processReleaseManifest
+> Task :tooling:text_translator:domain:processReleaseManifest
+> Task :tooling:text_translator:translator:extractDeepLinksRelease
+> Task :tooling:text_translator:translator:processReleaseManifest
+> Task :features:catalogExplorer:bundleLibCompileToJarRelease
+> Task :features:chaptersList:bundleLibCompileToJarRelease
+> Task :features:databaseExplorer:bundleLibCompileToJarRelease
+> Task :features:globalSourceSearch:bundleLibCompileToJarRelease
+> Task :features:libraryExplorer:bundleLibCompileToJarRelease
+> Task :app:processFullReleaseMainManifest
+> Task :features:reader:bundleLibCompileToJarRelease
+> Task :features:settings:bundleLibCompileToJarRelease
+> Task :features:sourceExplorer:bundleLibCompileToJarRelease
+> Task :features:webview:bundleLibCompileToJarRelease
+> Task :tooling:application_workers:bundleLibCompileToJarRelease
+> Task :tooling:local_source:bundleLibCompileToJarRelease
+> Task :tooling:text_translator:translator:bundleLibCompileToJarRelease
+> Task :app:javaPreCompileFullRelease
+> Task :tooling:text_translator:translator:bundleLibRuntimeToJarRelease
+> Task :features:libraryExplorer:bundleLibRuntimeToJarRelease
+> Task :tooling:application_workers:bundleLibRuntimeToJarRelease
+> Task :tooling:local_source:bundleLibRuntimeToJarRelease
+> Task :app:processFullReleaseManifest
+> Task :features:reader:bundleLibRuntimeToJarRelease
+> Task :app:processFullReleaseManifestForPackage
+> Task :features:chaptersList:bundleLibRuntimeToJarRelease
+> Task :features:globalSourceSearch:bundleLibRuntimeToJarRelease
+> Task :features:databaseExplorer:bundleLibRuntimeToJarRelease
+> Task :features:sourceExplorer:bundleLibRuntimeToJarRelease
+> Task :features:catalogExplorer:bundleLibRuntimeToJarRelease
+> Task :features:settings:bundleLibRuntimeToJarRelease
+> Task :features:webview:bundleLibRuntimeToJarRelease
+> Task :core:processReleaseJavaRes
+> Task :coreui:processReleaseJavaRes
+> Task :data:processReleaseJavaRes
+> Task :navigation:processReleaseJavaRes
+> Task :networking:processReleaseJavaRes
+> Task :scraper:processReleaseJavaRes
+> Task :strings:processReleaseJavaRes NO-SOURCE
+> Task :features:catalogExplorer:processReleaseJavaRes
+> Task :features:chaptersList:processReleaseJavaRes
+> Task :features:databaseExplorer:processReleaseJavaRes
+> Task :features:globalSourceSearch:processReleaseJavaRes
+> Task :features:libraryExplorer:processReleaseJavaRes
+> Task :features:reader:processReleaseJavaRes
+> Task :features:settings:processReleaseJavaRes
+> Task :features:sourceExplorer:processReleaseJavaRes
+> Task :features:webview:processReleaseJavaRes
+> Task :scraper:api:processReleaseJavaRes
+> Task :scraper:extension-manager:processReleaseJavaRes
+> Task :tooling:algorithms:processReleaseJavaRes
+> Task :tooling:application_workers:processReleaseJavaRes
+> Task :tooling:backup_create:processReleaseJavaRes
+> Task :tooling:backup_restore:processReleaseJavaRes
+> Task :tooling:epub_importer:processReleaseJavaRes
+> Task :tooling:epub_parser:processReleaseJavaRes
+> Task :tooling:local_database:processReleaseJavaRes
+> Task :tooling:local_source:processReleaseJavaRes
+> Task :tooling:text_to_speech:processReleaseJavaRes
+> Task :tooling:text_translator:domain:processReleaseJavaRes
+> Task :tooling:text_translator:translator:processReleaseJavaRes
+> Task :app:mergeFullReleaseStartupProfile
+> Task :app:mergeFullReleaseShaders
+> Task :app:compileFullReleaseShaders NO-SOURCE
+> Task :app:generateFullReleaseAssets UP-TO-DATE
+> Task :core:mergeReleaseShaders
+> Task :core:compileReleaseShaders NO-SOURCE
+> Task :core:generateReleaseAssets UP-TO-DATE
+> Task :core:mergeReleaseAssets
+> Task :coreui:mergeReleaseShaders
+> Task :coreui:compileReleaseShaders NO-SOURCE
+> Task :coreui:generateReleaseAssets UP-TO-DATE
+> Task :coreui:mergeReleaseAssets
+> Task :data:mergeReleaseShaders
+> Task :data:compileReleaseShaders NO-SOURCE
+> Task :data:generateReleaseAssets UP-TO-DATE
+> Task :data:mergeReleaseAssets
+> Task :navigation:mergeReleaseShaders
+> Task :navigation:compileReleaseShaders NO-SOURCE
+> Task :navigation:generateReleaseAssets UP-TO-DATE
+> Task :navigation:mergeReleaseAssets
+> Task :networking:mergeReleaseShaders
+> Task :networking:compileReleaseShaders NO-SOURCE
+> Task :networking:generateReleaseAssets UP-TO-DATE
+> Task :networking:mergeReleaseAssets
+> Task :scraper:mergeReleaseShaders
+> Task :scraper:compileReleaseShaders NO-SOURCE
+> Task :scraper:generateReleaseAssets UP-TO-DATE
+> Task :scraper:mergeReleaseAssets
+> Task :strings:mergeReleaseShaders
+> Task :strings:compileReleaseShaders NO-SOURCE
+> Task :strings:generateReleaseAssets UP-TO-DATE
+> Task :strings:mergeReleaseAssets
+> Task :features:catalogExplorer:mergeReleaseShaders
+> Task :features:catalogExplorer:compileReleaseShaders NO-SOURCE
+> Task :features:catalogExplorer:generateReleaseAssets UP-TO-DATE
+> Task :features:catalogExplorer:mergeReleaseAssets
+> Task :features:chaptersList:mergeReleaseShaders
+> Task :features:chaptersList:compileReleaseShaders NO-SOURCE
+> Task :features:chaptersList:generateReleaseAssets UP-TO-DATE
+> Task :features:chaptersList:mergeReleaseAssets
+> Task :features:databaseExplorer:mergeReleaseShaders
+> Task :features:databaseExplorer:compileReleaseShaders NO-SOURCE
+> Task :features:databaseExplorer:generateReleaseAssets UP-TO-DATE
+> Task :features:databaseExplorer:mergeReleaseAssets
+> Task :features:globalSourceSearch:mergeReleaseShaders
+> Task :features:globalSourceSearch:compileReleaseShaders NO-SOURCE
+> Task :features:globalSourceSearch:generateReleaseAssets UP-TO-DATE
+> Task :features:globalSourceSearch:mergeReleaseAssets
+> Task :features:libraryExplorer:mergeReleaseShaders
+> Task :features:libraryExplorer:compileReleaseShaders NO-SOURCE
+> Task :features:libraryExplorer:generateReleaseAssets UP-TO-DATE
+> Task :features:libraryExplorer:mergeReleaseAssets
+> Task :features:reader:mergeReleaseShaders
+> Task :features:reader:compileReleaseShaders NO-SOURCE
+> Task :features:reader:generateReleaseAssets UP-TO-DATE
+> Task :features:reader:mergeReleaseAssets
+> Task :features:settings:mergeReleaseShaders
+> Task :features:settings:compileReleaseShaders NO-SOURCE
+> Task :features:settings:generateReleaseAssets UP-TO-DATE
+> Task :features:settings:mergeReleaseAssets
+> Task :features:sourceExplorer:mergeReleaseShaders
+> Task :features:sourceExplorer:compileReleaseShaders NO-SOURCE
+> Task :features:sourceExplorer:generateReleaseAssets UP-TO-DATE
+> Task :features:sourceExplorer:mergeReleaseAssets
+> Task :features:webview:mergeReleaseShaders
+> Task :features:webview:compileReleaseShaders NO-SOURCE
+> Task :features:webview:generateReleaseAssets UP-TO-DATE
+> Task :features:webview:mergeReleaseAssets
+> Task :scraper:api:mergeReleaseShaders
+> Task :scraper:api:compileReleaseShaders NO-SOURCE
+> Task :scraper:api:generateReleaseAssets UP-TO-DATE
+> Task :scraper:api:mergeReleaseAssets
+> Task :scraper:extension-manager:mergeReleaseShaders
+> Task :scraper:extension-manager:compileReleaseShaders NO-SOURCE
+> Task :scraper:extension-manager:generateReleaseAssets UP-TO-DATE
+> Task :scraper:extension-manager:mergeReleaseAssets
+> Task :tooling:algorithms:mergeReleaseShaders
+> Task :tooling:algorithms:compileReleaseShaders NO-SOURCE
+> Task :tooling:algorithms:generateReleaseAssets UP-TO-DATE
+> Task :tooling:algorithms:mergeReleaseAssets
+> Task :tooling:application_workers:mergeReleaseShaders
+> Task :tooling:application_workers:compileReleaseShaders NO-SOURCE
+> Task :tooling:application_workers:generateReleaseAssets UP-TO-DATE
+> Task :tooling:application_workers:mergeReleaseAssets
+> Task :tooling:backup_create:mergeReleaseShaders
+> Task :tooling:backup_create:compileReleaseShaders NO-SOURCE
+> Task :tooling:backup_create:generateReleaseAssets UP-TO-DATE
+> Task :tooling:backup_create:mergeReleaseAssets
+> Task :tooling:backup_restore:mergeReleaseShaders
+> Task :tooling:backup_restore:compileReleaseShaders NO-SOURCE
+> Task :tooling:backup_restore:generateReleaseAssets UP-TO-DATE
+> Task :tooling:backup_restore:mergeReleaseAssets
+> Task :tooling:epub_importer:mergeReleaseShaders
+> Task :tooling:epub_importer:compileReleaseShaders NO-SOURCE
+> Task :tooling:epub_importer:generateReleaseAssets UP-TO-DATE
+> Task :tooling:epub_importer:mergeReleaseAssets
+> Task :tooling:epub_parser:mergeReleaseShaders
+> Task :tooling:epub_parser:compileReleaseShaders NO-SOURCE
+> Task :tooling:epub_parser:generateReleaseAssets UP-TO-DATE
+> Task :tooling:epub_parser:mergeReleaseAssets
+> Task :tooling:local_database:mergeReleaseShaders
+> Task :tooling:local_database:compileReleaseShaders NO-SOURCE
+> Task :tooling:local_database:generateReleaseAssets UP-TO-DATE
+> Task :tooling:local_database:mergeReleaseAssets
+> Task :tooling:local_source:mergeReleaseShaders
+> Task :tooling:local_source:compileReleaseShaders NO-SOURCE
+> Task :tooling:local_source:generateReleaseAssets UP-TO-DATE
+> Task :tooling:local_source:mergeReleaseAssets
+> Task :tooling:text_to_speech:mergeReleaseShaders
+> Task :tooling:text_to_speech:compileReleaseShaders NO-SOURCE
+> Task :tooling:text_to_speech:generateReleaseAssets UP-TO-DATE
+> Task :tooling:text_to_speech:mergeReleaseAssets
+> Task :tooling:text_translator:domain:mergeReleaseShaders
+> Task :tooling:text_translator:domain:compileReleaseShaders NO-SOURCE
+> Task :tooling:text_translator:domain:generateReleaseAssets UP-TO-DATE
+> Task :tooling:text_translator:domain:mergeReleaseAssets
+> Task :tooling:text_translator:translator:mergeReleaseShaders
+> Task :tooling:text_translator:translator:compileReleaseShaders NO-SOURCE
+> Task :tooling:text_translator:translator:generateReleaseAssets UP-TO-DATE
+> Task :tooling:text_translator:translator:mergeReleaseAssets
+> Task :app:mergeFullReleaseAssets
+> Task :app:compressFullReleaseAssets
+> Task :app:extractFullReleaseVersionControlInfo
+> Task :core:createFullJarRelease
+> Task :core:extractProguardFiles
+> Task :strings:createFullJarRelease
+> Task :strings:extractProguardFiles
+> Task :app:processFullReleaseResources
+> Task :strings:generateReleaseLintModel
+> Task :strings:prepareLintJarForPublish
+> Task :core:generateReleaseLintModel
+> Task :core:prepareLintJarForPublish
+> Task :coreui:createFullJarRelease
+> Task :coreui:extractProguardFiles
+> Task :tooling:local_database:createFullJarRelease
+> Task :tooling:local_database:extractProguardFiles
+> Task :tooling:local_database:generateReleaseLintModel
+> Task :tooling:local_database:prepareLintJarForPublish
+> Task :coreui:generateReleaseLintModel
+> Task :coreui:prepareLintJarForPublish
+> Task :data:createFullJarRelease
+> Task :data:extractProguardFiles
+> Task :networking:createFullJarRelease
+> Task :networking:extractProguardFiles
+> Task :networking:generateReleaseLintModel
+> Task :networking:prepareLintJarForPublish
+> Task :scraper:createFullJarRelease
+> Task :scraper:extractProguardFiles
+> Task :scraper:api:createFullJarRelease
+> Task :scraper:api:extractProguardFiles
+> Task :scraper:api:generateReleaseLintModel
+> Task :scraper:api:prepareLintJarForPublish
+> Task :scraper:extension-manager:createFullJarRelease
+> Task :scraper:extension-manager:extractProguardFiles
+> Task :scraper:extension-manager:generateReleaseLintModel
+> Task :scraper:extension-manager:prepareLintJarForPublish
+> Task :scraper:generateReleaseLintModel
+> Task :scraper:prepareLintJarForPublish
+> Task :tooling:epub_parser:createFullJarRelease
+> Task :tooling:epub_parser:extractProguardFiles
+> Task :tooling:epub_parser:generateReleaseLintModel
+> Task :tooling:epub_parser:prepareLintJarForPublish
+> Task :data:generateReleaseLintModel
+> Task :data:prepareLintJarForPublish
+> Task :navigation:createFullJarRelease
+> Task :navigation:extractProguardFiles
+> Task :navigation:generateReleaseLintModel
+> Task :navigation:prepareLintJarForPublish
+> Task :features:catalogExplorer:createFullJarRelease
+> Task :features:catalogExplorer:extractProguardFiles
+> Task :features:catalogExplorer:generateReleaseLintModel
+> Task :features:catalogExplorer:prepareLintJarForPublish
+> Task :features:chaptersList:createFullJarRelease
+> Task :features:chaptersList:extractProguardFiles
+> Task :features:chaptersList:generateReleaseLintModel
+> Task :features:chaptersList:prepareLintJarForPublish
+> Task :features:databaseExplorer:createFullJarRelease
+> Task :features:databaseExplorer:extractProguardFiles
+> Task :features:databaseExplorer:generateReleaseLintModel
+> Task :features:databaseExplorer:prepareLintJarForPublish
+> Task :features:globalSourceSearch:createFullJarRelease
+> Task :features:globalSourceSearch:extractProguardFiles
+> Task :features:globalSourceSearch:generateReleaseLintModel
+> Task :features:globalSourceSearch:prepareLintJarForPublish
+> Task :features:libraryExplorer:createFullJarRelease
+> Task :features:libraryExplorer:extractProguardFiles
+> Task :tooling:epub_importer:createFullJarRelease
+> Task :tooling:epub_importer:extractProguardFiles
+> Task :tooling:epub_importer:generateReleaseLintModel
+> Task :tooling:epub_importer:prepareLintJarForPublish
+> Task :tooling:text_translator:domain:createFullJarRelease
+> Task :tooling:text_translator:domain:extractProguardFiles
+> Task :tooling:text_translator:domain:generateReleaseLintModel
+> Task :tooling:text_translator:domain:prepareLintJarForPublish
+> Task :features:libraryExplorer:generateReleaseLintModel
+> Task :features:libraryExplorer:prepareLintJarForPublish
+> Task :features:reader:createFullJarRelease
+> Task :features:reader:extractProguardFiles
+> Task :tooling:algorithms:createFullJarRelease
+> Task :tooling:algorithms:extractProguardFiles
+> Task :tooling:algorithms:generateReleaseLintModel
+> Task :tooling:algorithms:prepareLintJarForPublish
+> Task :tooling:text_to_speech:createFullJarRelease
+> Task :tooling:text_to_speech:extractProguardFiles
+> Task :tooling:text_to_speech:generateReleaseLintModel
+> Task :tooling:text_to_speech:prepareLintJarForPublish
+> Task :features:reader:generateReleaseLintModel
+> Task :features:reader:prepareLintJarForPublish
+> Task :features:settings:createFullJarRelease
+> Task :features:settings:extractProguardFiles
+> Task :tooling:backup_create:createFullJarRelease
+> Task :tooling:backup_create:extractProguardFiles
+> Task :tooling:backup_create:generateReleaseLintModel
+> Task :tooling:backup_create:prepareLintJarForPublish
+> Task :tooling:backup_restore:createFullJarRelease
+> Task :tooling:backup_restore:extractProguardFiles
+> Task :tooling:backup_restore:generateReleaseLintModel
+> Task :tooling:backup_restore:prepareLintJarForPublish
+> Task :features:settings:generateReleaseLintModel
+> Task :features:settings:prepareLintJarForPublish
+> Task :features:sourceExplorer:createFullJarRelease
+> Task :features:sourceExplorer:extractProguardFiles
+> Task :features:sourceExplorer:generateReleaseLintModel
+> Task :features:sourceExplorer:prepareLintJarForPublish
+> Task :features:webview:createFullJarRelease
+> Task :features:webview:extractProguardFiles
+> Task :features:webview:generateReleaseLintModel
+> Task :features:webview:prepareLintJarForPublish
+> Task :tooling:application_workers:createFullJarRelease
+> Task :tooling:application_workers:extractProguardFiles
+> Task :tooling:application_workers:generateReleaseLintModel
+> Task :tooling:application_workers:prepareLintJarForPublish
+> Task :tooling:local_source:createFullJarRelease
+> Task :tooling:local_source:extractProguardFiles
+> Task :tooling:local_source:generateReleaseLintModel
+> Task :tooling:local_source:prepareLintJarForPublish
+> Task :tooling:text_translator:translator:createFullJarRelease
+> Task :tooling:text_translator:translator:extractProguardFiles
+> Task :tooling:text_translator:translator:generateReleaseLintModel
+> Task :tooling:text_translator:translator:prepareLintJarForPublish
+> Task :tooling:text_translator:translator:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:text_translator:translator:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:text_translator:translator:extractDeepLinksForAarRelease
+> Task :tooling:text_translator:translator:extractReleaseAnnotations
+> Task :tooling:text_translator:translator:mergeReleaseConsumerProguardFiles
+> Task :tooling:text_translator:translator:mergeReleaseJavaResource
+> Task :tooling:text_translator:translator:syncReleaseLibJars
+> Task :tooling:text_translator:translator:bundleReleaseLocalLintAar
+> Task :features:libraryExplorer:stripReleaseDebugSymbols NO-SOURCE
+> Task :features:libraryExplorer:copyReleaseJniLibsProjectAndLocalJars
+> Task :features:libraryExplorer:extractDeepLinksForAarRelease
+> Task :features:libraryExplorer:extractReleaseAnnotations
+> Task :features:libraryExplorer:mergeReleaseConsumerProguardFiles
+> Task :features:libraryExplorer:mergeReleaseJavaResource
+> Task :features:libraryExplorer:syncReleaseLibJars
+> Task :features:libraryExplorer:bundleReleaseLocalLintAar
+> Task :tooling:epub_importer:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:epub_importer:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:epub_importer:extractDeepLinksForAarRelease
+> Task :tooling:epub_importer:extractReleaseAnnotations
+> Task :tooling:epub_importer:mergeReleaseConsumerProguardFiles
+> Task :tooling:epub_importer:mergeReleaseJavaResource
+> Task :tooling:epub_importer:syncReleaseLibJars
+> Task :tooling:epub_importer:bundleReleaseLocalLintAar
+> Task :tooling:application_workers:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:application_workers:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:application_workers:extractDeepLinksForAarRelease
+> Task :tooling:application_workers:extractReleaseAnnotations
+> Task :tooling:application_workers:mergeReleaseConsumerProguardFiles
+> Task :app:kspFullReleaseKotlin
+> Task :tooling:application_workers:mergeReleaseJavaResource
+> Task :tooling:application_workers:syncReleaseLibJars
+> Task :tooling:application_workers:bundleReleaseLocalLintAar
+> Task :tooling:local_source:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:local_source:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:local_source:extractDeepLinksForAarRelease
+> Task :tooling:local_source:extractReleaseAnnotations
+> Task :tooling:local_source:mergeReleaseConsumerProguardFiles
+> Task :tooling:local_source:mergeReleaseJavaResource
+> Task :tooling:local_source:syncReleaseLibJars
+> Task :tooling:local_source:bundleReleaseLocalLintAar
+> Task :features:reader:stripReleaseDebugSymbols NO-SOURCE
+> Task :features:reader:copyReleaseJniLibsProjectAndLocalJars
+> Task :features:reader:extractDeepLinksForAarRelease
+> Task :features:reader:extractReleaseAnnotations
+> Task :features:reader:mergeReleaseConsumerProguardFiles
+> Task :features:reader:mergeReleaseJavaResource
+> Task :features:reader:syncReleaseLibJars
+> Task :features:reader:bundleReleaseLocalLintAar
+> Task :features:chaptersList:stripReleaseDebugSymbols NO-SOURCE
+> Task :features:chaptersList:copyReleaseJniLibsProjectAndLocalJars
+> Task :features:chaptersList:extractDeepLinksForAarRelease
+> Task :features:chaptersList:extractReleaseAnnotations
+> Task :features:chaptersList:mergeReleaseConsumerProguardFiles
+> Task :features:chaptersList:mergeReleaseJavaResource
+> Task :features:chaptersList:syncReleaseLibJars
+> Task :features:chaptersList:bundleReleaseLocalLintAar
+> Task :features:globalSourceSearch:stripReleaseDebugSymbols NO-SOURCE
+> Task :features:globalSourceSearch:copyReleaseJniLibsProjectAndLocalJars
+> Task :features:globalSourceSearch:extractDeepLinksForAarRelease
+> Task :features:globalSourceSearch:extractReleaseAnnotations
+> Task :features:globalSourceSearch:mergeReleaseConsumerProguardFiles
+> Task :features:globalSourceSearch:mergeReleaseJavaResource
+> Task :features:globalSourceSearch:syncReleaseLibJars
+> Task :features:globalSourceSearch:bundleReleaseLocalLintAar
+> Task :features:databaseExplorer:stripReleaseDebugSymbols NO-SOURCE
+> Task :features:databaseExplorer:copyReleaseJniLibsProjectAndLocalJars
+> Task :features:databaseExplorer:extractDeepLinksForAarRelease
+> Task :features:databaseExplorer:extractReleaseAnnotations
+> Task :features:databaseExplorer:mergeReleaseConsumerProguardFiles
+> Task :features:databaseExplorer:mergeReleaseJavaResource
+> Task :features:databaseExplorer:syncReleaseLibJars
+> Task :features:databaseExplorer:bundleReleaseLocalLintAar
+> Task :features:sourceExplorer:stripReleaseDebugSymbols NO-SOURCE
+> Task :features:sourceExplorer:copyReleaseJniLibsProjectAndLocalJars
+> Task :features:sourceExplorer:extractDeepLinksForAarRelease
+> Task :features:sourceExplorer:extractReleaseAnnotations
+> Task :features:sourceExplorer:mergeReleaseConsumerProguardFiles
+> Task :features:sourceExplorer:mergeReleaseJavaResource
+> Task :features:sourceExplorer:syncReleaseLibJars
+> Task :features:sourceExplorer:bundleReleaseLocalLintAar
+> Task :features:catalogExplorer:stripReleaseDebugSymbols NO-SOURCE
+> Task :features:catalogExplorer:copyReleaseJniLibsProjectAndLocalJars
+> Task :features:catalogExplorer:extractDeepLinksForAarRelease
+> Task :features:catalogExplorer:extractReleaseAnnotations
+> Task :features:catalogExplorer:mergeReleaseConsumerProguardFiles
+> Task :features:catalogExplorer:mergeReleaseJavaResource
+> Task :features:catalogExplorer:syncReleaseLibJars
+> Task :features:catalogExplorer:bundleReleaseLocalLintAar
+> Task :features:settings:stripReleaseDebugSymbols NO-SOURCE
+> Task :features:settings:copyReleaseJniLibsProjectAndLocalJars
+> Task :features:settings:extractDeepLinksForAarRelease
+> Task :features:settings:extractReleaseAnnotations
+> Task :features:settings:mergeReleaseConsumerProguardFiles
+> Task :features:settings:mergeReleaseJavaResource
+> Task :features:settings:syncReleaseLibJars
+> Task :features:settings:bundleReleaseLocalLintAar
+> Task :tooling:backup_restore:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:backup_restore:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:backup_restore:extractDeepLinksForAarRelease
+> Task :tooling:backup_restore:extractReleaseAnnotations
+> Task :tooling:backup_restore:mergeReleaseConsumerProguardFiles
+> Task :tooling:backup_restore:mergeReleaseJavaResource
+> Task :tooling:backup_restore:syncReleaseLibJars
+> Task :tooling:backup_restore:bundleReleaseLocalLintAar
+> Task :tooling:backup_create:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:backup_create:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:backup_create:extractDeepLinksForAarRelease
+> Task :tooling:backup_create:extractReleaseAnnotations
+> Task :tooling:backup_create:mergeReleaseConsumerProguardFiles
+> Task :tooling:backup_create:mergeReleaseJavaResource
+> Task :tooling:backup_create:syncReleaseLibJars
+> Task :tooling:backup_create:bundleReleaseLocalLintAar
+> Task :data:stripReleaseDebugSymbols NO-SOURCE
+> Task :data:copyReleaseJniLibsProjectAndLocalJars
+> Task :data:extractDeepLinksForAarRelease
+> Task :data:extractReleaseAnnotations
+> Task :data:mergeReleaseConsumerProguardFiles
+> Task :data:mergeReleaseJavaResource
+> Task :data:syncReleaseLibJars
+> Task :data:bundleReleaseLocalLintAar
+> Task :features:webview:stripReleaseDebugSymbols NO-SOURCE
+> Task :features:webview:copyReleaseJniLibsProjectAndLocalJars
+> Task :features:webview:extractDeepLinksForAarRelease
+> Task :features:webview:extractReleaseAnnotations
+> Task :features:webview:mergeReleaseConsumerProguardFiles
+> Task :features:webview:mergeReleaseJavaResource
+> Task :features:webview:syncReleaseLibJars
+> Task :features:webview:bundleReleaseLocalLintAar
+> Task :coreui:stripReleaseDebugSymbols NO-SOURCE
+> Task :coreui:copyReleaseJniLibsProjectAndLocalJars
+> Task :coreui:extractDeepLinksForAarRelease
+> Task :coreui:extractReleaseAnnotations
+> Task :coreui:mergeReleaseConsumerProguardFiles
+> Task :coreui:mergeReleaseJavaResource
+> Task :coreui:syncReleaseLibJars
+> Task :coreui:bundleReleaseLocalLintAar
+> Task :navigation:stripReleaseDebugSymbols NO-SOURCE
+> Task :navigation:copyReleaseJniLibsProjectAndLocalJars
+> Task :navigation:extractDeepLinksForAarRelease
+> Task :navigation:extractReleaseAnnotations
+> Task :navigation:mergeReleaseConsumerProguardFiles
+> Task :navigation:mergeReleaseJavaResource
+> Task :navigation:syncReleaseLibJars
+> Task :navigation:bundleReleaseLocalLintAar
+> Task :tooling:local_database:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:local_database:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:local_database:extractDeepLinksForAarRelease
+> Task :tooling:local_database:extractReleaseAnnotations
+> Task :tooling:local_database:mergeReleaseConsumerProguardFiles
+> Task :tooling:local_database:mergeReleaseJavaResource
+> Task :tooling:local_database:syncReleaseLibJars
+> Task :tooling:local_database:bundleReleaseLocalLintAar
+> Task :tooling:epub_parser:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:epub_parser:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:epub_parser:extractDeepLinksForAarRelease
+> Task :tooling:epub_parser:extractReleaseAnnotations
+> Task :tooling:epub_parser:mergeReleaseConsumerProguardFiles
+> Task :tooling:epub_parser:mergeReleaseJavaResource
+> Task :tooling:epub_parser:syncReleaseLibJars
+> Task :tooling:epub_parser:bundleReleaseLocalLintAar
+> Task :tooling:text_translator:domain:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:text_translator:domain:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:text_translator:domain:extractDeepLinksForAarRelease
+> Task :tooling:text_translator:domain:extractReleaseAnnotations
+> Task :tooling:text_translator:domain:mergeReleaseConsumerProguardFiles
+> Task :tooling:text_translator:domain:mergeReleaseJavaResource
+> Task :tooling:text_translator:domain:syncReleaseLibJars
+> Task :tooling:text_translator:domain:bundleReleaseLocalLintAar
+> Task :tooling:text_to_speech:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:text_to_speech:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:text_to_speech:extractDeepLinksForAarRelease
+> Task :tooling:text_to_speech:extractReleaseAnnotations
+> Task :tooling:text_to_speech:mergeReleaseConsumerProguardFiles
+> Task :tooling:text_to_speech:mergeReleaseJavaResource
+> Task :tooling:text_to_speech:syncReleaseLibJars
+> Task :tooling:text_to_speech:bundleReleaseLocalLintAar
+> Task :scraper:stripReleaseDebugSymbols NO-SOURCE
+> Task :scraper:copyReleaseJniLibsProjectAndLocalJars
+> Task :scraper:extractDeepLinksForAarRelease
+> Task :scraper:extractReleaseAnnotations
+> Task :scraper:mergeReleaseConsumerProguardFiles
+> Task :scraper:mergeReleaseJavaResource
+> Task :app:compileFullReleaseKotlin
+> Task :scraper:syncReleaseLibJars
+> Task :scraper:bundleReleaseLocalLintAar
+> Task :networking:stripReleaseDebugSymbols NO-SOURCE
+> Task :networking:copyReleaseJniLibsProjectAndLocalJars
+> Task :networking:extractDeepLinksForAarRelease
+> Task :networking:extractReleaseAnnotations
+> Task :networking:mergeReleaseConsumerProguardFiles
+> Task :networking:mergeReleaseJavaResource
+> Task :networking:syncReleaseLibJars
+> Task :networking:bundleReleaseLocalLintAar
+> Task :scraper:extension-manager:stripReleaseDebugSymbols NO-SOURCE
+> Task :scraper:extension-manager:copyReleaseJniLibsProjectAndLocalJars
+> Task :scraper:extension-manager:extractDeepLinksForAarRelease
+> Task :scraper:extension-manager:extractReleaseAnnotations
+> Task :scraper:extension-manager:mergeReleaseConsumerProguardFiles
+> Task :scraper:extension-manager:mergeReleaseJavaResource
+> Task :scraper:extension-manager:syncReleaseLibJars
+> Task :scraper:extension-manager:bundleReleaseLocalLintAar
+> Task :scraper:api:stripReleaseDebugSymbols NO-SOURCE
+> Task :scraper:api:copyReleaseJniLibsProjectAndLocalJars
+> Task :scraper:api:extractDeepLinksForAarRelease
+> Task :scraper:api:extractReleaseAnnotations
+> Task :scraper:api:mergeReleaseConsumerProguardFiles
+> Task :scraper:api:mergeReleaseJavaResource
+> Task :scraper:api:syncReleaseLibJars
+> Task :scraper:api:bundleReleaseLocalLintAar
+> Task :core:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:extractDeepLinksForAarRelease
+> Task :core:extractReleaseAnnotations
+> Task :core:mergeReleaseConsumerProguardFiles
+> Task :core:mergeReleaseJavaResource
+> Task :core:syncReleaseLibJars
+> Task :core:bundleReleaseLocalLintAar
+> Task :strings:stripReleaseDebugSymbols NO-SOURCE
+> Task :strings:copyReleaseJniLibsProjectAndLocalJars
+> Task :strings:extractDeepLinksForAarRelease
+> Task :strings:extractReleaseAnnotations
+> Task :strings:mergeReleaseConsumerProguardFiles
+> Task :strings:mergeReleaseJavaResource
+> Task :strings:syncReleaseLibJars
+> Task :strings:bundleReleaseLocalLintAar
+> Task :tooling:algorithms:stripReleaseDebugSymbols NO-SOURCE
+> Task :tooling:algorithms:copyReleaseJniLibsProjectAndLocalJars
+> Task :tooling:algorithms:extractDeepLinksForAarRelease
+> Task :tooling:algorithms:extractReleaseAnnotations
+> Task :tooling:algorithms:mergeReleaseConsumerProguardFiles
+> Task :tooling:algorithms:mergeReleaseJavaResource
+> Task :tooling:algorithms:syncReleaseLibJars
+> Task :tooling:algorithms:bundleReleaseLocalLintAar
+> Task :strings:writeReleaseLintModelMetadata
+> Task :app:compileFullReleaseJavaWithJavac
+> Task :app:hiltAggregateDepsFullRelease
+> Task :app:hiltJavaCompileFullRelease
+> Task :app:transformFullReleaseClassesWithAsm
+> Task :app:expandFullReleaseArtProfileWildcards
+> Task :app:mergeFullReleaseGeneratedProguardFiles
+> Task :app:processFullReleaseJavaRes
+> Task :app:mergeFullReleaseJavaResource
+> Task :core:lintVitalAnalyzeRelease
+> Task :app:generateFullReleaseLintVitalReportModel
+> Task :core:writeReleaseLintModelMetadata
+> Task :tooling:local_database:writeReleaseLintModelMetadata
+> Task :coreui:lintVitalAnalyzeRelease
+> Task :coreui:writeReleaseLintModelMetadata
+> Task :networking:writeReleaseLintModelMetadata
+> Task :scraper:writeReleaseLintModelMetadata
+> Task :scraper:api:writeReleaseLintModelMetadata
+> Task :scraper:extension-manager:writeReleaseLintModelMetadata
+> Task :tooling:epub_parser:writeReleaseLintModelMetadata
+> Task :app:minifyFullReleaseWithR8
+> Task :data:lintVitalAnalyzeRelease
+> Task :data:writeReleaseLintModelMetadata
+> Task :navigation:lintVitalAnalyzeRelease
+> Task :navigation:writeReleaseLintModelMetadata
+> Task :networking:lintVitalAnalyzeRelease
+> Task :scraper:lintVitalAnalyzeRelease
+> Task :strings:lintVitalAnalyzeRelease
+> Task :features:catalogExplorer:lintVitalAnalyzeRelease
+> Task :features:catalogExplorer:writeReleaseLintModelMetadata
+> Task :features:chaptersList:lintVitalAnalyzeRelease
+> Task :features:chaptersList:writeReleaseLintModelMetadata
+> Task :features:databaseExplorer:lintVitalAnalyzeRelease
+> Task :features:databaseExplorer:writeReleaseLintModelMetadata
+> Task :features:globalSourceSearch:lintVitalAnalyzeRelease
+> Task :features:globalSourceSearch:writeReleaseLintModelMetadata
+> Task :tooling:epub_importer:writeReleaseLintModelMetadata
+> Task :tooling:text_translator:domain:writeReleaseLintModelMetadata
+> Task :features:libraryExplorer:lintVitalAnalyzeRelease
+> Task :features:libraryExplorer:writeReleaseLintModelMetadata
+> Task :tooling:algorithms:writeReleaseLintModelMetadata
+> Task :tooling:text_to_speech:writeReleaseLintModelMetadata
+> Task :features:reader:lintVitalAnalyzeRelease
+> Task :features:reader:writeReleaseLintModelMetadata
+> Task :tooling:backup_create:writeReleaseLintModelMetadata
+> Task :tooling:backup_restore:writeReleaseLintModelMetadata
+> Task :features:settings:lintVitalAnalyzeRelease
+> Task :features:settings:writeReleaseLintModelMetadata
+> Task :features:sourceExplorer:lintVitalAnalyzeRelease
+> Task :features:sourceExplorer:writeReleaseLintModelMetadata
+> Task :features:webview:lintVitalAnalyzeRelease
+> Task :features:webview:writeReleaseLintModelMetadata
+> Task :scraper:api:lintVitalAnalyzeRelease
+> Task :scraper:extension-manager:lintVitalAnalyzeRelease
+> Task :tooling:algorithms:lintVitalAnalyzeRelease
+> Task :tooling:application_workers:lintVitalAnalyzeRelease
+> Task :tooling:application_workers:writeReleaseLintModelMetadata
+> Task :tooling:backup_create:lintVitalAnalyzeRelease
+> Task :tooling:backup_restore:lintVitalAnalyzeRelease
+> Task :tooling:epub_importer:lintVitalAnalyzeRelease

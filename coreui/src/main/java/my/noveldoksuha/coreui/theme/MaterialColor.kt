@@ -7,6 +7,7 @@ import androidx.compose.ui.graphics.luminance
 @Composable
 fun ColorScheme.isLightTheme() = background.luminance() > 0.5
 
+@Suppress("DEPRECATION")
 val light_colorScheme = ColorScheme(
     primary = Grey25,
     onPrimary = Grey900,
@@ -39,6 +40,7 @@ val light_colorScheme = ColorScheme(
     scrim = Grey300,
 )
 
+@Suppress("DEPRECATION")
 val dark_colorScheme = ColorScheme(
     primary = Grey900,
     onPrimary = Grey25,
@@ -71,6 +73,7 @@ val dark_colorScheme = ColorScheme(
     scrim = Grey800,
 )
 
+@Suppress("DEPRECATION")
 val black_colorScheme = ColorScheme(
     primary = Grey1000,
     onPrimary = Grey25,
