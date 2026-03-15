@@ -160,6 +160,19 @@ myNovelDokusha/
 - **Architecture**: MVVM with Repository pattern
 - **DI**: Hilt for dependency injection across all modules
 
+### Refactoring Guidelines
+
+**⚠️ IMPORTANT: For bulk code changes and massive refactoring, ALWAYS use `ast-grep` skill first!**
+
+When to use ast-grep:
+- Removing features/modules (e.g., TTS removal)
+- Bulk rename across multiple files
+- Pattern-based code transformations
+- Large-scale import cleanup
+- Removing unused code patterns
+
+**DO NOT use sed for complex Kotlin refactoring** - it breaks code structure!
+
 ### Module Conventions
 - Custom Gradle convention plugins enforce consistent configuration:
   - `noveldokusha.android.application` - Application modules

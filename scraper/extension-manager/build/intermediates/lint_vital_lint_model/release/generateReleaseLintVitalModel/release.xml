@@ -26,6 +26,6 @@
       applicationId="my.noveldokusha.scraper.extension.manager"
       generatedSourceFolders="build/generated/ksp/release/java:build/generated/ksp/release/kotlin:build/generated/ap_generated_sources/release/out:build/generated/source/buildConfig/release"
       generatedResourceFolders="build/generated/res/resValues/release"
-      desugaredMethodsFiles="/home/ubuntu/.gradle/caches/8.13/transforms/caa0774ec8697fc8b4fcf0aa77e1d7a0/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/home/ubuntu/.gradle/caches/8.13/transforms/969a35156b5191effc41b6a697702d70/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
