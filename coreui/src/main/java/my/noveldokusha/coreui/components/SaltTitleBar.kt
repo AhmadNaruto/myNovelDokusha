@@ -51,7 +51,8 @@ fun SaltTitleBar(
     actions: @Composable () -> Unit = {},
     containerColor: Color = Color.Transparent,
     titleColor: Color = MaterialTheme.colorScheme.onSurface,
-    subtitleColor: Color = MaterialTheme.colorScheme.onSurfaceVariant
+    subtitleColor: Color = MaterialTheme.colorScheme.onSurfaceVariant,
+    backContentDescription: String = "Back"
 ) {
     Box(
         modifier = modifier
@@ -82,7 +83,7 @@ fun SaltTitleBar(
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = "Back",
+                        contentDescription = backContentDescription,
                         modifier = Modifier.size(24.dp),
                         tint = titleColor
                     )

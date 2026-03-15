@@ -12,3 +12,8 @@
 /word_database-wal
 /app/release
 *.jks
+
+# Build outputs
+/build/
+**/build/
+

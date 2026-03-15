@@ -34,11 +34,26 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.Dp
 import my.noveldokusha.coreui.modifiers.bounceOnPressed
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.Settings
+
+/**
+ * Animation constants for SaltUI components.
+ */
+private object SaltItemAnimations {
+    const val PRESSED_SCALE = 0.98f
+    const val PRESSED_ALPHA = 0.95f
+    val HORIZONTAL_PADDING = 16.dp
+    val VERTICAL_PADDING = 4.dp
+    val CONTENT_SPACING = 16.dp
+    val CONTENT_VERTICAL_PADDING = 12.dp
+}
 
 /**
  * SaltUI-inspired Item component built with Material 3.
  * Clean, modern list item for settings and navigation.
- * 
+ *
  * Features:
  * - Smooth press animation with scale effect
  * - Clean visual hierarchy
@@ -56,18 +71,18 @@ fun SaltItem(
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
-    
+
     val scale by animateFloatAsState(
-        targetValue = if (isPressed && enabled) 0.98f else 1f,
+        targetValue = if (isPressed && enabled) SaltItemAnimations.PRESSED_SCALE else 1f,
         animationSpec = spring(
             dampingRatio = Spring.DampingRatioMediumBouncy,
             stiffness = Spring.StiffnessMedium
         ),
         label = "itemScale"
     )
-    
+
     val alpha by animateFloatAsState(
-        targetValue = if (isPressed && enabled) 0.95f else 1f,
+        targetValue = if (isPressed && enabled) SaltItemAnimations.PRESSED_ALPHA else 1f,
         animationSpec = spring(
             dampingRatio = Spring.DampingRatioMediumBouncy,
             stiffness = Spring.StiffnessMedium
@@ -94,16 +109,9 @@ fun SaltItem(
                     Modifier
                 }
             )
-            .padding(horizontal = 16.dp, vertical = 4.dp)
-            .then(
-                if (isPressed && enabled) {
-                    Modifier
-                } else {
-                    Modifier
-                }
-            ),
+            .padding(horizontal = SaltItemAnimations.HORIZONTAL_PADDING, vertical = SaltItemAnimations.VERTICAL_PADDING),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(16.dp)
+        horizontalArrangement = Arrangement.spacedBy(SaltItemAnimations.CONTENT_SPACING)
     ) {
         // Leading content (icon)
         if (leadingContent != null) {
@@ -365,3 +373,50 @@ fun SaltSpacer(
         modifier = modifier.height(height)
     )
 }
+
+// region Previews
+@androidx.compose.ui.tooling.preview.Preview
+@Composable
+private fun SaltItemPreview() {
+    my.noveldokusha.coreui.theme.InternalTheme(my.noveldokusha.coreui.theme.Themes.LIGHT) {
+        androidx.compose.material3.Surface {
+            SaltItem(
+                headline = "Settings Item",
+                subheadline = "This is a description",
+                onClick = {},
+                leadingIcon = androidx.compose.material.icons.Icons.Outlined.Settings
+            )
+        }
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview
+@Composable
+private fun SaltItemSwitcherPreview() {
+    my.noveldokusha.coreui.theme.InternalTheme(my.noveldokusha.coreui.theme.Themes.LIGHT) {
+        androidx.compose.material3.Surface {
+            SaltItemSwitcher(
+                headline = "Toggle Setting",
+                subheadline = "Enable or disable feature",
+                checked = true,
+                onCheckedChange = {},
+                leadingIcon = androidx.compose.material.icons.Icons.Outlined.Check
+            )
+        }
+    }
+}
+
+@androidx.compose.ui.tooling.preview.Preview
+@Composable
+private fun SaltTitleBarPreview() {
+    my.noveldokusha.coreui.theme.InternalTheme(my.noveldokusha.coreui.theme.Themes.LIGHT) {
+        androidx.compose.material3.Surface {
+            SaltTitleBar(
+                title = "Settings",
+                showBackButton = true,
+                onBackClick = {}
+            )
+        }
+    }
+}
+// endregion
