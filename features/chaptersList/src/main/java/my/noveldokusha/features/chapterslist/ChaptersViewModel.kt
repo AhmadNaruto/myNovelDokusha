@@ -15,7 +15,6 @@ import kotlinx.coroutines.launch
 import my.noveldokusha.coreui.BaseViewModel
 import my.noveldokusha.data.AppRepository
 import my.noveldokusha.data.DownloaderRepository
-import my.noveldokusha.data.EpubImporterRepository
 import my.noveldokusha.chapterslist.R
 import my.noveldokusha.core.AppCoroutineScope
 import my.noveldokusha.core.AppFileResolver
@@ -44,7 +43,6 @@ internal class ChaptersViewModel @Inject constructor(
     appFileResolver: AppFileResolver,
     private val downloaderRepository: DownloaderRepository,
     private val chaptersRepository: ChaptersRepository,
-    private val epubImporterRepository: EpubImporterRepository,
     stateHandle: SavedStateHandle,
 ) : BaseViewModel(), ChapterStateBundle {
 
@@ -80,12 +78,6 @@ internal class ChaptersViewModel @Inject constructor(
     )
 
     init {
-        appScope.launch {
-            if (rawBookUrl.isContentUri && appRepository.libraryBooks.get(bookUrl) == null) {
-                importUriContent()
-            }
-        }
-
         viewModelScope.launch {
             if (state.isLocalSource.value) return@launch
 
@@ -122,9 +114,7 @@ internal class ChaptersViewModel @Inject constructor(
             return
         }
         toasty.show(R.string.updating_book_info)
-        if (rawBookUrl.isContentUri) {
-            importUriContent()
-        } else if (!state.isLocalSource.value) {
+        if (!state.isLocalSource.value) {
             updateCover()
             updateDescription()
             updateChaptersList()
@@ -144,23 +134,6 @@ internal class ChaptersViewModel @Inject constructor(
         downloaderRepository.bookDescription(bookUrl = bookUrl).onSuccess {
             if (it == null) return@onSuccess
             appRepository.libraryBooks.updateDescription(bookUrl, it)
-        }
-    }
-
-    private fun importUriContent() {
-        if (loadChaptersJob?.isActive == true) return
-        loadChaptersJob = appScope.launch {
-            state.error.value = ""
-            state.isRefreshing.value = true
-            val isInLibrary = appRepository.libraryBooks.existInLibrary(bookUrl)
-            epubImporterRepository.importEpubFromContentUri(
-                contentUri = rawBookUrl,
-                bookTitle = bookTitle,
-                addToLibrary = isInLibrary
-            ).onError {
-                state.error.value = it.message
-            }
-            state.isRefreshing.value = false
         }
     }
 

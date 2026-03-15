@@ -103,9 +103,7 @@ dependencies {
     implementation(projects.tooling.localDatabase)
     implementation(projects.tooling.epubParser)
     implementation(projects.tooling.textTranslator.domain)
-    implementation(projects.tooling.epubImporter)
     implementation(projects.tooling.applicationWorkers)
-    implementation(projects.tooling.localSource)
 
     implementation(projects.features.reader)
     implementation(projects.features.chaptersList)

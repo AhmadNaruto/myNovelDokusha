@@ -37,7 +37,6 @@ import my.noveldokusha.R
 import my.noveldokusha.catalogexplorer.CatalogExplorerScreen
 import my.noveldokusha.libraryexplorer.LibraryScreen
 import my.noveldokusha.settings.SettingsScreen
-import my.noveldokusha.tooling.epub_importer.EpubImportService
 
 private data class Page(
     @DrawableRes val iconRes: Int,
@@ -102,8 +101,6 @@ open class MainActivity : BaseActivity() {
                 }
             }
         }
-
-        handleIntent(intent)
     }
 
     private fun requestPushNotificationPermission() {
@@ -115,39 +112,6 @@ open class MainActivity : BaseActivity() {
         val result = ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
         if (result != PackageManager.PERMISSION_GRANTED) {
             requestNotificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-        }
-    }
-
-    private fun handleIntent(intent: Intent) {
-        val action = intent.action ?: return
-        val type = intent.type
-
-        when (action) {
-            Intent.ACTION_SEND -> {
-                if (type == "application/epub+zip") {
-                    handleSharedEpub(intent)
-                }
-            }
-
-            Intent.ACTION_VIEW -> {
-                handleViewedEpub(intent)
-            }
-        }
-    }
-
-    private fun handleViewedEpub(intent: Intent) {
-        val epubUri: Uri? = intent.data
-        if (epubUri != null) {
-            EpubImportService.start(ctx = this, uri = epubUri)
-        }
-    }
-
-    private fun handleSharedEpub(intent: Intent) {
-        val epubUri: Uri? = IntentCompat.getParcelableExtra(
-            intent, Intent.EXTRA_STREAM, Uri::class.java
-        )
-        if (epubUri != null) {
-            EpubImportService.start(ctx = this, uri = epubUri)
         }
     }
 }
