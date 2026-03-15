@@ -34,6 +34,34 @@
 - Android TTS & Media APIs
 - Readability4j, Crux (text extraction)
 
+## UI Components (Material 3 + SaltUI-inspired)
+
+### Enhanced Components (coreui module)
+- **MyButton**: Material 3 button with spring animations (scale + opacity + shadow)
+- **InteractiveCard**: Card with hover/press effects and dynamic elevation
+- **EnhancedIcon**: Icon with animated background container and shadows
+- **Section**: Card container with dynamic elevation and accent glow
+- **SaltItem**: SaltUI-inspired list item for settings/navigation
+- **SaltItemSwitcher**: Toggle switch item with Material 3 Switch
+- **SaltItemValue**: Key-value display item with badge support
+- **SaltRoundedColumn**: Cluster container for grouping related items
+- **SaltSectionTitle**: Section header with primary color
+- **SaltTitleBar**: Modern top app bar with back button and actions
+- **SaltSpacer**: Consistent spacing component
+
+### Animation System
+- **AnimationSpecs**: Reusable spring animation presets (Quick, Default, Relaxed, Bouncy, Subtle)
+- **bounceOnPressed**: Modifier for press scale animation
+- **animateScale/Opacity/Rotation/Translation**: Spring-based animation helpers
+
+### Design Principles
+- Material 3 foundation with SaltUI-inspired patterns
+- Spring-based micro-interactions for delightful UX
+- Clean visual hierarchy with proper spacing
+- Consistent touch targets (56dp minimum)
+- Tonal elevation and color schemes
+- Support for light/dark/black themes
+
 ## Project Structure
 
 ```
