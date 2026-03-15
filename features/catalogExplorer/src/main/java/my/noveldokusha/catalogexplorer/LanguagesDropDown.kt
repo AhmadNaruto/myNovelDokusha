@@ -16,8 +16,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import my.noveldoksuha.coreui.components.MyButton
-import my.noveldoksuha.data.LanguageItem
+import my.noveldokusha.coreui.components.MyButton
+import my.noveldokusha.data.LanguageItem
 
 @Composable
 internal fun LanguagesDropDown(

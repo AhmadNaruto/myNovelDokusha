@@ -7,8 +7,8 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import my.noveldoksuha.coreui.BaseActivity
-import my.noveldoksuha.coreui.theme.Theme
+import my.noveldokusha.coreui.BaseActivity
+import my.noveldokusha.coreui.theme.Theme
 import my.noveldokusha.core.utils.Extra_String
 import my.noveldokusha.navigation.NavigationRoutes
 import javax.inject.Inject

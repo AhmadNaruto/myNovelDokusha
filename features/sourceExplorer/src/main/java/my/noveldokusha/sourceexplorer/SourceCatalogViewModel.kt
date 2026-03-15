@@ -6,11 +6,11 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import my.noveldoksuha.coreui.BaseViewModel
-import my.noveldoksuha.coreui.components.ToolbarMode
-import my.noveldoksuha.coreui.states.PagedListIteratorState
-import my.noveldoksuha.data.AppRepository
-import my.noveldoksuha.mappers.mapToBookMetadata
+import my.noveldokusha.coreui.BaseViewModel
+import my.noveldokusha.coreui.components.ToolbarMode
+import my.noveldokusha.coreui.states.PagedListIteratorState
+import my.noveldokusha.data.AppRepository
+import my.noveldokusha.mappers.mapToBookMetadata
 import my.noveldokusha.core.Toasty
 import my.noveldokusha.core.appPreferences.AppPreferences
 import my.noveldokusha.core.utils.StateExtra_String

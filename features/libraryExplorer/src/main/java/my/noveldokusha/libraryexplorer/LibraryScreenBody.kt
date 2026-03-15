@@ -33,8 +33,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlinx.coroutines.launch
-import my.noveldoksuha.coreui.components.CollapsibleDivider
-import my.noveldoksuha.coreui.theme.colorApp
+import my.noveldokusha.coreui.components.CollapsibleDivider
+import my.noveldokusha.coreui.theme.colorApp
 import my.noveldokusha.core.domain.LibraryCategory
 import my.noveldokusha.feature.local_database.BookWithContext
 

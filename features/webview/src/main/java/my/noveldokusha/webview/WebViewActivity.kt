@@ -11,8 +11,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import dagger.hilt.android.AndroidEntryPoint
-import my.noveldoksuha.coreui.theme.Theme
-import my.noveldoksuha.coreui.theme.ThemeProvider
+import my.noveldokusha.coreui.theme.Theme
+import my.noveldokusha.coreui.theme.ThemeProvider
 import my.noveldokusha.core.Toasty
 import my.noveldokusha.core.utils.Extra_String
 import my.noveldokusha.network.toUrl

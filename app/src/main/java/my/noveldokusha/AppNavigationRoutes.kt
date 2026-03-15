@@ -2,8 +2,8 @@ package my.noveldokusha
 
 import android.content.Context
 import android.content.Intent
-import my.noveldoksuha.databaseexplorer.databaseSearch.DatabaseSearchActivity
-import my.noveldoksuha.databaseexplorer.databaseSearch.DatabaseSearchExtras
+import my.noveldokusha.databaseexplorer.databaseSearch.DatabaseSearchActivity
+import my.noveldokusha.databaseexplorer.databaseSearch.DatabaseSearchExtras
 import my.noveldokusha.features.chapterslist.ChaptersActivity
 import my.noveldokusha.features.main.MainActivity
 import my.noveldokusha.features.reader.ReaderActivity

@@ -21,7 +21,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
-import my.noveldoksuha.coreui.components.CollapsibleDivider
+import my.noveldokusha.coreui.components.CollapsibleDivider
 import my.noveldokusha.navigation.NavigationRouteViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)

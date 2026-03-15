@@ -19,10 +19,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import my.noveldoksuha.coreui.components.BookImageButtonView
-import my.noveldoksuha.coreui.modifiers.bounceOnPressed
-import my.noveldoksuha.coreui.theme.ColorAccent
-import my.noveldoksuha.coreui.theme.ImageBorderShape
+import my.noveldokusha.coreui.components.BookImageButtonView
+import my.noveldokusha.coreui.modifiers.bounceOnPressed
+import my.noveldokusha.coreui.theme.ColorAccent
+import my.noveldokusha.coreui.theme.ImageBorderShape
 import my.noveldokusha.core.isLocalUri
 import my.noveldokusha.core.rememberResolvedBookImagePath
 import my.noveldokusha.feature.local_database.BookWithContext

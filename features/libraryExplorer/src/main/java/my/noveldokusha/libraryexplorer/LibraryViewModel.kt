@@ -7,9 +7,9 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
-import my.noveldoksuha.coreui.BaseViewModel
-import my.noveldoksuha.coreui.components.BookSettingsDialogState
-import my.noveldoksuha.data.AppRepository
+import my.noveldokusha.coreui.BaseViewModel
+import my.noveldokusha.coreui.components.BookSettingsDialogState
+import my.noveldokusha.data.AppRepository
 import my.noveldokusha.core.appPreferences.AppPreferences
 import my.noveldokusha.core.utils.asMutableStateOf
 import javax.inject.Inject

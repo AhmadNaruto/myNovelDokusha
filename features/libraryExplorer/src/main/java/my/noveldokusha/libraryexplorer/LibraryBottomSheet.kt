@@ -17,9 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import my.noveldoksuha.coreui.components.PosNegCheckbox
-import my.noveldoksuha.coreui.components.TernaryStateToggle
-import my.noveldoksuha.coreui.theme.ColorAccent
+import my.noveldokusha.coreui.components.PosNegCheckbox
+import my.noveldokusha.coreui.components.TernaryStateToggle
+import my.noveldokusha.coreui.theme.ColorAccent
 import my.noveldokusha.core.utils.toToggleableState
 
 @OptIn(ExperimentalMaterial3Api::class)

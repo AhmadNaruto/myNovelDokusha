@@ -30,9 +30,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.core.content.ContextCompat
 import androidx.core.content.IntentCompat
 import dagger.hilt.android.AndroidEntryPoint
-import my.noveldoksuha.coreui.BaseActivity
-import my.noveldoksuha.coreui.components.AnimatedTransition
-import my.noveldoksuha.coreui.theme.Theme
+import my.noveldokusha.coreui.BaseActivity
+import my.noveldokusha.coreui.components.AnimatedTransition
+import my.noveldokusha.coreui.theme.Theme
 import my.noveldokusha.R
 import my.noveldokusha.catalogexplorer.CatalogExplorerScreen
 import my.noveldokusha.libraryexplorer.LibraryScreen

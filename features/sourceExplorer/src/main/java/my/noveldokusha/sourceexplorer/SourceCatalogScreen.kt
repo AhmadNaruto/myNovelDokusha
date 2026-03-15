@@ -29,11 +29,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import my.noveldoksuha.coreui.components.AnimatedTransition
-import my.noveldoksuha.coreui.components.BooksVerticalView
-import my.noveldoksuha.coreui.components.CollapsibleDivider
-import my.noveldoksuha.coreui.components.ToolbarMode
-import my.noveldoksuha.coreui.components.TopAppBarSearch
+import my.noveldokusha.coreui.components.AnimatedTransition
+import my.noveldokusha.coreui.components.BooksVerticalView
+import my.noveldokusha.coreui.components.CollapsibleDivider
+import my.noveldokusha.coreui.components.ToolbarMode
+import my.noveldokusha.coreui.components.TopAppBarSearch
 import my.noveldokusha.core.appPreferences.ListLayoutMode
 import my.noveldokusha.core.utils.actionCopyToClipboard
 import my.noveldokusha.feature.local_database.BookMetadata

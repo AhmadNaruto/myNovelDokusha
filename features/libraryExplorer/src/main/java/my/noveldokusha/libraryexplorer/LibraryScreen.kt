@@ -23,9 +23,9 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
-import my.noveldoksuha.coreui.components.BookSettingsDialog
-import my.noveldoksuha.coreui.components.BookSettingsDialogState
-import my.noveldoksuha.coreui.theme.ColorNotice
+import my.noveldokusha.coreui.components.BookSettingsDialog
+import my.noveldokusha.coreui.components.BookSettingsDialogState
+import my.noveldokusha.coreui.theme.ColorNotice
 import my.noveldokusha.navigation.NavigationRouteViewModel
 import my.noveldokusha.feature.local_database.BookMetadata
 

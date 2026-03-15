@@ -20,14 +20,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import my.noveldoksuha.coreui.components.EnhancedIcon
-import my.noveldoksuha.coreui.components.SaltItem
-import my.noveldoksuha.coreui.components.SaltItemSwitcher
-import my.noveldoksuha.coreui.components.SaltRoundedColumn
-import my.noveldoksuha.coreui.components.SaltSectionTitle
-import my.noveldoksuha.coreui.components.SaltSpacer
-import my.noveldoksuha.coreui.modifiers.bounceOnPressed
-import my.noveldoksuha.coreui.theme.Themes
+import my.noveldokusha.coreui.components.EnhancedIcon
+import my.noveldokusha.coreui.components.SaltItem
+import my.noveldokusha.coreui.components.SaltItemSwitcher
+import my.noveldokusha.coreui.components.SaltRoundedColumn
+import my.noveldokusha.coreui.components.SaltSectionTitle
+import my.noveldokusha.coreui.components.SaltSpacer
+import my.noveldokusha.coreui.modifiers.bounceOnPressed
+import my.noveldokusha.coreui.theme.Themes
 import my.noveldokusha.settings.R
 
 /**

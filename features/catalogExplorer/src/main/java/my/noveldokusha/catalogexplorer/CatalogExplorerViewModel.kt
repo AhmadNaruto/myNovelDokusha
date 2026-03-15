@@ -3,8 +3,8 @@ package my.noveldokusha.catalogexplorer
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import my.noveldoksuha.coreui.BaseViewModel
-import my.noveldoksuha.data.ScraperRepository
+import my.noveldokusha.coreui.BaseViewModel
+import my.noveldokusha.data.ScraperRepository
 import my.noveldokusha.core.LanguageCode
 import my.noveldokusha.core.appPreferences.AppPreferences
 import my.noveldokusha.core.utils.toState

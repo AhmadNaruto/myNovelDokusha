@@ -11,11 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import my.noveldoksuha.coreui.components.SaltItem
-import my.noveldoksuha.coreui.components.SaltItemValue
-import my.noveldoksuha.coreui.components.SaltRoundedColumn
-import my.noveldoksuha.coreui.components.SaltSectionTitle
-import my.noveldoksuha.coreui.components.SaltSpacer
+import my.noveldokusha.coreui.components.SaltItem
+import my.noveldokusha.coreui.components.SaltItemValue
+import my.noveldokusha.coreui.components.SaltRoundedColumn
+import my.noveldokusha.coreui.components.SaltSectionTitle
+import my.noveldokusha.coreui.components.SaltSpacer
 import my.noveldokusha.settings.R
 
 /**

@@ -23,7 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.viewinterop.AndroidView
-import my.noveldoksuha.coreui.theme.InternalTheme
+import my.noveldokusha.coreui.theme.InternalTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
