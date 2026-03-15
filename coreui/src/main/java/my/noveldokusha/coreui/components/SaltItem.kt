@@ -47,7 +47,6 @@ private object SaltItemAnimations {
     val HORIZONTAL_PADDING = 16.dp
     val VERTICAL_PADDING = 4.dp
     val CONTENT_SPACING = 16.dp
-    val CONTENT_VERTICAL_PADDING = 12.dp
 }
 
 /**

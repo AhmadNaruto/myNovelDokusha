@@ -94,6 +94,41 @@ myNovelDokusha/
 2. ⏳ **Phase 2:** Reader screen (PLANNED - requires careful testing)
 3. ⏳ **Phase 3:** Library & Explorer screens (FUTURE)
 
+### Reader Screen Migration Plan
+
+**Current State:**
+- Uses XML ListView with ViewBinding
+- 11 XML layout files (activity_reader.xml + 10 list items)
+- Custom ArrayAdapter with 12 view types
+- Complex scrolling behavior with TTS integration (TTS removed)
+
+**Target State:**
+- LazyColumn with Compose items
+- Compose composables for each item type
+- StateFlow-based state management
+- Simplified item rendering
+
+**Migration Steps:**
+1. Create Compose item composables (Body, Title, Image, etc.)
+2. Create LazyColumn wrapper component
+3. Migrate scroll state management
+4. Migrate font customization
+5. Migrate translation overlay
+6. Test with large chapters (1000+ items)
+7. A/B test performance
+8. Remove XML layouts
+
+**Estimated Effort:** 3-5 days
+**Risk Level:** MEDIUM (core reading experience)
+**Testing Required:** 
+- Performance with 1000+ items
+- Scroll position preservation
+- Font changes
+- Translation mode
+- Infinite scroll
+
+**Tracking Issue:** #READER-MIGRATION-2025
+
 ```
 
 ## Building and Running

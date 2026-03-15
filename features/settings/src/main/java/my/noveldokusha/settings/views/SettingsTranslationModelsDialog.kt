@@ -48,14 +48,19 @@ internal fun SettingsTranslationModelsDialog(
                 modifier = Modifier.padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                items(translationModelsStates) {
+                items(translationModelsStates) { modelState ->
                     Row(
                         modifier = Modifier.padding(4.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            text = it.asDisplayName(),
-                            modifier = Modifier.weight(1f)
+                            text = modelState.asDisplayName(),
+                            modifier = Modifier.weight(1f),
+                            color = if (modelState.available) {
+                                MaterialTheme.colorScheme.onSurface
+                            } else {
+                                MaterialTheme.colorScheme.onSurfaceVariant
+                            }
                         )
                         Box(
                             contentAlignment = Alignment.Center,
@@ -64,47 +69,117 @@ internal fun SettingsTranslationModelsDialog(
                                 .height(22.dp)
                         ) {
                             when {
-                                it.language == "und" -> {
+                                modelState.language == "und" -> {
                                     // Auto-detect doesn't need download/manage
-                                    Text(
-                                        text = "✓",
-                                        style = MaterialTheme.typography.bodyLarge,
-                                        color = MaterialTheme.colorScheme.primary
-                                    )
-                                }
-                                it.available -> {
-                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Row(
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                                    ) {
                                         Icon(
                                             Icons.Outlined.Done,
-                                            contentDescription = null
+                                            contentDescription = null,
+                                            tint = MaterialTheme.colorScheme.primary,
+                                            modifier = Modifier.size(18.dp)
+                                        )
+                                        Text(
+                                            text = "Built-in",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = MaterialTheme.colorScheme.primary
+                                        )
+                                    }
+                                }
+                                modelState.available -> {
+                                    Row(
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                                    ) {
+                                        Icon(
+                                            Icons.Outlined.Done,
+                                            contentDescription = "Downloaded",
+                                            tint = MaterialTheme.colorScheme.primary,
+                                            modifier = Modifier.size(18.dp)
                                         )
                                         IconButton(
-                                            onClick = { onRemoveTranslationModel(it.language) },
-                                            enabled = it.language != "en"
+                                            onClick = { onRemoveTranslationModel(modelState.language) },
+                                            enabled = modelState.language != "en"
                                         ) {
                                             Icon(
                                                 Icons.Filled.Delete,
-                                                contentDescription = null,
+                                                contentDescription = "Delete",
+                                                tint = if (modelState.language == "en") {
+                                                    MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
+                                                } else {
+                                                    MaterialTheme.colorScheme.error
+                                                },
+                                                modifier = Modifier.size(20.dp)
                                             )
                                         }
                                     }
                                 }
 
-                                it.downloading -> IconButton(onClick = { }, enabled = false) {
-                                    CircularProgressIndicator(
-                                        modifier = Modifier.size(22.dp),
-                                        color = MaterialTheme.colorScheme.onPrimary
-                                    )
+                                modelState.downloading -> {
+                                    Row(
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                                    ) {
+                                        CircularProgressIndicator(
+                                            modifier = Modifier.size(18.dp),
+                                            strokeWidth = 2.dp,
+                                            color = MaterialTheme.colorScheme.primary
+                                        )
+                                        Text(
+                                            text = "Downloading...",
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = MaterialTheme.colorScheme.primary
+                                        )
+                                    }
                                 }
 
-                                else -> IconButton(
-                                    onClick = { onDownloadTranslationModel(it.language) }) {
-                                    Icon(
-                                        Icons.Filled.CloudDownload,
-                                        contentDescription = null,
-                                        tint = if (it.downloadingFailed) Color.Red
-                                        else LocalContentColor.current
-                                    )
+                                modelState.downloadingFailed -> {
+                                    Row(
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.spacedBy(4.dp)
+                                    ) {
+                                        Icon(
+                                            Icons.Filled.CloudDownload,
+                                            contentDescription = "Download failed",
+                                            tint = MaterialTheme.colorScheme.error,
+                                            modifier = Modifier.size(18.dp)
+                                        )
+                                        IconButton(
+                                            onClick = { onDownloadTranslationModel(modelState.language) }
+                                        ) {
+                                            Text(
+                                                text = "Retry",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = MaterialTheme.colorScheme.primary
+                                            )
+                                        }
+                                    }
+                                }
+
+                                else -> {
+                                    // Not downloaded - show download button
+                                    IconButton(
+                                        onClick = { onDownloadTranslationModel(modelState.language) }
+                                    ) {
+                                        Row(
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            horizontalArrangement = Arrangement.spacedBy(4.dp)
+                                        ) {
+                                            Icon(
+                                                Icons.Filled.CloudDownload,
+                                                contentDescription = "Download",
+                                                tint = MaterialTheme.colorScheme.primary,
+                                                modifier = Modifier.size(18.dp)
+                                            )
+                                            Text(
+                                                text = "Download",
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = MaterialTheme.colorScheme.primary
+                                            )
+                                        }
+                                    }
                                 }
                             }
                         }
