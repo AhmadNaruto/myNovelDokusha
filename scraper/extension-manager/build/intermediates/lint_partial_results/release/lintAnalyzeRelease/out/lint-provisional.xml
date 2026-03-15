@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.12.3" type="conditional_incidents">
+
+    <incident
+        id="QueryPermissionsNeeded"
+        severity="warning"
+        message="As of Android 11, this method no longer returns information about all apps; see https://g.co/dev/packagevisibility for details">
+        <location
+            file="${:scraper:extension-manager*release*MAIN*sourceProvider*0*javaDir*0}/my/noveldokusha/scraper/extension_manager/ExtensionManager.kt"
+            line="56"
+            column="52"
+            startOffset="1865"
+            endLine="56"
+            endColumn="72"
+            endOffset="1885"/>
+        <map>
+            <entry
+                name="queryAll"
+                boolean="true"/>
+        </map>
+    </incident>
+
+</incidents>

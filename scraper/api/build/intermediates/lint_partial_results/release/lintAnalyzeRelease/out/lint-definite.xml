@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.12.3" type="incidents">
+
+    <incident
+        id="TrustAllX509TrustManager"
+        severity="warning"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="${:scraper:api*release*MAIN*sourceProvider*0*javaDir*0}/my/noveldokusha/scraper/api/utils/HttpUtils.kt"
+            line="84"
+            column="18"
+            startOffset="2761"
+            endLine="84"
+            endColumn="36"
+            endOffset="2779"/>
+    </incident>
+
+    <incident
+        id="TrustAllX509TrustManager"
+        severity="warning"
+        message="`checkServerTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="${:scraper:api*release*MAIN*sourceProvider*0*javaDir*0}/my/noveldokusha/scraper/api/utils/HttpUtils.kt"
+            line="88"
+            column="18"
+            startOffset="2901"
+            endLine="88"
+            endColumn="36"
+            endOffset="2919"/>
+    </incident>
+
+</incidents>

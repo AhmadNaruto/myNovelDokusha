@@ -1,0 +1,21 @@
+<lint-module
+    format="1"
+    dir="/home/ubuntu/myNovelDokusha/scraper/extension-manager"
+    name=":scraper:extension-manager"
+    type="LIBRARY"
+    maven="NovelDokusha.scraper:extension-manager:unspecified"
+    agpVersion="8.12.3"
+    buildFolder="build"
+    resourcePrefix="scraper_extension_manager_"
+    bootClassPath="/home/ubuntu/android-sdk/platforms/android-35/android.jar:/home/ubuntu/android-sdk/build-tools/35.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-35"
+    neverShrinking="true">
+  <lintOptions
+      lintConfig="/home/ubuntu/myNovelDokusha/lint.xml"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"
+      showAll="true"/>
+  <variant name="release"/>
+</lint-module>
