@@ -111,7 +111,6 @@ internal class ReaderSession(
         translatorIsActive = { readerLiveTranslation.translatorState != null },
         translatorSourceLanguageOrNull = { readerLiveTranslation.translatorState?.source },
         translatorTargetLanguageOrNull = { readerLiveTranslation.translatorState?.target },
-        translatorProvider = { "mlkit" },
         bookUrl = bookUrl,
         orderedChapters = orderedChapters,
         readerState = ReaderState.INITIAL_LOAD,

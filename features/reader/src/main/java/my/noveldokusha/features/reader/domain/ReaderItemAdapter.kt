@@ -121,12 +121,8 @@ internal class ReaderItemAdapter(
             else -> ActivityReaderListItemTranslateAttributionBinding.bind(convertView)
         }
         
-        // Set text based on provider
-        bind.attributionText.text = when (item.provider) {
-            "gemini" -> "Powered by Gemini"
-            else -> "Powered by Google Translate"
-        }
-        
+        bind.attributionText.text = "Powered by Google Translate"
+
         return bind.root
     }
 

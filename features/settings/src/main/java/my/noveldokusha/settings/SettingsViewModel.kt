@@ -66,8 +66,6 @@ internal class SettingsViewModel @Inject constructor(
                 viewModelScope
             )
         ),
-        geminiApiKey = appPreferences.TRANSLATION_GEMINI_API_KEY.state(viewModelScope),
-        preferOnlineTranslation = appPreferences.TRANSLATION_PREFER_ONLINE.state(viewModelScope),
     )
 
     init {
@@ -116,14 +114,6 @@ internal class SettingsViewModel @Inject constructor(
 
     fun onThemeChange(themes: Themes) {
         appPreferences.THEME_ID.value = themes.toPreferenceTheme
-    }
-
-    fun onGeminiApiKeyChange(apiKey: String) {
-        appPreferences.TRANSLATION_GEMINI_API_KEY.value = apiKey
-    }
-
-    fun onPreferOnlineTranslationChange(prefer: Boolean) {
-        appPreferences.TRANSLATION_PREFER_ONLINE.value = prefer
     }
 
     private fun updateDatabaseSize() = viewModelScope.launch {

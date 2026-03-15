@@ -36,12 +36,22 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import my.noveldoksuha.coreui.modifiers.bounceOnPressed
 import my.noveldoksuha.coreui.theme.ColorAccent
 import my.noveldoksuha.coreui.theme.InternalTheme
 import my.noveldoksuha.coreui.theme.Themes
 import my.noveldoksuha.coreui.theme.ifCase
 import my.noveldoksuha.coreui.theme.selectableMinHeight
 
+/**
+ * Modern Material 3 Button with tonal elevation and smooth animations.
+ * Features:
+ * - Larger corner radius (16dp) for contemporary look
+ * - Subtle border with low opacity for depth
+ * - Smooth color transition on selection
+ * - Optional bounce animation on press
+ * - Minimum touch target of 56dp for accessibility
+ */
 @Composable
 fun MyButton(
     text: String,
@@ -50,12 +60,12 @@ fun MyButton(
     animate: Boolean = true,
     textAlign: TextAlign = TextAlign.Start,
     outerPadding: Dp = 4.dp,
-    contentPadding: PaddingValues = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+    contentPadding: PaddingValues = PaddingValues(horizontal = 20.dp, vertical = 12.dp),
     minHeight: Dp = selectableMinHeight,
-    shape: Shape = MaterialTheme.shapes.small,
+    shape: Shape = MaterialTheme.shapes.medium,
     borderWidth: Dp = 1.dp,
-    borderColor: Color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f),
-    backgroundColor: Color = MaterialTheme.colorScheme.primary,
+    borderColor: Color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f),
+    backgroundColor: Color = MaterialTheme.colorScheme.primaryContainer,
     textStyle: TextStyle = LocalTextStyle.current,
     selected: Boolean = false,
     selectedBackgroundColor: Color = ColorAccent,
@@ -126,8 +136,10 @@ private fun InternalButton(
     val background by animateColorAsState(
         targetValue = if (selected) selectedBackgroundColor else backgroundColor, label = ""
     )
+    
     Surface(
         modifier = modifier
+            .bounceOnPressed(interactionSource, bounceScale = 0.96f)
             .ifCase(animate) { animateContentSize() }
             .padding(outerPadding)
             .heightIn(min = minHeight)
@@ -142,7 +154,8 @@ private fun InternalButton(
                 onClick = onClick,
                 onLongClick = onLongClick
             ),
-        color = background
+        color = background,
+        shape = shape
     ) {
         Box(propagateMinConstraints = true) {
             content(this)

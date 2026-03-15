@@ -8,7 +8,7 @@ Search from a large catalog of content, open your pick and just enjoy.
 Copyright © 2023, [nani](https://github.com/nanihadesuka), Released under [GPL-3](LICENSE) FOSS
 
 ## Features
-  - **Gemini Translation Support** - Live translation powered by Google Gemini AI
+  - **Live Translation** - ML Kit-based on-device translation
   - **Multiple sources** from where to read novels:
     - **Chinese Sources** (with GBK encoding support):
       - 69书吧 (69shuba.com) - With automatic Cloudflare bypass
@@ -25,7 +25,7 @@ Copyright © 2023, [nani](https://github.com/nanihadesuka), Released under [GPL-
   - **Advanced Reader Features**:
     - Infinite scroll
     - Custom font, font size
-    - **Live translation** with Gemini AI
+    - **Live translation** with ML Kit
     - **Text to speech**:
       - Background playback
       - Adjust voice, pitch, speed

@@ -194,7 +194,7 @@ internal class ReaderLiveTranslation(
         }
     }
 
-    fun isUsingGemini(): Boolean {
+    fun isUsingOnlineTranslation(): Boolean {
         return translationManager.isUsingOnlineTranslation
     }
 
@@ -212,8 +212,8 @@ internal class ReaderLiveTranslation(
                 }
 
                 Log.d(TAG, "onRedoTranslation: invalidating cache for source=$source, target=$target")
-                
-                // 1. Clear in-memory cache using reflection (for Gemini)
+
+                // 1. Clear in-memory cache using reflection
                 val methods = translationManager.javaClass.methods
                 val method = methods.find { it.name == "invalidateCacheFor" }
                 

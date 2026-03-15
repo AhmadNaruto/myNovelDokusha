@@ -20,7 +20,9 @@ val Grey500 = Color(0xFF727272)
 val Grey600 = Color(0xFF5B5B5B)
 val Grey700 = Color(0xFF454545)
 val Grey800 = Color(0xFF2E2E2E)
+val Grey850 = Color(0xFF1E1E1E)  // Added for dark theme surfaces
 val Grey900 = Color(0xFF181818)
+val Grey950 = Color(0xFF0D0D0D)  // Added for black theme surfaces
 val Grey1000 = Color(0xFF000000)
 
 val Error25 = Color(0xFFF6A0A7)

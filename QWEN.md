@@ -6,7 +6,7 @@
 
 ### Key Features
 - **Multiple Sources**: Chinese (69书吧, UU看书, 顶点小说, 乐阅读, Twkan) and English novel sources
-- **Gemini Translation Support**: Live translation powered by Google Gemini AI
+- **Live Translation**: ML Kit-based on-device translation
 - **Advanced Reader**: Infinite scroll, custom fonts/sizes, live translation
 - **Text-to-Speech**: Background playback, adjustable voice/pitch/speed
 - **Local Source**: Read local EPUB files
@@ -116,12 +116,12 @@ myNovelDokusha/
 ./gradlew clean build
 
 # Build specific flavor
-./gradlew assembleFullDebug    # Full version (with Gemini translation)
+./gradlew assembleFullDebug    # Full version (with ML Kit translation)
 ./gradlew assembleFossDebug    # FOSS version (no proprietary deps)
 ```
 
 ### Product Flavors
-- **full**: Includes all features (Gemini translation via MLKit)
+- **full**: Includes all features (ML Kit translation)
 - **foss**: Open-source only dependencies (translation disabled)
 
 ### Custom Build Properties

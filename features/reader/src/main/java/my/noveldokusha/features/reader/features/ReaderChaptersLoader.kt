@@ -31,7 +31,6 @@ internal class ReaderChaptersLoader(
     private val translatorIsActive: () -> Boolean,
     private val translatorSourceLanguageOrNull: () -> String?,
     private val translatorTargetLanguageOrNull: () -> String?,
-    private val translatorProvider: () -> String,
     private val bookUrl: String,
     val orderedChapters: List<Chapter>,
     @Volatile var readerState: ReaderState,
@@ -551,8 +550,7 @@ internal class ReaderChaptersLoader(
 
                 val itemTranslationAttribution = if (translatorIsActive()) {
                     ReaderItem.TranslateAttribution(
-                        chapterIndex = chapterIndex,
-                        provider = translatorProvider()
+                        chapterIndex = chapterIndex
                     )
                 } else null
 
