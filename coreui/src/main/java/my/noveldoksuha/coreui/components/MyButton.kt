@@ -2,12 +2,17 @@ package my.noveldoksuha.coreui.components
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Indication
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.border
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
@@ -27,8 +32,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
@@ -44,12 +51,14 @@ import my.noveldoksuha.coreui.theme.ifCase
 import my.noveldoksuha.coreui.theme.selectableMinHeight
 
 /**
- * Modern Material 3 Button with tonal elevation and smooth animations.
+ * Enhanced Material 3 Button with dynamic animations and depth effects.
  * Features:
+ * - Scale + opacity + shadow animations on press
+ * - Tonal elevation with dynamic shadow
  * - Larger corner radius (16dp) for contemporary look
  * - Subtle border with low opacity for depth
  * - Smooth color transition on selection
- * - Optional bounce animation on press
+ * - Spring-based micro-interactions
  * - Minimum touch target of 56dp for accessibility
  */
 @Composable
@@ -69,12 +78,12 @@ fun MyButton(
     textStyle: TextStyle = LocalTextStyle.current,
     selected: Boolean = false,
     selectedBackgroundColor: Color = ColorAccent,
+    elevation: Dp = 0.dp,
     onClick: () -> Unit,
     onLongClick: (() -> Unit)? = null,
     indication: Indication = LocalIndication.current,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     content: @Composable BoxScope.() -> Unit = {
-
         val color = when {
             selected && (textStyle.color.luminance() < 0.5) -> Color.White
             else -> textStyle.color
@@ -104,6 +113,7 @@ fun MyButton(
         backgroundColor = backgroundColor,
         selectedBackgroundColor = selectedBackgroundColor,
         selected = selected,
+        elevation = elevation,
         onClick = onClick,
         onLongClick = onLongClick,
         indication = indication,
@@ -127,19 +137,71 @@ private fun InternalButton(
     backgroundColor: Color,
     selectedBackgroundColor: Color,
     selected: Boolean,
+    elevation: Dp,
     onClick: () -> Unit,
     onLongClick: (() -> Unit)?,
     indication: Indication,
     interactionSource: MutableInteractionSource,
     content: @Composable BoxScope.() -> Unit
 ) {
+    val isPressed by interactionSource.collectIsPressedAsState()
+    
+    // Animate background color
     val background by animateColorAsState(
-        targetValue = if (selected) selectedBackgroundColor else backgroundColor, label = ""
+        targetValue = if (selected) selectedBackgroundColor else backgroundColor,
+        animationSpec = spring(
+            dampingRatio = Spring.DampingRatioMediumBouncy,
+            stiffness = Spring.StiffnessLow
+        ),
+        label = "buttonBackground"
     )
     
+    // Animate scale for press effect
+    val scale by animateFloatAsState(
+        targetValue = if (isPressed && enabled) 0.96f else 1f,
+        animationSpec = spring(
+            dampingRatio = Spring.DampingRatioLowBouncy,
+            stiffness = Spring.StiffnessMedium
+        ),
+        label = "buttonScale"
+    )
+    
+    // Animate elevation for depth effect
+    val animatedElevation by animateDpAsState(
+        targetValue = if (isPressed && enabled) 0.dp else elevation,
+        animationSpec = spring(
+            dampingRatio = Spring.DampingRatioMediumBouncy,
+            stiffness = Spring.StiffnessMedium
+        ),
+        label = "buttonElevation"
+    )
+    
+    // Animate opacity for subtle feedback
+    val alpha by animateFloatAsState(
+        targetValue = if (isPressed && enabled) 0.92f else 1f,
+        animationSpec = spring(
+            dampingRatio = Spring.DampingRatioMediumBouncy,
+            stiffness = Spring.StiffnessMedium
+        ),
+        label = "buttonAlpha"
+    )
+
     Surface(
         modifier = modifier
-            .bounceOnPressed(interactionSource, bounceScale = 0.96f)
+            .graphicsLayer {
+                this.scaleX = scale
+                this.scaleY = scale
+                this.alpha = alpha
+            }
+            .ifCase(animatedElevation > 0.dp) {
+                shadow(
+                    elevation = animatedElevation,
+                    shape = shape,
+                    clip = false,
+                    ambientColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f),
+                    spotColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.2f)
+                )
+            }
             .ifCase(animate) { animateContentSize() }
             .padding(outerPadding)
             .heightIn(min = minHeight)
@@ -155,7 +217,8 @@ private fun InternalButton(
                 onLongClick = onLongClick
             ),
         color = background,
-        shape = shape
+        shape = shape,
+        shadowElevation = 0.dp // We use custom shadow
     ) {
         Box(propagateMinConstraints = true) {
             content(this)
