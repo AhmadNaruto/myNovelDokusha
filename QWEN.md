@@ -71,6 +71,29 @@ myNovelDokusha/
 │   └── algorithms/               # Utility algorithms
 └── gradle/
     └── libs.versions.toml        # Version catalog
+
+## UI Migration Status
+
+### Fully Migrated to Compose (100%)
+- ✅ **Settings Screen** - SaltUI-inspired pattern with SaltItem components
+- ✅ **Settings Sub-screens** - Theme, Data, Backup, Translation, etc.
+- ✅ **Navigation** - Fully Compose-based
+- ✅ **Dialogs & Overlays** - All using Compose
+
+### Hybrid Approach (XML + Compose)
+- ⚠️ **Reader Screen** - ListView (XML) + ComposeView for settings overlay
+  - **Reason:** Complex custom scrolling, TTS integration, font customization
+  - **Plan:** Migrate to LazyColumn in future iteration
+  - **XML Files:** 11 layouts (activity_reader.xml + 10 list items)
+
+### XML Remaining (Debug Only)
+- ℹ️ **Debug Tools** - activity_middleware_test.xml (debug build only)
+
+### Migration Roadmap
+1. ✅ **Phase 1:** Settings screens (COMPLETED)
+2. ⏳ **Phase 2:** Reader screen (PLANNED - requires careful testing)
+3. ⏳ **Phase 3:** Library & Explorer screens (FUTURE)
+
 ```
 
 ## Building and Running
